@@ -18,9 +18,11 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Barlow', sans-serif; background: var(--green-pale); color: var(--text); line-height: 1.6; }
+
   .topbar { background: var(--green); padding: 10px 20px; text-align: center; }
   .topbar p { color: var(--green-light); font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; }
   .topbar a { color: white; text-decoration: none; font-weight: 600; }
+
   .hero { background: var(--green); padding: 40px 24px 32px; text-align: center; color: white; }
   .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--green-light); margin: 0 auto 16px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 600; color: var(--green-light); overflow: hidden; }
   .avatar img { width: 100%; height: 100%; object-fit: cover; }
@@ -28,15 +30,75 @@
   .hero .role { font-size: 13px; color: var(--green-light); letter-spacing: 0.5px; margin-bottom: 20px; }
   .quote-block { background: rgba(255,255,255,0.08); border-left: 3px solid var(--green-light); border-radius: 0 8px 8px 0; padding: 14px 16px; text-align: left; max-width: 480px; margin: 0 auto; }
   .quote-block p { font-family: 'Lora', serif; font-style: italic; font-size: 15px; color: rgba(255,255,255,0.92); line-height: 1.6; }
+
   .section { padding: 32px 20px; max-width: 600px; margin: 0 auto; }
   .section-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+
   .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
   .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
   .temi { display: flex; flex-direction: column; gap: 12px; }
   .tema { background: white; border-radius: 10px; border: 1px solid var(--border); padding: 14px 16px; display: flex; gap: 14px; align-items: flex-start; }
   .tema-bar { width: 3px; align-self: stretch; background: var(--green-light); border-radius: 2px; flex-shrink: 0; }
   .tema-title { font-size: 12px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
   .tema-text { font-size: 13px; color: #3a3a3a; line-height: 1.55; }
+
+  /* PORTFOLIO SLIDER */
+  .portfolio-section { padding: 32px 0; }
+  .portfolio-header { padding: 0 20px; max-width: 600px; margin: 0 auto 16px; }
+  .portfolio-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 20px 12px;
+    scrollbar-width: none;
+  }
+  .portfolio-scroll::-webkit-scrollbar { display: none; }
+  .portfolio-pair {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  .portfolio-card {
+    width: 140px;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    display: block;
+    text-decoration: none;
+    background: #e8f0eb;
+    flex-shrink: 0;
+  }
+  .portfolio-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+  .portfolio-card:hover img { transform: scale(1.04); }
+  .portfolio-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 18px 8px 8px; color: white; }
+  .portfolio-caption .tag { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--green-light); margin-bottom: 2px; }
+  .portfolio-caption .title { font-size: 11px; font-weight: 500; line-height: 1.3; }
+  .portfolio-hint { padding: 0 20px; margin-top: 8px; font-size: 11px; color: var(--muted); text-align: center; }
+
+  /* CV ACCORDION */
+  .cv-stack { display: flex; flex-direction: column; gap: 8px; }
+  .cv-toggle { width: 100%; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); text-align: left; gap: 10px; }
+  .cv-toggle:hover { border-color: var(--green); }
+  .cv-toggle .cv-icon { font-size: 16px; flex-shrink: 0; }
+  .cv-toggle .arrow { font-size: 11px; color: var(--muted); transition: transform 0.25s; flex-shrink: 0; }
+  .cv-toggle.open { border-radius: 10px 10px 0 0; border-color: var(--green); }
+  .cv-toggle.open .arrow { transform: rotate(180deg); }
+  .cv-content { display: none; background: white; border: 1px solid var(--green); border-top: none; border-radius: 0 0 10px 10px; padding: 16px; margin-bottom: 0; }
+  .cv-content.open { display: block; }
+  .cv-block { margin-bottom: 16px; }
+  .cv-block:last-child { margin-bottom: 0; }
+  .cv-block-title { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 8px; }
+  .cv-item { font-size: 13px; color: #3a3a3a; line-height: 1.55; padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .cv-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .cv-item strong { font-weight: 600; color: var(--text); display: block; }
+  .cv-item span { font-size: 11px; color: var(--muted); display: block; margin-bottom: 3px; }
+
   .social-grid { display: flex; flex-direction: column; gap: 10px; }
   .social-link { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
   .social-link:hover { border-color: var(--green); }
@@ -47,32 +109,6 @@
   .social-icon.coalition { background: #f1f8e9; }
   .social-label { font-size: 14px; font-weight: 500; }
   .social-sub { font-size: 12px; color: var(--muted); }
-
-  /* PORTFOLIO */
-  .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .portfolio-item { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 1/1; display: block; text-decoration: none; background: #e8f0eb; }
-  .portfolio-item.featured { grid-column: span 2; aspect-ratio: 16/9; }
-  .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
-  .portfolio-item:hover img { transform: scale(1.03); }
-  .portfolio-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.65)); padding: 20px 10px 10px; color: white; }
-  .portfolio-caption .tag { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.7px; color: var(--green-light); margin-bottom: 2px; }
-  .portfolio-caption .title { font-size: 12px; font-weight: 500; line-height: 1.3; }
-
-  /* CV ACCORDION */
-  .cv-toggle { width: 100%; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); text-align: left; }
-  .cv-toggle:hover { border-color: var(--green); }
-  .cv-toggle .arrow { font-size: 12px; color: var(--muted); transition: transform 0.25s; flex-shrink: 0; }
-  .cv-toggle.open { border-radius: 10px 10px 0 0; }
-  .cv-toggle.open .arrow { transform: rotate(180deg); }
-  .cv-content { display: none; background: white; border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; padding: 16px; }
-  .cv-content.open { display: block; }
-  .cv-block { margin-bottom: 18px; }
-  .cv-block:last-child { margin-bottom: 0; }
-  .cv-block-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 8px; }
-  .cv-item { font-size: 13px; color: #3a3a3a; line-height: 1.55; padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
-  .cv-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .cv-item strong { font-weight: 600; color: var(--text); display: block; }
-  .cv-item span { font-size: 11px; color: var(--muted); display: block; margin-bottom: 3px; }
 
   .footer { background: var(--green); padding: 24px 20px; text-align: center; color: rgba(255,255,255,0.7); font-size: 12px; line-height: 1.8; }
   .footer strong { color: white; display: block; font-size: 14px; margin-bottom: 4px; }
@@ -119,91 +155,163 @@
 
 <div class="section">
   <p class="section-title">Chi sono</p>
-  <button class="cv-toggle" onclick="this.classList.toggle('open'); document.getElementById('cv').classList.toggle('open')">
-    Percorso professionale e competenze
-    <span class="arrow">▼</span>
-  </button>
-  <div class="cv-content" id="cv">
-    <div class="cv-block">
-      <div class="cv-block-title">Esperienza</div>
-      <div class="cv-item">
-        <strong>CORILA — Responsabile Progetti GIS e Comunicazione</strong>
-        <span>2009 – presente</span>
-        Gestione e pubblicazione di dati ambientali attraverso piattaforme WebGIS. Progetti INTERREG su pianificazione spaziale marittima e monitoraggio lagunare. Redazione del Piano Morfologico della Laguna di Venezia.
-      </div>
-      <div class="cv-item">
-        <strong>Servizio Geologico della Provincia di Venezia</strong>
-        <span>2006 – 2009</span>
-        Digitalizzazione della Carta Geologica e Idrogeologica provinciale. Modelli per il monitoraggio delle acque di falda e analisi della subsidenza.
-      </div>
-    </div>
-    <div class="cv-block">
-      <div class="cv-block-title">Formazione</div>
-      <div class="cv-item">
-        <strong>Master II livello in Sistemi Informativi Territoriali</strong>
-        <span>IUAV Venezia, 2007</span>
-      </div>
-      <div class="cv-item">
-        <strong>Laurea in Geologia</strong>
-        <span>Università di Padova, 2004 · tesi sull'idrogeologia dei Colli Euganei</span>
+  <div class="cv-stack">
+
+    <button class="cv-toggle" onclick="toggle(this,'cv1')">
+      <span class="cv-icon">🗺️</span> Lavoro — GIS e dati ambientali
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv1">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>CORILA — Responsabile Progetti GIS e Comunicazione</strong>
+          <span>2009 – presente</span>
+          Gestione di dati ambientali e sviluppo di piattaforme WebGIS. Progetti INTERREG su pianificazione spaziale marittima e monitoraggio della Laguna di Venezia. Redazione del Piano Morfologico in collaborazione con il Ministero delle Infrastrutture.
+        </div>
+        <div class="cv-item">
+          <strong>Servizio Geologico della Provincia di Venezia</strong>
+          <span>2006 – 2009</span>
+          Digitalizzazione della Carta Geologica e Idrogeologica provinciale. Analisi della subsidenza e monitoraggio delle falde acquifere.
+        </div>
+        <div class="cv-item">
+          <strong>Competenze tecniche</strong>
+          QGIS, GeoNode, MapServer, OpenLayers, Leaflet, ArcGIS · PostgreSQL/PostGIS, Python, SQL · Master II livello in Sistemi Informativi Territoriali, IUAV Venezia (2007) · Laurea in Geologia, Università di Padova (2004)
+        </div>
       </div>
     </div>
-    <div class="cv-block">
-      <div class="cv-block-title">Competenze tecniche</div>
-      <div class="cv-item">
-        QGIS, ArcGIS, GRASS · GeoNode, MapServer, OpenLayers, Leaflet · PostgreSQL/PostGIS · Python, SQL, HTML, JavaScript · DaVinci Resolve, Reaper · Obsidian, Notion
+
+    <button class="cv-toggle" onclick="toggle(this,'cv2')">
+      <span class="cv-icon">🧭</span> Territorio — GeoTransect e VenetoBside
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv2">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>GeoTransect (2011)</strong>
+          <span>Associazione geologica Il Reggipoggio</span>
+          Viaggio a piedi e in bici dal nord al sud del Veneto attraverso i GeoSiti regionali. Un progetto che univa osservazione scientifica, camminata e narrazione ambientale. Coprì l'attenzione del Corriere.it.
+        </div>
+        <div class="cv-item">
+          <strong>VenetoBside (2019)</strong>
+          Sei tappe dalla Tre Cime di Lavaredo fino al delta del Po, in bicicletta, attraverso le aree marginali del Veneto colpite dalla tempesta VAIA. Un viaggio tra alti e bassi topografici, geografici e umani.
+        </div>
+        <div class="cv-item">
+          <strong>Il Reggipoggio (2007 – 2012)</strong>
+          Presidente dell'associazione geologica monselicense. Organizzazione di escursioni, attività culturali e divulgazione scientifica sul territorio dei Colli Euganei.
+        </div>
       </div>
     </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv3')">
+      <span class="cv-icon">📷</span> Fotografia e racconto visivo
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv3">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>Fotografo sportivo — Sportograf</strong>
+          <span>2022 – presente</span>
+          Copertura fotografica di eventi di ultratrail ed endurance cycling. Approccio documentaristico, attenzione alla dimensione umana prima che alla prestazione.
+        </div>
+        <div class="cv-item">
+          <strong>Formazione</strong>
+          Corso di photoreportage con Daniele Cagnazzo · Corso per filmmaker e documentarista di viaggio · DaVinci Resolve: editing e color grading con Travel Media House (2023)
+        </div>
+      </div>
+    </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv4')">
+      <span class="cv-icon">🚴</span> Bici — Altrociclismo e VagoTorno
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv4">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>Altrociclismo (2014 – presente)</strong>
+          Blog, podcast e newsletter dedicati al ciclismo amatoriale. Storie di persone, non di watt. L'idea che la bici sia uno strumento per leggere il territorio e raccontare chi si è.
+        </div>
+        <div class="cv-item">
+          <strong>VagoTorno ASD — Presidente</strong>
+          <span>2016 – presente</span>
+          Associazione sportiva dilettantistica con base a Monselice. Organizzazione di eventi ciclistici sul territorio dei Colli Euganei e della Bassa Padovana.
+        </div>
+      </div>
+    </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv5')">
+      <span class="cv-icon">🎙️</span> Podcast — Invisibile Perso
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv5">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>Invisibile Perso (gennaio 2025 – presente)</strong>
+          Diario intimo di un geologo quarantenne in crisi. Frustrazione lavorativa, senso di inadeguatezza e ricerca di autenticità — senza filtri. Un podcast sulla Generazione X che si sente incompiuta e cerca un modo per stare al mondo con più senso.
+        </div>
+        <div class="cv-item">
+          <strong>Formazione podcast</strong>
+          Corso branded podcast con Rossella Pivanti (2022)
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
 <div class="divider"></div>
 
-<div class="section">
-  <p class="section-title">Ultimi interventi</p>
-  <div class="portfolio-grid">
+<div class="portfolio-section">
+  <div class="portfolio-header">
+    <p class="section-title">Ultimi interventi</p>
+  </div>
+  <div class="portfolio-scroll">
 
-    <a class="portfolio-item featured" href="https://www.instagram.com/reel/DX8x2zstSQp/" target="_blank">
-      <img src="cover/cover1.png" alt="Fare campagna è un gioco di squadra">
-      <div class="portfolio-caption">
-        <div class="tag">In evidenza · Video</div>
-        <div class="title">Fare campagna è un gioco di squadra</div>
-      </div>
-    </a>
+    <div class="portfolio-pair">
+      <a class="portfolio-card" href="https://www.instagram.com/reel/DX8x2zstSQp/" target="_blank">
+        <img src="cover/cover1.png" alt="Gioco di squadra">
+        <div class="portfolio-caption">
+          <div class="tag">In evidenza · Video</div>
+          <div class="title">Fare campagna è un gioco di squadra</div>
+        </div>
+      </a>
+      <a class="portfolio-card" href="https://www.instagram.com/p/DX7GZqXjcNC/" target="_blank">
+        <img src="cover/cover2.png" alt="Ex Italcementi">
+        <div class="portfolio-caption">
+          <div class="tag">Carosello</div>
+          <div class="title">Ex Italcementi: i numeri</div>
+        </div>
+      </a>
+    </div>
 
-    <a class="portfolio-item" href="https://www.instagram.com/p/DX7GZqXjcNC/" target="_blank">
-      <img src="cover/cover2.png" alt="Ex Italcementi">
-      <div class="portfolio-caption">
-        <div class="tag">Carosello</div>
-        <div class="title">Ex Italcementi: i numeri raccontati</div>
-      </div>
-    </a>
+    <div class="portfolio-pair">
+      <a class="portfolio-card" href="https://www.instagram.com/reel/DXzEyzwt4Jy/" target="_blank">
+        <img src="cover/cover3.png" alt="Primo Maggio">
+        <div class="portfolio-caption">
+          <div class="tag">Video</div>
+          <div class="title">Primo Maggio e il lavoro in Veneto</div>
+        </div>
+      </a>
+      <a class="portfolio-card" href="https://www.instagram.com/reel/DXwEz2RNdMT/" target="_blank">
+        <img src="cover/cover4.png" alt="Podcast Gen Z">
+        <div class="portfolio-caption">
+          <div class="tag">Podcast</div>
+          <div class="title">Con Angelica Gallo — Gen Z</div>
+        </div>
+      </a>
+    </div>
 
-    <a class="portfolio-item" href="https://www.instagram.com/reel/DXzEyzwt4Jy/" target="_blank">
-      <img src="cover/cover3.png" alt="Primo Maggio">
-      <div class="portfolio-caption">
-        <div class="tag">Video</div>
-        <div class="title">Primo Maggio e il lavoro in Veneto</div>
-      </div>
-    </a>
-
-    <a class="portfolio-item" href="https://www.instagram.com/reel/DXwEz2RNdMT/" target="_blank">
-      <img src="cover/cover4.png" alt="Podcast Gen Z">
-      <div class="portfolio-caption">
-        <div class="tag">Podcast</div>
-        <div class="title">Con Angelica Gallo — Gen Z</div>
-      </div>
-    </a>
-
-    <a class="portfolio-item" href="https://www.instagram.com/p/DXmPwlBjf7c/" target="_blank">
-      <img src="cover/cover5.png" alt="Banchetto in piazza">
-      <div class="portfolio-caption">
-        <div class="tag">Post</div>
-        <div class="title">Il banchetto in piazza</div>
-      </div>
-    </a>
+    <div class="portfolio-pair">
+      <a class="portfolio-card" href="https://www.instagram.com/p/DXmPwlBjf7c/" target="_blank">
+        <img src="cover/cover5.png" alt="Banchetto in piazza">
+        <div class="portfolio-caption">
+          <div class="tag">Post</div>
+          <div class="title">Il banchetto in piazza</div>
+        </div>
+      </a>
+    </div>
 
   </div>
+  <p class="portfolio-hint">← scorri per vedere altri →</p>
 </div>
 
 <div class="divider"></div>
@@ -235,6 +343,13 @@
   Candidato consigliere comunale · Monselice 2026<br>
   <a href="mailto:andrea.rosina77@gmail.com">andrea.rosina77@gmail.com</a>
 </div>
+
+<script>
+function toggle(btn, id) {
+  btn.classList.toggle('open');
+  document.getElementById(id).classList.toggle('open');
+}
+</script>
 
 </body>
 </html>
