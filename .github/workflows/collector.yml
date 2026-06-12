@@ -1,0 +1,33 @@
+name: Sottosuoli Collector
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # ogni giorno alle 06:00 UTC (08:00 ora italiana)
+  workflow_dispatch:        # permette esecuzione manuale dal pannello GitHub
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa dipendenze
+        run: pip install -r requirements.txt
+
+      - name: Esegui collector
+        run: python collector.py
+
+      - name: Commit e push se ci sono cambiamenti
+        run: |
+          git config user.name  "sottosuoli-bot"
+          git config user.email "bot@andrearosina.com"
+          git add index.html sottosuoli_news.json
+          git diff --cached --quiet || git commit -m "🌍 Aggiornamento notizie $(date +'%d/%m/%Y')"
+          git push
