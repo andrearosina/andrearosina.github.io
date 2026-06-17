@@ -39,14 +39,6 @@
   .section { padding: 32px 20px; max-width: 600px; margin: 0 auto; }
   .section-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
 
-  .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
-  .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-  /* Shorts verticale */
-  .video-wrap-short { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
-  .video-wrap-short iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-  /* Griglia video tematici */
   .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .video-card { background: white; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
   .video-card-embed { position: relative; padding-bottom: 56.25%; height: 0; }
@@ -60,44 +52,6 @@
   .tema-bar { width: 3px; align-self: stretch; background: var(--green-light); border-radius: 2px; flex-shrink: 0; }
   .tema-title { font-size: 12px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
   .tema-text { font-size: 13px; color: #3a3a3a; line-height: 1.55; }
-
-  /* PORTFOLIO SLIDER */
-  .portfolio-section { padding: 32px 0; }
-  .portfolio-header { padding: 0 20px; max-width: 600px; margin: 0 auto 16px; }
-  .portfolio-scroll {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 20px 12px;
-    scrollbar-width: none;
-  }
-  .portfolio-scroll::-webkit-scrollbar { display: none; }
-  .portfolio-pair {
-    display: flex;
-    gap: 10px;
-    flex-shrink: 0;
-    scroll-snap-align: start;
-  }
-  .portfolio-card {
-    width: 140px;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    position: relative;
-    display: block;
-    text-decoration: none;
-    background: #e8f0eb;
-    flex-shrink: 0;
-  }
-  .portfolio-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
-  .portfolio-card:hover img { transform: scale(1.04); }
-  .portfolio-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 18px 8px 8px; color: white; }
-  .portfolio-caption .tag { font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--green-light); margin-bottom: 2px; }
-  .portfolio-caption .title { font-size: 11px; font-weight: 500; line-height: 1.3; }
-  .portfolio-hint { padding: 0 20px; margin-top: 8px; font-size: 11px; color: var(--muted); text-align: center; }
 
   /* CV ACCORDION */
   .cv-stack { display: flex; flex-direction: column; gap: 8px; }
@@ -128,20 +82,25 @@
   .social-label { font-size: 14px; font-weight: 500; }
   .social-sub { font-size: 12px; color: var(--muted); }
 
-  .sottosuoli-section { background: var(--green); padding: 32px 20px; }
+  /* SOTTOSUOLI */
+  .sottosuoli-section { background: #ffffff; padding: 32px 20px; border-top: 3px solid var(--green); border-bottom: 3px solid var(--green); }
   .sottosuoli-inner { max-width: 600px; margin: 0 auto; }
-  .sottosuoli-badge { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--green-light); border: 1px solid rgba(149,213,178,0.4); border-radius: 4px; padding: 3px 8px; margin-bottom: 12px; }
-  .sottosuoli-title { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: white; margin-bottom: 8px; line-height: 1.2; }
-  .sottosuoli-desc { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.65; margin-bottom: 20px; }
+  .sottosuoli-badge { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--green); border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; margin-bottom: 12px; }
+  .sottosuoli-title { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--green); margin-bottom: 8px; line-height: 1.2; }
+  .sottosuoli-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
+  .sottosuoli-intro { font-family: 'Lora', serif; font-style: italic; font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; padding: 12px 16px; border-left: 3px solid var(--green-light); background: var(--green-pale); border-radius: 0 8px 8px 0; }
   .sottosuoli-news { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-  .news-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(149,213,178,0.2); border-radius: 10px; padding: 12px 14px; }
-  .news-tag { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green-light); margin-bottom: 4px; }
-  .news-title { font-size: 13px; font-weight: 500; color: white; line-height: 1.4; }
-  .news-date { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 4px; }
-  .news-placeholder { font-size: 12px; color: rgba(255,255,255,0.4); font-style: italic; text-align: center; padding: 16px; }
-  .sottosuoli-cta { display: flex; align-items: center; justify-content: center; gap: 10px; background: white; color: var(--green); border-radius: 10px; padding: 14px 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: opacity 0.2s; }
-  .sottosuoli-cta:hover { opacity: 0.92; }
-  .sottosuoli-cta .cta-sub { font-size: 11px; font-weight: 400; color: var(--muted); display: block; margin-top: 1px; }
+  .news-item { background: var(--green-pale); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; text-decoration: none; display: block; }
+  .news-item:hover { border-color: var(--green); background: #eef6f1; }
+  .news-tag { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 4px; }
+  .news-title { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.4; }
+  .news-comment { font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.5; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
+  .news-date { font-size: 11px; color: var(--muted); opacity: 0.6; margin-top: 5px; }
+  .sottosuoli-cta { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--green); color: white; border-radius: 10px; padding: 14px 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: opacity 0.2s; }
+  .sottosuoli-cta:hover { opacity: 0.88; }
+  .sottosuoli-cta .cta-sub { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.7); display: block; margin-top: 1px; }
+
+  .footer { background: var(--green); padding: 24px 20px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.7); }
   .footer strong { color: white; display: block; font-size: 14px; margin-bottom: 4px; }
   .footer a { color: var(--green-light); text-decoration: none; }
   .divider { height: 1px; background: var(--border); margin: 0 20px; }
@@ -149,10 +108,12 @@
 </head>
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
   <p>Geologo · GIS specialist · <a href="https://sottosuoli.substack.com" target="_blank">Iscriviti a Sottosuoli →</a></p>
 </div>
 
+<!-- HERO -->
 <div class="hero">
   <div class="avatar"><img src="foto.jpg" alt="Andrea Rosina"></div>
   <h1>Andrea Rosina</h1>
@@ -163,6 +124,37 @@
   </div>
 </div>
 
+<!-- SOTTOSUOLI — rassegna del giorno -->
+<div class="sottosuoli-section">
+  <div class="sottosuoli-inner">
+    <div class="sottosuoli-badge">Osservatorio · aggiornato oggi</div>
+    <h2 class="sottosuoli-title">Sottosuoli</h2>
+    <p class="sottosuoli-desc">Territorio, rischio ambientale e cambiamenti climatici raccontati da un geologo. Quello che non si vede in superficie.</p>
+
+    <div class="sottosuoli-news" id="sottosuoliNews">
+      <!-- SOTTOSUOLI:START -->
+      <a class="news-item" href="https://economiacircolare.com/regione-emilia-romagna-termovalorizzatore-plastica-differenziata/" target="_blank">
+        <div class="news-tag">Economia Circolare</div>
+        <div class="news-title">Crisi del riciclo, Emilia Romagna: “Rischio termovalorizzazione per la plastica differenziata”</div>
+        <div class="news-date">2026-06-17</div>
+      </a>
+      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/16/news/fiumi_italia_acqua_estate_2026-425414691/?rss" target="_blank">
+        <div class="news-tag">Repubblica Ambiente</div>
+        <div class="news-title">Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate</div>
+        <div class="news-date">2026-06-17</div>
+      </a>
+      <!-- SOTTOSUOLI:END -->
+    </div>
+
+    <a class="sottosuoli-cta" href="https://sottosuoli.substack.com" target="_blank">
+      <span>↓ Iscriviti a Sottosuoli<span class="cta-sub">Gratis · Su Substack · Disdici quando vuoi</span></span>
+    </a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VIDEO -->
 <div class="section">
   <p class="section-title">Video — territorio e ambiente</p>
   <div class="video-grid">
@@ -212,6 +204,7 @@
 
 <div class="divider"></div>
 
+<!-- DI COSA MI OCCUPO -->
 <div class="section">
   <p class="section-title">Di cosa mi occupo</p>
   <div class="temi">
@@ -225,6 +218,7 @@
 
 <div class="divider"></div>
 
+<!-- CHI SONO -->
 <div class="section">
   <p class="section-title">Chi sono</p>
   <div class="cv-stack">
@@ -332,69 +326,7 @@
 
 <div class="divider"></div>
 
-<div class="portfolio-section">
-  <div class="portfolio-header">
-    <p class="section-title">Ultimi interventi</p>
-  </div>
-  <div class="portfolio-scroll">
-
-    <div class="portfolio-pair">
-       <a class="portfolio-card" href="https://www.facebook.com/andrea.geobracc/posts/pfbid033EXLQKtrxysteSWZreEMrm9kGrwPrXbELnYrUw3q849YQBVRW6ox9cNSDibF72LKl" target="_blank">
-        <img src="cover/cover6.png" alt="Questo sono io">
-        <div class="portfolio-caption">
-          <div class="tag">Post Fb</div>
-          <div class="title">Presentazione del candidato</div>
-        </div>
-      </a>
-      <a class="portfolio-card" href="https://www.instagram.com/reel/DX8x2zstSQp/" target="_blank">
-        <img src="cover/cover1.png" alt="Gioco di squadra">
-        <div class="portfolio-caption">
-          <div class="tag">In evidenza · Video</div>
-          <div class="title">Fare campagna è un gioco di squadra</div>
-        </div>
-      </a>
-      <a class="portfolio-card" href="https://www.instagram.com/p/DX7GZqXjcNC/" target="_blank">
-        <img src="cover/cover2.png" alt="Ex Italcementi">
-        <div class="portfolio-caption">
-          <div class="tag">Carosello</div>
-          <div class="title">Ex Italcementi: i numeri</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="portfolio-pair">
-      <a class="portfolio-card" href="https://www.instagram.com/reel/DXzEyzwt4Jy/" target="_blank">
-        <img src="cover/cover3.png" alt="Primo Maggio">
-        <div class="portfolio-caption">
-          <div class="tag">Video</div>
-          <div class="title">Primo Maggio e il lavoro in Veneto</div>
-        </div>
-      </a>
-      <a class="portfolio-card" href="https://www.instagram.com/reel/DXwEz2RNdMT/" target="_blank">
-        <img src="cover/cover4.png" alt="Podcast Gen Z">
-        <div class="portfolio-caption">
-          <div class="tag">Podcast</div>
-          <div class="title">Con Angelica Gallo — Gen Z</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="portfolio-pair">
-      <a class="portfolio-card" href="https://www.instagram.com/p/DXmPwlBjf7c/" target="_blank">
-        <img src="cover/cover5.png" alt="Banchetto in piazza">
-        <div class="portfolio-caption">
-          <div class="tag">Post</div>
-          <div class="title">Il banchetto in piazza</div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-  <p class="portfolio-hint">← scorri per vedere altri →</p>
-</div>
-
-<div class="divider"></div>
-
+<!-- PODCAST -->
 <div class="section">
   <p class="section-title">Invisibile Perso — podcast</p>
   <iframe
@@ -409,6 +341,7 @@
 
 <div class="divider"></div>
 
+<!-- SEGUIMI -->
 <div class="section">
   <p class="section-title">Seguimi</p>
   <div class="social-grid">
@@ -424,10 +357,6 @@
       <div class="social-icon spotify">♫</div>
       <div><div class="social-label">Podcast — Invisibile Perso</div><div class="social-sub">Su Spotify</div></div>
     </a>
-    <a class="social-link" href="https://www.instagram.com/invisibileperso/" target="_blank">
-      <div class="social-icon ig">📷</div>
-      <div><div class="social-label">Instagram — Invisibile Perso</div><div class="social-sub">@invisibileperso</div></div>
-    </a>
     <a class="social-link" href="https://sottosuoli.substack.com" target="_blank">
       <div class="social-icon coalition">🌍</div>
       <div><div class="social-label">Sottosuoli</div><div class="social-sub">Newsletter su ambiente e territorio</div></div>
@@ -435,33 +364,7 @@
   </div>
 </div>
 
-<div class="sottosuoli-section">
-  <div class="sottosuoli-inner">
-    <div class="sottosuoli-badge">Newsletter</div>
-    <h2 class="sottosuoli-title">Sottosuoli</h2>
-    <p class="sottosuoli-desc">Territorio, rischio ambientale e cambiamenti climatici raccontati da un geologo. Quello che non si vede in superficie — ogni settimana nella tua email.</p>
-
-    <div class="sottosuoli-news" id="sottosuoliNews">
-      <!-- SOTTOSUOLI:START -->
-      <a class="news-item" href="https://economiacircolare.com/regione-emilia-romagna-termovalorizzatore-plastica-differenziata/" target="_blank" style="text-decoration:none;display:block;">
-        <div class="news-tag">ambiente-clima · geografia · Economia Circolare</div>
-        <div class="news-title">Crisi del riciclo, Emilia Romagna: “Rischio termovalorizzazione per la plastica differenziata”</div>
-        <div class="news-date">2026-06-17</div>
-      </a>
-      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/16/news/fiumi_italia_acqua_estate_2026-425414691/?rss" target="_blank" style="text-decoration:none;display:block;">
-        <div class="news-tag">cambiamenti-climatici · natura-biodiversita · Repubblica Ambiente</div>
-        <div class="news-title">Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate</div>
-        <div class="news-date">2026-06-17</div>
-      </a>
-      <!-- SOTTOSUOLI:END -->
-    </div>
-
-    <a class="sottosuoli-cta" href="https://sottosuoli.substack.com" target="_blank">
-      <span>↓ Iscriviti a Sottosuoli<span class="cta-sub">Gratis · Su Substack · Disdici quando vuoi</span></span>
-    </a>
-  </div>
-</div>
-
+<!-- FOOTER -->
 <div class="footer">
   <strong>Andrea Rosina</strong>
   Geologo · GIS specialist · Monselice<br>
