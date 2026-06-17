@@ -100,6 +100,20 @@
   .sottosuoli-cta:hover { opacity: 0.88; }
   .sottosuoli-cta .cta-sub { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.7); display: block; margin-top: 1px; }
 
+  /* POST DAL CAMPO */
+  .posts-section { padding: 32px 20px; max-width: 600px; margin: 0 auto; }
+  .post-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .post-card { background: white; border-radius: 10px; border: 1px solid var(--border);
+               overflow: hidden; text-decoration: none; display: block;
+               transition: border-color .2s, box-shadow .2s; }
+  .post-card:hover { border-color: var(--green); box-shadow: 0 2px 8px rgba(45,106,79,.1); }
+  .post-card-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+  .post-card-body { padding: 10px 12px; }
+  .post-card-title { font-size: 12px; font-weight: 600; color: var(--text);
+                     line-height: 1.35; margin-bottom: 4px; }
+  .post-card-comment { font-size: 11px; color: var(--muted); font-style: italic;
+                       line-height: 1.4; }
+
   .footer { background: var(--green); padding: 24px 20px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.7); }
   .footer strong { color: white; display: block; font-size: 14px; margin-bottom: 4px; }
   .footer a { color: var(--green-light); text-decoration: none; }
@@ -133,26 +147,15 @@
 
     <div class="sottosuoli-news" id="sottosuoliNews">
       <!-- SOTTOSUOLI:START -->
-      <p class="sottosuoli-intro">Proviamo a inserire queste news</p>
       <a class="news-item" href="https://economiacircolare.com/regione-emilia-romagna-termovalorizzatore-plastica-differenziata/" target="_blank">
         <div class="news-tag">Economia Circolare</div>
-        <div class="news-title">Crisi del riciclo, Emilia Romagna: “Rischio termovalorizzazione per la plastica differenziata”</div>
+        <div class="news-title">Crisi del riciclo, Emilia Romagna: "Rischio termovalorizzazione per la plastica differenziata"</div>
         <div class="news-date">2026-06-17</div>
       </a>
       <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/16/news/fiumi_italia_acqua_estate_2026-425414691/?rss" target="_blank">
         <div class="news-tag">Repubblica Ambiente</div>
-        <div class="news-title">Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate</div>
+        <div class="news-title">Dalla neve ai fiumi: un'Italia "capovolta" aspetta l'estate</div>
         <div class="news-date">2026-06-17</div>
-      </a>
-      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/17/news/alberi_co2_fotosintesi-425412638/?rss" target="_blank">
-        <div class="news-tag">Repubblica Ambiente</div>
-        <div class="news-title">Gli alberi potrebbero immagazzinare meno CO2 del previsto</div>
-        <div class="news-date">2026-06-17</div>
-      </a>
-      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/16/news/bonus_caldaie_dal_3_agosto_cambiano_le_regole_efficienza_energetica-425412485/?rss" target="_blank">
-        <div class="news-tag">Repubblica Ambiente</div>
-        <div class="news-title">Bonus caldaie, cambiano le regole: come funzionano gli incentivi per l’efficienza energetica</div>
-        <div class="news-date">2026-06-16</div>
       </a>
       <!-- SOTTOSUOLI:END -->
     </div>
@@ -165,51 +168,12 @@
 
 <div class="divider"></div>
 
-<!-- VIDEO -->
-<div class="section">
-  <p class="section-title">Video — territorio e ambiente</p>
-  <div class="video-grid">
-
-    <div class="video-card">
-      <div class="video-card-embed">
-        <iframe src="https://www.youtube.com/embed/GvhMByuO5Js" title="Consumo del suolo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card-label">
-        <div class="video-card-tag">Ambiente</div>
-        <div class="video-card-title">Consumo del suolo</div>
-      </div>
-    </div>
-
-    <div class="video-card">
-      <div class="video-card-embed">
-        <iframe src="https://www.youtube.com/embed/zGk0DNZ1igM" title="Cicloturismo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card-label">
-        <div class="video-card-tag">Territorio</div>
-        <div class="video-card-title">Cicloturismo</div>
-      </div>
-    </div>
-
-    <div class="video-card">
-      <div class="video-card-embed">
-        <iframe src="https://www.youtube.com/embed/93K0bng1Lwk" title="Senso del dissenso e ambiente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card-label">
-        <div class="video-card-tag">Ambiente</div>
-        <div class="video-card-title">Dissenso e responsabilità</div>
-      </div>
-    </div>
-
-    <div class="video-card">
-      <div class="video-card-embed">
-        <iframe src="https://www.youtube.com/embed/l1bdcMfFm9U" title="Analisi dei bilanci" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-card-label">
-        <div class="video-card-tag">Bilanci</div>
-        <div class="video-card-title">Analisi dei bilanci comunali</div>
-      </div>
-    </div>
-
+<!-- DAL CAMPO -->
+<div class="posts-section">
+  <p class="section-title">Dal campo</p>
+  <div class="post-grid">
+    <!-- POSTS:START -->
+    <!-- POSTS:END -->
   </div>
 </div>
 
