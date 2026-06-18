@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-06-18T18:46:52.765624+00:00",
-  "totale": 32,
+  "aggiornato": "2026-06-18T19:32:55.556406+00:00",
+  "totale": 13,
   "articoli": [
     {
       "titolo": "Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate",
@@ -63,6 +63,22 @@
       "data_iso": "2026-06-16T10:00:01+00:00"
     },
     {
+      "titolo": "Dalla piattaforma CliNE al nuovo quadro sul cambiamento climatico in Friuli Venezia Giulia",
+      "sommario": "È stato pubblicato online il documento “Il Friuli Venezia Giulia nel cambiamento climatico” (Stato dell’arte a maggio 2026) che utilizza le proiezioni climatiche elaborate attraverso CliNE per fornire un quadro aggiornato delle conoscenze sul clima regionale e sui possibili sviluppi futuri.",
+      "link": "https://www.snpambiente.it/notizie/temi/report-intertematici/cambiamenti-climatici/dalla-piattaforma-cline-al-nuovo-quadro-sul-cambiamento-climatico-in-friuli-venezia-giulia/?utm_source=rss&utm_medium=rss&utm_campaign=dalla-piattaforma-cline-al-nuovo-quadro-sul-cambiamento-climatico-in-friuli-venezia-giulia",
+      "fonte": "SNPA",
+      "categoria_fonte": "istituzionale",
+      "temi": [
+        "cambiamenti-climatici",
+        "veneto",
+        "ambiente-clima",
+        "geografia",
+        "friuli"
+      ],
+      "data": "2026-06-16",
+      "data_iso": "2026-06-16T09:14:31+00:00"
+    },
+    {
       "titolo": "Cibi importati nell’Unione europea: Slow Food invoca misure specchio. I casi studio di mais e grano",
       "sommario": "Chiedendo l'introduzione di misure specchio, Slow Food evidenzia la necessità che i cibi importati nell'Unione europea, come mais e grano, rispettino gli stessi standard di quelli prodotti nell'Ue.",
       "link": "https://www.lifegate.it/slow-food-misure-specchio-cibi-importati",
@@ -119,6 +135,33 @@
       "data_iso": "2026-06-15T10:40:27+00:00"
     },
     {
+      "titolo": "Incendi boschivi: nel 2025 aumenta la superficie andata in fumo. Necessario investire nella prevenzione",
+      "sommario": "ISPRA aggiorna la pagina dedicata agli impatti sugli ecosistemi dei grandi incendi boschivi     Il monitoraggio condotto da ISPRA nel corso del 2025 evidenzia un incremento dell’incidenza degli incendi rispetto all’anno precedente. La superficie complessiva interessata ammonta a 965 km 2  (pari all’estensione della provincia di Pistoia), un valore che quasi raddoppia le stime registrate nel 2024. I dati storici archiviati da EFFIS -European Forest Fire Information System – collocano il 2025 tra ",
+      "link": "https://www.isprambiente.gov.it/it/news/incendi-boschivi-nel-2025-aumenta-la-superficie-andata-in-fumo-necessario-investire-nella-prevenzione",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "temi": [
+        "droni",
+        "gis",
+        "natura-biodiversita",
+        "ambiente-clima",
+        "ecosistemi",
+        "clima-estremo"
+      ],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T08:27:00+00:00"
+    },
+    {
+      "titolo": "No ai data center per l’IA, Cittadina della California blocca la costruzione con un referendum",
+      "sommario": "Oltre l’86% degli elettori di Monterey Park ha bocciato la richiesta di costruzione. E’ la prima volta che accade negli Stati Uniti",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/12/news/data_center_referendum_california-425401548/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "temi": [],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T07:45:00+00:00"
+    },
+    {
       "titolo": "Le false promesse della filiera degli allevamenti intensivi",
       "sommario": "Torniamo a parlare di allevamenti intensivi, questa volta concentrandoci sulla comunicazione. È sempre più evidente come l’industria della carne e dei latticini abbia un modus operandi preciso volto a nascondere il suo impatto ambientale e mostrarsi positivo per la salute. Nonostante sempre più studi e report mostrino il contrario Continue Reading Le false promesse della filiera degli allevamenti intensivi\nL'articolo Le false promesse della filiera degli allevamenti intensivi proviene da Economi",
       "link": "https://economiacircolare.com/le-false-promesse-della-filiera-degli-allevamenti-intensivi/",
@@ -129,285 +172,18 @@
       "data_iso": "2026-06-15T07:00:20+00:00"
     },
     {
-      "titolo": "Maltempo Abruzzo, risveglio gelido sui rilievi: minime eccezionali per giugno, valori prossimi allo zero",
-      "sommario": "Il tempo migliora gradualmente sull’Abruzzo, ma il clima resta ancora frizzante soprattutto lungo il versante adriatico. Nelle prossime ore, infatti, persisteranno annuvolamenti irregolari accompagnati da venti settentrionali ancora sostenuti, responsabili di un ulteriore calo de",
-      "link": "https://www.meteoweb.eu/2026/06/maltempo-abruzzo-risveglio-gelido-sui-rilievi-minime-eccezionali-per-giugno-valori-prossimi-allo-zero/1001944404/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T09:25:55+00:00"
-    },
-    {
-      "titolo": "Trent’Anni dall’Alluvione di Versilia e Garfagnana: all’Università di Pisa una giornata di studio sulle sfide meteorologiche presenti e future",
-      "sommario": "A trent&#8217;anni esatti dal drammatico evento che il 19 giugno 1996 colpì duramente e profondamente diversi comuni della Versilia e della Garfagnana, la comunità scientifica, le istituzioni e i cittadini si riuniscono per una giornata di fondamentale importanza dedicata alla si",
-      "link": "https://www.meteoweb.eu/2026/06/trentanni-dallalluvione-di-versilia-e-garfagnana-alluniversita-di-pisa-una-giornata-di-studio-sulle-sfide-meteorologiche-presenti-e-future/1001944388/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T08:53:37+00:00"
-    },
-    {
-      "titolo": "Allerta in Cina: in arrivo “alluvioni estreme” nel Nord/Ovest dello Xinjiang",
-      "sommario": "Le autorità cinesi hanno lanciato un avviso alle comunità della regione nordoccidentale dello Xinjiang e delle aree limitrofe, invitando la popolazione a prepararsi a possibili &#8220;alluvioni estreme&#8221; nel corso dell’estate. Il fenomeno, secondo quanto riportato dai media ",
-      "link": "https://www.meteoweb.eu/2026/06/allerta-in-cina-in-arrivo-alluvioni-estreme-nel-nord-ovest-dello-xinjiang/1001944369/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico",
-        "clima_estremo"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T07:31:06+00:00"
-    },
-    {
-      "titolo": "Meteo Toscana: bel tempo fino a domenica, lunedì tornano i rovesci",
-      "sommario": "Quadro meteo generalmente stabile e caratterizzato da condizioni di tempo prevalentemente soleggiato in Toscana. Nel complesso, si prevedono temperature in graduale aumento, venti variabili tra deboli e moderati e mari per lo più poco mossi, con instabilità attesa lunedì. Il Lamm",
-      "link": "https://www.meteoweb.eu/2026/06/meteo-toscana-bel-tempo-fino-a-domenica-lunedi-tornano-i-rovesci/1001944364/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T06:37:01+00:00"
-    },
-    {
-      "titolo": "Esplosione sul Sole, la NASA conferma: nube di plasma punta la Terra",
-      "sommario": "Il meteo spaziale torna ad animarsi con una nuova allerta in vista del fine settimana. Ieri, la dinamica macchia solare 4465 ha scatenato un&#8217;esplosione sulla superficie della nostra stella, in una regione in cui le temperature superano normalmente i 6.000°C, generando una v",
-      "link": "https://www.meteoweb.eu/2026/06/esplosione-sul-sole-la-nasa-conferma-nube-di-plasma-punta-la-terra/1001944340/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T05:35:40+00:00"
-    },
-    {
-      "titolo": "Terremoto in Albania: sisma scuote il Sud | DATI e MAPPE",
-      "sommario": "La terra è tornata a tremare nel cuore della penisola balcanica durante le prime ore di questa mattina. Secondo i dati ufficiali rilasciati dall&#8217;Istituto Nazionale di Geofisica e Vulcanologia, un terremoto magnitudo 3.8 ha colpito il territorio dell&#8217;Albania. L&#8217;e",
-      "link": "https://www.meteoweb.eu/2026/06/terremoto-in-albania-sisma-scuote-il-sud-dati-e-mappe/1001944354/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "consumo_suolo"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T05:24:22+00:00"
-    },
-    {
-      "titolo": "USA, i tornado devastano il Midwest: voli cancellati e un morto, mentre la costa Est brucia",
-      "sommario": "Una violenta ondata di maltempo ha scosso le regioni centrali degli Stati Uniti, lasciando dietro di sé una scia di distruzione, case rase al suolo e intere comunità isolate senza energia elettrica. Nelle ultime ore, almeno 3 tornado hanno colpito con ferocia le aree urbane e rur",
-      "link": "https://www.meteoweb.eu/2026/06/usa-i-tornado-devastano-il-midwest-voli-cancellati-e-un-morto-mentre-la-costa-est-brucia/1001944333/",
-      "fonte": "MeteoWeb",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T03:44:44+00:00"
-    },
-    {
-      "titolo": "Le grandinate si spostano verso le regioni più fredde e diventeranno sempre più devastanti",
-      "sommario": "Un nuovo studio pubblicato su  Nature Climate Chance  mostra come, per via del riscaldamento globale, le condizioni favorevoli per le grandinate si stiano muovendo verso latitudini più alte",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/12/news/grandinate_crisi_clima-425399550/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "12 Jun 2026",
-      "data_iso": "2026-06-12T03:00:00+00:00"
-    },
-    {
-      "titolo": "Podcast – Green&Blue Festival: “La transizione, oltre i numeri”",
-      "sommario": "Le temperature che salgono, i mari che si innalzano, gli eventi meteo sempre più estremi. Ma anche i nuovi modi di generare energia, di spostarsi, di produrre e di consumare. Un podcast settimanale di approfondimento, dedicato alla Terra, ai cambiamenti climatici alle...",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/11/news/podcast_pianeta_greenblue_la_transizione_oltre_i_numeri-425405442/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "11 Jun 2026",
-      "data_iso": "2026-06-11T21:00:00+00:00"
-    },
-    {
-      "titolo": "Quali sono le Cinque Vele 2026, dal mare di Pollica al lago di Molveno",
-      "sommario": "La guida \"Il mare più bello\" di Legambiente e Touring Club premia con Cinque Vele le località marine e lacustri che puntano a una gestione e a un turismo sostenibile contro la crisi climatica",
-      "link": "https://www.lifegate.it/cinque-vele-2026-legambiente-touring-club-italiano",
-      "fonte": "LifeGate",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "11 Jun 2026",
-      "data_iso": "2026-06-11T14:52:24+00:00"
-    },
-    {
-      "titolo": "I Mondiali del 2026 tra crisi climatica e mobilità globale",
-      "sommario": "Temperature record e controlli alle frontiere: il Mondiale mostra come i cambiamenti climatici e le politiche migratorie influenzino anche lo sport.",
-      "link": "https://www.lifegate.it/mondiali-crisi-climatica-mobilita",
-      "fonte": "LifeGate",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "11 Jun 2026",
-      "data_iso": "2026-06-11T12:53:16+00:00"
-    },
-    {
-      "titolo": "Carlo Buontempo: “Le ondate di calore saranno sempre più frequenti”",
-      "sommario": "Per il direttore del Climate Change Service di Copernicus, ospite al Festival di Green&amp;Blue, la tendenza è chiara: “Questo e il prossimo anno rischiano di essere fra i più caldi”",
-      "link": "https://www.repubblica.it/green-and-blue/dossier/festival-greenandblue-2026/2026/05/26/news/carlo_buontempo-425371352/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "11 Jun 2026",
-      "data_iso": "2026-06-11T09:55:00+00:00"
-    },
-    {
-      "titolo": "Gli eventi estremi in Europa sono già “la nuova normalità”, secondo Copernicus",
-      "sommario": "Agli eventi estremi occorre abituarsi, perché non sono più l'eccezione: a spiegarlo è il servizio di monitoraggio climatico europeo Copernicus.",
-      "link": "https://www.lifegate.it/eventi-estremi-nuova-normalita-copernicus",
-      "fonte": "LifeGate",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "11 Jun 2026",
-      "data_iso": "2026-06-11T08:15:59+00:00"
-    },
-    {
-      "titolo": "Dagli anni Settanta sono triplicati i giorni di acqua alta (per colpa nostra)",
-      "sommario": "I livelli del mare si innalzano, e così anche gli episodi di acqua alta considerati “estremi”. Uno studio su  Science Advances  ha stimato il contributo umano a questi fenomeni",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/11/news/acqua_alta_crisi_clima-425403388/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico"
-      ],
-      "data": "11 Jun 2026",
-      "data_iso": "2026-06-11T07:43:33+00:00"
-    },
-    {
-      "titolo": "Greenpeace: “I super ricchi, responsabili di un quarto delle emissioni”",
-      "sommario": "Secondo gli analisti dell’organizzazione: l’1% della popolazione ad alto reddito contribuisce con quasi 1 trilione di dollari di danni all’anno al clima. “Un modo per affrontare lo squilibrio potrebbe essere attraverso le tasse sul patrimonio”",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/10/news/greenpeace_super_ricchi_danni_clima-425401951/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "10 Jun 2026",
-      "data_iso": "2026-06-10T14:57:36+00:00"
-    },
-    {
-      "titolo": "Copernicus: “A maggio caldo record in Europa secondo solo a quello del 2024”",
-      "sommario": "Temperature medie più alte di 1,42°C rispetto all’era preindustriale. “Probabile aumento degli eventi estremi e della siccità”",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/10/news/copernicus_maggio_caldo_record-425401837/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "10 Jun 2026",
-      "data_iso": "2026-06-10T13:30:05+00:00"
-    },
-    {
-      "titolo": "La Città nascosta",
-      "sommario": "ISPRA presenta l’aggiornamento della Carta delle cavità sotterranee di Roma   La mappa di densità delle cavità sotterranee di Roma, aggiornata al 2026, evidenzia come oltre 100 km² del territorio dell’Urbe sono interessati dalla presenza di vuoti sotterranei; quasi 61 km 2  risul",
-      "link": "https://www.isprambiente.gov.it/it/news/la-citta-nascosta",
+      "titolo": "Cibo, Biodiversità e Desertificazione",
+      "sommario": "In occasione della  Giornata mondiale contro la desertificazione e la siccità   l  ’Ordine degli Architetti P.P.C. della provincia di Messina e la Fondazione Architetti nel Mediterraneo Messina, con il patrocinio dell’Istituto Nazionale di Bioarchitettura e in collaborazione con Assocea Messina, propongono la giornata formativa dal titolo:  “ Cibo, Biodiversità e Desertificazione ”.    Saranno affrontati i temi relativi al rapporto tra cambiamenti climatici, tutela della biodiversità, alimentazi",
+      "link": "https://www.unccd.int/events/desertification-drought-day/2026",
       "fonte": "ISPRA",
       "categoria_fonte": "istituzionale",
       "temi": [
-        "rischio_idrogeologico",
-        "consumo_suolo"
+        "siccità",
+        "cambiamenti-climatici",
+        "biodiversità"
       ],
-      "data": "10 Jun 2026",
-      "data_iso": "2026-06-10T08:28:00+00:00"
-    },
-    {
-      "titolo": "Tibet, bastano 2°C in più per aumentare le emissioni dal permafrost dell’80%",
-      "sommario": "Il calore penetra nelle profondità del suolo liberando il carbonio antico, rimasto intrappolato per oltre 3 mila anni",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/10/news/tibet_permafrost_riscaldamento_globale-425399053/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "10 Jun 2026",
-      "data_iso": "2026-06-10T03:00:00+00:00"
-    },
-    {
-      "titolo": "Comprando un climatizzatore si ha diritto anche al bonus mobili",
-      "sommario": "Oltre allo sconto sulla pompa di calore si ottengono anche aiuti per l’acquisto di letti, tavoli, sedie ed elettrodomestici",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/09/news/fisco_verde_bonus_climatizzatore-425397118/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "09 Jun 2026",
-      "data_iso": "2026-06-09T18:00:00+00:00"
-    },
-    {
-      "titolo": "Ghiacciai valdostani, inverno 2025-26: accumuli in flessione",
-      "sommario": "La prima fase del monitoraggio dei ghiacciai regionali destinata alla misura degli apporti nevosi nell'inverno appena trascorso si è conclusa con le misure di accumulo effettuate a maggio sul Timorion e sul Rutor.",
-      "link": "https://www.snpambiente.it/notizie/temi/report-intertematici/cambiamenti-climatici/ghiacciai-valdostani-inverno-2025-26-accumuli-in-flessione/?utm_source=rss&utm_medium=rss&utm_campaign=ghiacciai-valdostani-inverno-2025-26-accumuli-in-flessione",
-      "fonte": "SNPA",
-      "categoria_fonte": "istituzionale",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "09 Jun 2026",
-      "data_iso": "2026-06-09T15:10:28+00:00"
-    },
-    {
-      "titolo": "Giornata contro la desertificazione e la siccità 2026",
-      "sommario": "Celebrata ogni anno il 17 giugno, la  Giornata mondiale contro la desertificazione e la siccità  è l'occasione in cui le Nazioni Unite sensibilizzano l'opinione pubblica sul degrado del suolo e sulla siccità, mobilitando azioni per proteggere e ripristinare la salute dei terreni.",
-      "link": "https://www.isprambiente.gov.it/it/news/giornata-contro-la-desertificazione-e-la-siccita-2026",
-      "fonte": "ISPRA",
-      "categoria_fonte": "istituzionale",
-      "temi": [
-        "clima_estremo",
-        "consumo_suolo"
-      ],
-      "data": "09 Jun 2026",
-      "data_iso": "2026-06-09T13:07:00+00:00"
-    },
-    {
-      "titolo": "Usa, il lago San Carlos chiuso per siccità e inquinamento. \"Sono morti tutti i pesci”",
-      "sommario": "Il grande bacino nel territorio Apache tra siccità, carenza d'ossigeno e proliferazione di alghe ha visto morire migliaia di trote e pesci persico. L'allarme delle autorità: \"Vietato avvicinarsi\"",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/09/news/lago_san_carlos_arizona_clima_siccita-425399316/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [
-        "rischio_idrogeologico",
-        "clima_estremo",
-        "consumo_suolo"
-      ],
-      "data": "09 Jun 2026",
-      "data_iso": "2026-06-09T10:53:04+00:00"
-    },
-    {
-      "titolo": "Summer School “Ecosistemi marino-costieri e cambiamenti climatici: catene di connessioni e resilienza”",
-      "sommario": "Nell’ambito della Scuola di Specializzazione in Discipline Ambientali di ISPRA, L’Istituto Superiore per la Protezione e la Ricerca Ambientale (ISPRA), organizza la Summer School sugli “Ecosistemi marino-costieri e cambiamenti climatici: catene di connessioni e resilienza” che si",
-      "link": "https://www.snpambiente.it/notizie/summer-school-ecosistemi-marino-costieri-e-cambiamenti-climatici-catene-di-connessioni-e-resilienza/?utm_source=rss&utm_medium=rss&utm_campaign=summer-school-ecosistemi-marino-costieri-e-cambiamenti-climatici-catene-di-connessioni-e-resilienza",
-      "fonte": "SNPA",
-      "categoria_fonte": "istituzionale",
-      "temi": [
-        "clima_estremo"
-      ],
-      "data": "09 Jun 2026",
-      "data_iso": "2026-06-09T10:40:24+00:00"
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T06:36:00+00:00"
     }
   ]
 }
