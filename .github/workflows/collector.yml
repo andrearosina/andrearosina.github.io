@@ -1,9 +1,10 @@
 name: Sottosuoli Collector
 
 on:
-  schedule:
-    - cron: '0 6 * * *'   # ogni giorno alle 06:00 UTC (08:00 ora italiana)
-  workflow_dispatch:        # permette esecuzione manuale dal pannello GitHub
+  # DISATTIVATO: la rassegna è gestita manualmente dalla dashboard locale (push_sito).
+  # Lo schedule automatico sovrascriveva la selezione editoriale curata.
+  # Resta solo il trigger manuale per emergenze/test.
+  workflow_dispatch:        # esecuzione manuale dal pannello GitHub
 
 jobs:
   collect:

@@ -1,7 +1,133 @@
 {
-  "aggiornato": "2026-06-12T09:33:55.053814+00:00",
-  "totale": 23,
+  "aggiornato": "2026-06-18T15:31:27.401826+00:00",
+  "totale": 32,
   "articoli": [
+    {
+      "titolo": "Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate",
+      "sommario": "Nord in difficoltà, mentre al Sud gli invasi sono pieni. La crisi del clima disegna una nuova geografia dell’acqua. Intanto il volume delle risorse idriche prodotto dalla fusione della neve cala del 48% rispetto agli anni scorsi. Il lago Trasimeno sceso di altri 8 centimetri",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/16/news/fiumi_italia_acqua_estate_2026-425414691/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "cambiamenti-climatici",
+        "natura-biodiversita",
+        "ambiente-clima",
+        "geografia",
+        "italia",
+        "acqua-dolce",
+        "fiumi"
+      ],
+      "data": "2026-06-17",
+      "data_iso": "2026-06-17T07:00:00+00:00"
+    },
+    {
+      "titolo": "Gli alberi potrebbero immagazzinare meno CO2 del previsto",
+      "sommario": "Lo studio: non sempre la fotosintesi comporta una crescita della pianta, e dunque uno stoccaggio di lungo termine della CO2 sotto forma di materiale legnoso",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/17/news/alberi_co2_fotosintesi-425412638/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "emissioni",
+        "ambiente-clima",
+        "mitigazione"
+      ],
+      "data": "2026-06-17",
+      "data_iso": "2026-06-17T05:00:00+00:00"
+    },
+    {
+      "titolo": "Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi”",
+      "sommario": "Giovanni Carrosio, docente di Sociologia dell’ambiente all’Università di Trieste, è “d’accordo dal punto di vista valoriale, bisogna però interrogarsi sulle conseguenze nell'opinione pubblica” Continue Reading Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi”\nL'articolo Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi” proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/carrosio-units-pubblicita-fonti-fossili/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "geografia",
+        "friuli"
+      ],
+      "data": "2026-06-16",
+      "data_iso": "2026-06-16T12:00:40+00:00"
+    },
+    {
+      "titolo": "Net zero: le imprese cambiano linguaggio. Resilienza come arroccamento strategico?",
+      "sommario": "La congiuntura geopolitica, l’aumento dei costi energetici e l’economia di guerra rendono l’impegno delle imprese verso il Net Zero più tortuoso. Riforestare, proteggere ecosistemi e ripristinare suoli è necessario, ma non può diventare una licenza per continuare a estrarre petrolio, gas e carbone Continue Reading Net zero: le imprese cambiano linguaggio. Resilienza come arroccamento strategico?\nL'articolo Net zero: le imprese cambiano linguaggio. Resilienza come arroccamento strategico? provien",
+      "link": "https://economiacircolare.com/net-zero-imprese-rapporto-bsi/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "natura-biodiversita",
+        "ambiente-clima",
+        "ecosistemi",
+        "mitigazione"
+      ],
+      "data": "2026-06-16",
+      "data_iso": "2026-06-16T10:00:01+00:00"
+    },
+    {
+      "titolo": "Cibi importati nell’Unione europea: Slow Food invoca misure specchio. I casi studio di mais e grano",
+      "sommario": "Chiedendo l'introduzione di misure specchio, Slow Food evidenzia la necessità che i cibi importati nell'Unione europea, come mais e grano, rispettino gli stessi standard di quelli prodotti nell'Ue.",
+      "link": "https://www.lifegate.it/slow-food-misure-specchio-cibi-importati",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "food"
+      ],
+      "data": "2026-06-16",
+      "data_iso": "2026-06-16T07:23:38+00:00"
+    },
+    {
+      "titolo": "Come decarbonizzare la filiera agroalimentare, secondo il progetto MC0",
+      "sommario": "Grazie al progetto transfrontaliero MC0, tante PMI italiane e francesi hanno avviato un processo di decarbonizzazione. Anche per il settore agroalimentare.",
+      "link": "https://www.lifegate.it/decarbonizzare-filiera-agroalimentare-mc0",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "emissioni",
+        "ambiente-clima",
+        "mitigazione"
+      ],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T12:33:22+00:00"
+    },
+    {
+      "titolo": "Le banche non frenano sulle fossili, anzi: 8.700 miliardi di dollari da Parigi a oggi",
+      "sommario": "Il nuovo rapporto Banking on Climate Chaos denuncia quasi mille miliardi di dollari di finanziamenti a petrolio, gas e carbone nel solo 2025. In testa JPMorgan Chase, Bank of America e MUFG, mentre la crisi energetica globale riporta al centro il legame tra fossili, instabilità geopolitica e costo della vita: “le banche più grandi del mondo stanno scegliendo di rendere il nostro sistema energetico più costoso, più fragile e più iniquo” Continue Reading Le banche non frenano sulle fossili, anzi: ",
+      "link": "https://economiacircolare.com/banking-on-climate-chaos-2026/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "droni"
+      ],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T12:00:21+00:00"
+    },
+    {
+      "titolo": "La sfida per l’eolico guarda al turismo: la guida di Legambiente sui “Parchi del Vento”",
+      "sommario": "L’associazione pubblica una nuova edizione che valorizza 34 impianti eolici in Italia. “Esempi di transizione energetica e di turismo sostenibile”. Ogni tappa una scheda tecnica e informazioni sui territori. Tra trekking, ciclabili, passeggiate a cavallo, arrampicate, rafting e...",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/15/news/giornata_mondiale_del_vento_legambiente_guida_parchi_del_vento-425411894/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "temi": [
+        "ambiente-clima",
+        "geografia",
+        "italia",
+        "mobilita",
+        "transizione-energetica",
+        "rinnovabili",
+        "ciclabili"
+      ],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T10:40:27+00:00"
+    },
+    {
+      "titolo": "Le false promesse della filiera degli allevamenti intensivi",
+      "sommario": "Torniamo a parlare di allevamenti intensivi, questa volta concentrandoci sulla comunicazione. È sempre più evidente come l’industria della carne e dei latticini abbia un modus operandi preciso volto a nascondere il suo impatto ambientale e mostrarsi positivo per la salute. Nonostante sempre più studi e report mostrino il contrario Continue Reading Le false promesse della filiera degli allevamenti intensivi\nL'articolo Le false promesse della filiera degli allevamenti intensivi proviene da Economi",
+      "link": "https://economiacircolare.com/le-false-promesse-della-filiera-degli-allevamenti-intensivi/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "temi": [],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T07:00:20+00:00"
+    },
     {
       "titolo": "Maltempo Abruzzo, risveglio gelido sui rilievi: minime eccezionali per giugno, valori prossimi allo zero",
       "sommario": "Il tempo migliora gradualmente sull’Abruzzo, ma il clima resta ancora frizzante soprattutto lungo il versante adriatico. Nelle prossime ore, infatti, persisteranno annuvolamenti irregolari accompagnati da venti settentrionali ancora sostenuti, responsabili di un ulteriore calo de",
