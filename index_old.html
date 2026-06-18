@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Andrea Rosina — Geologo, GIS specialist, osservatore di territori fragili. Autore di Sottosuoli, newsletter su ambiente e territorio.">
+<meta property="og:title" content="Andrea Rosina">
+<meta property="og:description" content="Andrea Rosina — Geologo, GIS specialist, osservatore di territori fragili. Autore di Sottosuoli, newsletter su ambiente e territorio.">
+<meta property="og:image" content="https://andrearosina.com/foto.jpg">
+<meta property="og:url" content="https://andrearosina.com/">
+<meta property="og:type" content="website">
+<title>Andrea Rosina</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2D6A4F;
+    --green-light: #95D5B2;
+    --green-pale: #F8FAF9;
+    --orange: #E07B39;
+    --text: #1a1a1a;
+    --muted: #5a6e62;
+    --border: #d4e6da;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Barlow', sans-serif; background: var(--green-pale); color: var(--text); line-height: 1.6; }
+
+  .topbar { background: var(--green); padding: 10px 20px; text-align: center; }
+  .topbar p { color: var(--green-light); font-size: 12px; letter-spacing: 0.8px; text-transform: uppercase; }
+  .topbar a { color: white; text-decoration: none; font-weight: 600; }
+
+  .hero { background: var(--green); padding: 40px 24px 32px; text-align: center; color: white; }
+  .avatar { width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--green-light); margin: 0 auto 16px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 600; color: var(--green-light); overflow: hidden; }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .hero h1 { font-size: 26px; font-weight: 600; margin-bottom: 4px; }
+  .hero .role { font-size: 13px; color: var(--green-light); letter-spacing: 0.5px; margin-bottom: 20px; }
+  .quote-block { background: rgba(255,255,255,0.08); border-left: 3px solid var(--green-light); border-radius: 0 8px 8px 0; padding: 14px 16px; text-align: left; max-width: 480px; margin: 0 auto; }
+  .quote-block p { font-family: 'Lora', serif; font-style: italic; font-size: 15px; color: rgba(255,255,255,0.92); line-height: 1.6; }
+
+  .section { padding: 32px 20px; max-width: 600px; margin: 0 auto; }
+  .section-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .video-card { background: white; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+  .video-card-embed { position: relative; padding-bottom: 56.25%; height: 0; }
+  .video-card-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+  .video-card-label { padding: 8px 10px; }
+  .video-card-tag { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.7px; color: var(--green); margin-bottom: 2px; }
+  .video-card-title { font-size: 12px; font-weight: 500; color: var(--text); line-height: 1.35; }
+
+  .temi { display: flex; flex-direction: column; gap: 12px; }
+  .tema { background: white; border-radius: 10px; border: 1px solid var(--border); padding: 14px 16px; display: flex; gap: 14px; align-items: flex-start; }
+  .tema-bar { width: 3px; align-self: stretch; background: var(--green-light); border-radius: 2px; flex-shrink: 0; }
+  .tema-title { font-size: 12px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px; }
+  .tema-text { font-size: 13px; color: #3a3a3a; line-height: 1.55; }
+
+  /* CV ACCORDION */
+  .cv-stack { display: flex; flex-direction: column; gap: 8px; }
+  .cv-toggle { width: 100%; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); text-align: left; gap: 10px; }
+  .cv-toggle:hover { border-color: var(--green); }
+  .cv-toggle .cv-icon { font-size: 16px; flex-shrink: 0; }
+  .cv-toggle .arrow { font-size: 11px; color: var(--muted); transition: transform 0.25s; flex-shrink: 0; }
+  .cv-toggle.open { border-radius: 10px 10px 0 0; border-color: var(--green); }
+  .cv-toggle.open .arrow { transform: rotate(180deg); }
+  .cv-content { display: none; background: white; border: 1px solid var(--green); border-top: none; border-radius: 0 0 10px 10px; padding: 16px; margin-bottom: 0; }
+  .cv-content.open { display: block; }
+  .cv-block { margin-bottom: 16px; }
+  .cv-block:last-child { margin-bottom: 0; }
+  .cv-block-title { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 8px; }
+  .cv-item { font-size: 13px; color: #3a3a3a; line-height: 1.55; padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .cv-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .cv-item strong { font-weight: 600; color: var(--text); display: block; }
+  .cv-item span { font-size: 11px; color: var(--muted); display: block; margin-bottom: 3px; }
+
+  .social-grid { display: flex; flex-direction: column; gap: 10px; }
+  .social-link { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+  .social-link:hover { border-color: var(--green); }
+  .social-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+  .social-icon.ig { background: #fce4ec; }
+  .social-icon.fb { background: #e3f2fd; }
+  .social-icon.spotify { background: #e8f5e9; }
+  .social-icon.coalition { background: #f1f8e9; }
+  .social-label { font-size: 14px; font-weight: 500; }
+  .social-sub { font-size: 12px; color: var(--muted); }
+
+  /* SOTTOSUOLI */
+  .sottosuoli-section { background: #ffffff; padding: 32px 20px; border-top: 3px solid var(--green); border-bottom: 3px solid var(--green); }
+  .sottosuoli-inner { max-width: 600px; margin: 0 auto; }
+  .sottosuoli-badge { display: inline-block; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--green); border: 1px solid var(--border); border-radius: 4px; padding: 3px 8px; margin-bottom: 12px; }
+  .sottosuoli-title { font-family: 'Lora', serif; font-size: 28px; font-weight: 600; color: var(--green); margin-bottom: 8px; line-height: 1.2; }
+  .sottosuoli-desc { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
+  .sottosuoli-intro { font-family: 'Lora', serif; font-style: italic; font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; padding: 12px 16px; border-left: 3px solid var(--green-light); background: var(--green-pale); border-radius: 0 8px 8px 0; }
+  .sottosuoli-news { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+  .news-item { background: var(--green-pale); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; text-decoration: none; display: block; }
+  .news-item:hover { border-color: var(--green); background: #eef6f1; }
+  .news-tag { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 4px; }
+  .news-title { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.4; }
+  .news-comment { font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.5; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
+  .news-date { font-size: 11px; color: var(--muted); opacity: 0.6; margin-top: 5px; }
+  .sottosuoli-cta { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--green); color: white; border-radius: 10px; padding: 14px 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: opacity 0.2s; }
+  .sottosuoli-cta:hover { opacity: 0.88; }
+  .sottosuoli-cta .cta-sub { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.7); display: block; margin-top: 1px; }
+
+  /* POST DAL CAMPO */
+  .posts-section { padding: 32px 20px; max-width: 600px; margin: 0 auto; }
+  .post-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .post-card { background: white; border-radius: 10px; border: 1px solid var(--border);
+               overflow: hidden; text-decoration: none; display: block;
+               transition: border-color .2s, box-shadow .2s; }
+  .post-card:hover { border-color: var(--green); box-shadow: 0 2px 8px rgba(45,106,79,.1); }
+  .post-card-img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+  .post-card-body { padding: 10px 12px; }
+  .post-card-title { font-size: 12px; font-weight: 600; color: var(--text);
+                     line-height: 1.35; margin-bottom: 4px; }
+  .post-card-comment { font-size: 11px; color: var(--muted); font-style: italic;
+                       line-height: 1.4; }
+
+  .footer { background: var(--green); padding: 24px 20px; text-align: center; font-size: 13px; color: rgba(255,255,255,0.7); }
+  .footer strong { color: white; display: block; font-size: 14px; margin-bottom: 4px; }
+  .footer a { color: var(--green-light); text-decoration: none; }
+  .divider { height: 1px; background: var(--border); margin: 0 20px; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <p>Geologo · GIS specialist · <a href="https://sottosuoli.substack.com" target="_blank">Iscriviti a Sottosuoli →</a></p>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="avatar"><img src="foto.jpg" alt="Andrea Rosina"></div>
+  <h1>Andrea Rosina</h1>
+  <p class="role">Geologo · GIS specialist</p>
+  <div class="quote-block">
+    <p>Leggo il territorio nei dati e lo racconto a chi ci vive sopra.</p>
+    <p style="margin-top:10px; font-style:normal; font-family:'Barlow',sans-serif; font-size:13px; color:rgba(255,255,255,0.75); line-height:1.55;">Vent'anni di dati ambientali, mappe e sistemi informativi territoriali. E la convinzione che capire il territorio sia il primo passo per prendersene cura.</p>
+  </div>
+</div>
+
+<!-- SOTTOSUOLI — rassegna del giorno -->
+<div class="sottosuoli-section">
+  <div class="sottosuoli-inner">
+    <div class="sottosuoli-badge">Osservatorio · aggiornato oggi</div>
+    <h2 class="sottosuoli-title">Sottosuoli</h2>
+    <p class="sottosuoli-desc">Territorio, rischio ambientale e cambiamenti climatici raccontati da un geologo. Quello che non si vede in superficie.</p>
+
+    <!-- Due modalità -->
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:24px;">
+      <div style="background:white; border-radius:10px; padding:14px 16px; display:flex; gap:14px; align-items:flex-start; border-left:4px solid var(--green);">
+        <div style="font-size:22px; flex-shrink:0; margin-top:1px;">📰</div>
+        <div>
+          <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--green); margin-bottom:5px;">Sul sito — ogni giorno</div>
+          <div style="font-size:13px; color:#3a3a3a; line-height:1.6;">Una piccola rassegna stampa: le notizie su ambiente, territorio e clima che ho trovato rilevanti nelle ultime 24 ore. Senza commento, solo segnalazione.</div>
+        </div>
+      </div>
+      <div style="background:white; border-radius:10px; padding:14px 16px; display:flex; gap:14px; align-items:flex-start; border-left:4px solid var(--orange);">
+        <div style="font-size:22px; flex-shrink:0; margin-top:1px;">✉️</div>
+        <div>
+          <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--orange); margin-bottom:5px;">In newsletter — ogni settimana</div>
+          <div style="font-size:13px; color:#3a3a3a; line-height:1.6;">Una selezione ragionata con il mio commento: cosa è successo, perché conta, cosa ci dice del territorio in cui viviamo. Più gli approfondimenti che non entrano in una notizia.</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--muted); margin-bottom:10px;">Rassegna di oggi</p>
+
+    <div class="sottosuoli-news" id="sottosuoliNews">
+      <!-- SOTTOSUOLI:START -->
+      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/16/news/fiumi_italia_acqua_estate_2026-425414691/?rss" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">cambiamenti-climatici · natura-biodiversita · Repubblica Ambiente</div>
+        <div class="news-title">Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate</div>
+        <div class="news-date">2026-06-17</div>
+      </a>
+      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/17/news/alberi_co2_fotosintesi-425412638/?rss" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">emissioni · ambiente-clima · Repubblica Ambiente</div>
+        <div class="news-title">Gli alberi potrebbero immagazzinare meno CO2 del previsto</div>
+        <div class="news-date">2026-06-17</div>
+      </a>
+      <a class="news-item" href="https://economiacircolare.com/carrosio-units-pubblicita-fonti-fossili/" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">geografia · friuli · Economia Circolare</div>
+        <div class="news-title">Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi”</div>
+        <div class="news-date">2026-06-16</div>
+      </a>
+      <a class="news-item" href="https://economiacircolare.com/net-zero-imprese-rapporto-bsi/" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">natura-biodiversita · ambiente-clima · Economia Circolare</div>
+        <div class="news-title">Net zero: le imprese cambiano linguaggio. Resilienza come arroccamento strategico?</div>
+        <div class="news-date">2026-06-16</div>
+      </a>
+      <a class="news-item" href="https://www.lifegate.it/slow-food-misure-specchio-cibi-importati" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">food · LifeGate</div>
+        <div class="news-title">Cibi importati nell’Unione europea: Slow Food invoca misure specchio. I casi studio di mais e grano</div>
+        <div class="news-date">2026-06-16</div>
+      </a>
+      <a class="news-item" href="https://www.lifegate.it/decarbonizzare-filiera-agroalimentare-mc0" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">emissioni · ambiente-clima · LifeGate</div>
+        <div class="news-title">Come decarbonizzare la filiera agroalimentare, secondo il progetto MC0</div>
+        <div class="news-date">2026-06-15</div>
+      </a>
+      <a class="news-item" href="https://economiacircolare.com/banking-on-climate-chaos-2026/" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">droni · Economia Circolare</div>
+        <div class="news-title">Le banche non frenano sulle fossili, anzi: 8.700 miliardi di dollari da Parigi a oggi</div>
+        <div class="news-date">2026-06-15</div>
+      </a>
+      <a class="news-item" href="https://www.repubblica.it/green-and-blue/2026/06/15/news/giornata_mondiale_del_vento_legambiente_guida_parchi_del_vento-425411894/?rss" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">ambiente-clima · geografia · Repubblica Ambiente</div>
+        <div class="news-title">La sfida per l’eolico guarda al turismo: la guida di Legambiente sui “Parchi del Vento”</div>
+        <div class="news-date">2026-06-15</div>
+      </a>
+      <a class="news-item" href="https://economiacircolare.com/le-false-promesse-della-filiera-degli-allevamenti-intensivi/" target="_blank" style="text-decoration:none;display:block;">
+        <div class="news-tag">Notizia · Economia Circolare</div>
+        <div class="news-title">Le false promesse della filiera degli allevamenti intensivi</div>
+        <div class="news-date">2026-06-15</div>
+      </a>
+      <!-- SOTTOSUOLI:END -->
+    </div>
+
+    <a class="sottosuoli-cta" href="https://sottosuoli.substack.com" target="_blank">
+      <span>✉ Iscriviti alla newsletter settimanale<span class="cta-sub">Selezione ragionata · commento · approfondimenti · gratis su Substack</span></span>
+    </a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SOTTO LA PERGOLA -->
+<div class="posts-section">
+  <p class="section-title">Sotto la pergola</p>
+  <p style="font-size:13px; color:var(--muted); line-height:1.6; margin-bottom:18px;">Contenuti, commenti e approfondimenti: dalla pergola all'ambiente che ci circonda.</p>
+  <div class="post-grid">
+    <!-- POSTS:START -->
+      <a class="post-card" href="https://www.instagram.com/reel/DZNby3Ctb82/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+        <img src="cover/763f09f5deda4801b04c091fe74198b6.png" alt="Giornata mondiale dell&#x27;ambiente" class="post-card-img">
+        <div class="post-card-body">
+          <div class="post-card-title">Giornata mondiale dell&#x27;ambiente</div>
+          <div class="post-card-comment">Insieme alle compagne e ai compagni di lista abbiamo voluto fermarci un momento — non per fare un comizio, ma per ricordare perché tutto questo ha senso.
+
+Le parole di Michelle Bachelet, di Papa Francesco. E poi le nostre, quelle di persone che vivono a Monselice e credono che prendersi cura del territorio sia un atto politico concreto, non uno slogan.</div>
+        </div>
+      </a>
+      <a class="post-card" href="https://www.facebook.com/reel/3129224143931643" target="_blank">
+        <img src="cover/ff5a55fe1c174098bfacca50544a892c.png" alt="Post di saluto dopo la lunga e intensa campagna elettorale" class="post-card-img">
+        <div class="post-card-body">
+          <div class="post-card-title">Post di saluto dopo la lunga e intensa campagna elettorale</div>
+          <div class="post-card-comment">proviamo a caricare</div>
+        </div>
+      </a>
+      <!-- POSTS:END -->
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- DI COSA MI OCCUPO -->
+<div class="section">
+  <p class="section-title">Di cosa mi occupo</p>
+  <div class="temi">
+    <div class="tema" style="border-left:3px solid #2D6A4F;"><div class="tema-bar" style="background:#2D6A4F;"></div><div><div class="tema-title" style="color:#2D6A4F;">Dati ambientali e GIS</div><div class="tema-text">Lavoro con dati ambientali da vent'anni. Sistemi informativi territoriali, WebGIS, monitoraggio ambientale in tempo reale. Dalla Laguna di Venezia all'Adriatico, costruisco strumenti che rendono i dati accessibili e utili.</div></div></div>
+    <div class="tema" style="border-left:3px solid #3D8C6F;"><div class="tema-bar" style="background:#3D8C6F;"></div><div><div class="tema-title" style="color:#3D8C6F;">Territorio e rischio</div><div class="tema-text">Rischio idrogeologico, consumo di suolo, fragilità dei territori. Questioni che conosco dai dati e racconto cercando di renderle comprensibili a chi non ha un background tecnico ma vive sullo stesso territorio.</div></div></div>
+    <div class="tema" style="border-left:3px solid #74C69D;"><div class="tema-bar" style="background:#74C69D;"></div><div><div class="tema-title" style="color:#52916E;">Cambiamenti climatici</div><div class="tema-text">Non come tema astratto ma come fenomeno che si legge nei dati locali, nelle alluvioni, nelle siccità, nella trasformazione dei paesaggi che conosciamo. Guardare il clima con gli strumenti della geologia e della pianificazione territoriale.</div></div></div>
+    <div class="tema" style="border-left:3px solid #E07B39;"><div class="tema-bar" style="background:#E07B39;"></div><div><div class="tema-title" style="color:#E07B39;">Bici e territorio</div><div class="tema-text">Vado in bici e conosco strade, margini e potenzialità del territorio da una prospettiva diversa. Mobilità lenta, lettura del paesaggio, esplorazione — un altro modo di capire dove viviamo.</div></div></div>
+  </div>
+  <p style="margin-top:16px; font-size:13px; color:var(--muted); font-family:'Lora',serif; font-style:italic; text-align:center; line-height:1.6;">Non porto slogan, ma un modo di lavorare:<br>osservare, capire, condividere.</p>
+</div>
+
+<div class="divider"></div>
+
+<!-- CHI SONO -->
+<div class="section">
+  <p class="section-title">Chi sono</p>
+  <div class="cv-stack">
+
+    <button class="cv-toggle" onclick="toggle(this,'cv1')">
+      <span class="cv-icon">🗺️</span> Lavoro — GIS e dati ambientali
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv1">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>CORILA — Responsabile Progetti GIS e Comunicazione</strong>
+          <span>2009 – presente</span>
+          Gestione di dati ambientali e sviluppo di piattaforme WebGIS. Progetti INTERREG su pianificazione spaziale marittima e monitoraggio della Laguna di Venezia. Redazione del Piano Morfologico in collaborazione con il Ministero delle Infrastrutture.
+        </div>
+        <div class="cv-item">
+          <strong>Servizio Geologico della Provincia di Venezia</strong>
+          <span>2006 – 2009</span>
+          Digitalizzazione della Carta Geologica e Idrogeologica provinciale. Analisi della subsidenza e monitoraggio delle falde acquifere.
+        </div>
+        <div class="cv-item">
+          <strong>Competenze tecniche</strong>
+          QGIS, GeoNode, MapServer, OpenLayers, Leaflet, ArcGIS · PostgreSQL/PostGIS, Python, SQL · Master II livello in Sistemi Informativi Territoriali, IUAV Venezia (2007) · Laurea in Geologia, Università di Padova (2004)
+        </div>
+      </div>
+    </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv2')">
+      <span class="cv-icon">🧭</span> Territorio — GeoTransect e VenetoBside
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv2">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>GeoTransect (2011)</strong>
+          <span>Associazione geologica Il Reggipoggio</span>
+          Viaggio a piedi e in bici dal nord al sud del Veneto attraverso i GeoSiti regionali. Un progetto che univa osservazione scientifica, camminata e narrazione ambientale. Coprì l'attenzione del Corriere.it.
+        </div>
+        <div class="cv-item">
+          <strong>VenetoBside (2019)</strong>
+          Sei tappe dalla Tre Cime di Lavaredo fino al delta del Po, in bicicletta, attraverso le aree marginali del Veneto colpite dalla tempesta VAIA. Un viaggio tra alti e bassi topografici, geografici e umani.
+        </div>
+        <div class="cv-item">
+          <strong>Il Reggipoggio (2007 – 2012)</strong>
+          Presidente dell'associazione geologica monselicense. Organizzazione di escursioni, attività culturali e divulgazione scientifica sul territorio dei Colli Euganei.
+        </div>
+      </div>
+    </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv3')">
+      <span class="cv-icon">📷</span> Fotografia e racconto visivo
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv3">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>Fotografo sportivo — Sportograf</strong>
+          <span>2022 – presente</span>
+          Copertura fotografica di eventi di ultratrail ed endurance cycling. Approccio documentaristico, attenzione alla dimensione umana prima che alla prestazione.
+        </div>
+        <div class="cv-item">
+          <strong>Formazione</strong>
+          Corso di photoreportage con Daniele Cagnazzo · Corso per filmmaker e documentarista di viaggio · DaVinci Resolve: editing e color grading con Travel Media House (2023)
+        </div>
+      </div>
+    </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv4')">
+      <span class="cv-icon">🚴</span> Bici — Altrociclismo e VagoTorno
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv4">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>Altrociclismo (2014 – presente)</strong>
+          Blog, podcast e newsletter dedicati al ciclismo amatoriale. Storie di persone, non di watt. L'idea che la bici sia uno strumento per leggere il territorio e raccontare chi si è.
+        </div>
+        <div class="cv-item">
+          <strong>VagoTorno ASD — Presidente</strong>
+          <span>2016 – presente</span>
+          Associazione sportiva dilettantistica con base a Monselice. Organizzazione di eventi ciclistici sul territorio dei Colli Euganei e della Bassa Padovana.
+        </div>
+      </div>
+    </div>
+
+    <button class="cv-toggle" onclick="toggle(this,'cv5')">
+      <span class="cv-icon">🎙️</span> Podcast — Invisibile Perso
+      <span class="arrow">▼</span>
+    </button>
+    <div class="cv-content" id="cv5">
+      <div class="cv-block">
+        <div class="cv-item">
+          <strong>Invisibile Perso (gennaio 2025 – presente)</strong>
+          Diario intimo di un geologo quarantenne in crisi. Frustrazione lavorativa, senso di inadeguatezza e ricerca di autenticità — senza filtri. Un podcast sulla Generazione X che si sente incompiuta e cerca un modo per stare al mondo con più senso.
+        </div>
+        <div class="cv-item">
+          <strong>Formazione podcast</strong>
+          Corso branded podcast con Rossella Pivanti (2022)
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- PODCAST -->
+<div class="section">
+  <p class="section-title">Invisibile Perso — podcast</p>
+  <iframe
+    src="https://open.spotify.com/embed/show/4DFO1TUfdTAAenUVn9j13b"
+    width="100%"
+    height="152"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    style="border-radius:10px; display:block;">
+  </iframe>
+</div>
+
+<div class="divider"></div>
+
+<!-- SEGUIMI -->
+<div class="section">
+  <p class="section-title">Seguimi</p>
+  <div class="social-grid">
+    <a class="social-link" href="https://www.instagram.com/andrea_rosina__/" target="_blank">
+      <div class="social-icon ig">📷</div>
+      <div><div class="social-label">Instagram</div><div class="social-sub">@andrea_rosina__</div></div>
+    </a>
+    <a class="social-link" href="https://www.facebook.com/andrea.geobracc" target="_blank">
+      <div class="social-icon fb">f</div>
+      <div><div class="social-label">Facebook</div><div class="social-sub">Andrea Rosina</div></div>
+    </a>
+    <a class="social-link" href="https://open.spotify.com/show/4DFO1TUfdTAAenUVn9j13b" target="_blank">
+      <div class="social-icon spotify">♫</div>
+      <div><div class="social-label">Podcast — Invisibile Perso</div><div class="social-sub">Su Spotify</div></div>
+    </a>
+    <a class="social-link" href="https://sottosuoli.substack.com" target="_blank">
+      <div class="social-icon coalition">🌍</div>
+      <div><div class="social-label">Sottosuoli</div><div class="social-sub">Newsletter su ambiente e territorio</div></div>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Andrea Rosina</strong>
+  Geologo · GIS specialist · Monselice<br>
+  <a href="mailto:andrea.rosina77@gmail.com">andrea.rosina77@gmail.com</a> · <a href="https://sottosuoli.substack.com">sottosuoli.substack.com</a>
+</div>
+
+<script>
+function toggle(btn, id) {
+  btn.classList.toggle('open');
+  document.getElementById(id).classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
