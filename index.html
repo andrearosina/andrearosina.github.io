@@ -65,6 +65,9 @@
   .kicker { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--green); margin-bottom:8px; }
   h2 { font-family:'Lora', serif; font-size: clamp(29px, 4vw, 44px); line-height:1.08; color:var(--green-2); margin-bottom:10px; }
   .lead { font-size:17px; color:var(--muted); max-width:760px; }
+  .rassegna-meta { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:18px; }
+  .rassegna-date { display:inline-flex; align-items:center; gap:8px; background:var(--green-pale); border:1px solid var(--border); color:var(--green-2); border-radius:999px; padding:9px 13px; font-weight:700; font-size:14px; }
+  .rassegna-note { color:var(--muted); font-size:13px; }
 
   .news-layout { display:grid; grid-template-columns: minmax(0, 1fr) 310px; gap:24px; align-items:start; }
   .sottosuoli-news { display:flex; flex-direction:column; gap:10px; }
@@ -165,6 +168,12 @@
       <div class="kicker">Rassegna quotidiana</div>
       <h2>Cosa sta succedendo</h2>
       <p class="lead">Ogni giorno raccolgo notizie su clima, ambiente, territorio, energia, suolo, agricoltura e paesaggio. Non tutto merita un commento; molto merita attenzione.</p>
+      <div class="rassegna-meta">
+        <div class="rassegna-date">
+          <!-- RASSEGNA_DATE:START -->Rassegna quotidiana — 18 giugno 2026<!-- RASSEGNA_DATE:END -->
+        </div>
+        <div class="rassegna-note">Selezione aggiornata con il lettore RSS di Sottosuoli.</div>
+      </div>
     </div>
     <div class="news-layout">
       <div class="sottosuoli-news" id="sottosuoliNews">
@@ -220,7 +229,7 @@
         <h3>Dalla notizia al territorio</h3>
         <p>La rassegna è il primo livello di osservazione: segnala ciò che emerge. La newsletter settimanale seleziona, collega e prova a riportare le notizie alla scala dei luoghi che abitiamo.</p>
         <a class="btn" href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Iscriviti su Substack</a>
-        <a class="pill" style="display:block;text-align:center;margin-top:10px;" href="notizie.html">Archivio notizie</a>
+        <a class="pill" style="display:block;text-align:center;margin-top:10px;" href="archivio.html">Archivio notizie</a>
       </aside>
     </div>
   </div>
@@ -342,7 +351,7 @@ Le parole di Michelle Bachelet, di Papa Francesco. E poi le nostre, quelle di pe
 <footer class="footer">
   <div class="wrap footer-grid">
     <div><strong>Sottosuoli</strong><br>Osservatorio sul territorio a cura di Andrea Rosina.</div>
-    <div><a href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="mailto:andrea.rosina77@gmail.com">Email</a> · <a href="notizie.html">Archivio</a></div>
+    <div><a href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="mailto:andrea.rosina77@gmail.com">Email</a> · <a href="archivio.html">Archivio</a> · <a href="metodo.html">Metodo</a></div>
   </div>
 </footer>
 
