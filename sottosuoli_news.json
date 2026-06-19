@@ -1,13 +1,231 @@
 {
-  "aggiornato": "2026-06-18T19:32:55.556406+00:00",
-  "totale": 13,
+  "aggiornato": "2026-06-19T15:56:56.428693+00:00",
+  "totale": 28,
   "articoli": [
+    {
+      "titolo": "L’ondata di caldo africano in Europa non è un’anomalia, ma il volto della nuova estate mediterranea",
+      "sommario": "Gran parte dell’Europa occidentale sta già facendo i conti con temperature che in molte città sfiorano o superano i 35 gradi.",
+      "link": "https://www.lifegate.it/ondata-di-caldo-africano-europa-estate-mediterraneo",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T10:51:34+00:00"
+    },
+    {
+      "titolo": "Cosa vuol dire depaving: togliere l’asfalto per far respirare le città",
+      "sommario": "E se la rigenerazione urbana passasse dal sottrarre anziché dall'aggiungere? Alla scoperta del depaving, la pratica che rompe la barriera di asfalto e cemento e promette di riscrivere il rapporto tra spazio urbano, gestione delle acque e verde urbano Continue Reading Cosa vuol dire depaving: togliere l&#8217;asfalto per far respirare le città\nL'articolo Cosa vuol dire depaving: togliere l&#8217;asfalto per far respirare le città proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/cosa-vuol-dire-depaving-citta/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "rigenerazione-urbana"
+      ],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T10:04:01+00:00"
+    },
+    {
+      "titolo": "Scarti agroalimentari, sono milioni di tonnellate annue in Italia, ma il 70% non viene convertito",
+      "sommario": "Almeno 130 mila tonnellate annue potrebbero essere ulteriormente valorizzate",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/19/news/scarti_agroalimentari_sono_milioni_di_tonnellate_annue_in_italia-425421076/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T09:40:08+00:00"
+    },
+    {
+      "titolo": "Overtourism, il Premio Demetra per la letteratura ambientale a Cristina Nadotti",
+      "sommario": "“Il turismo che non paga” miglior saggio dell’anno per il premio Comieco. L’inchiesta è dedicata all’impatto del turismo su luoghi e comunità",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/19/news/overtourism_premio_demetra_cristina_nadotti-425420836/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "overtourism-montagna"
+      ],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T08:30:00+00:00"
+    },
+    {
+      "titolo": "In Africa 13 milioni di persone colpite da eventi meteo estremi nel 2025",
+      "sommario": "Il rapporto Stato del clima in Africa dell’Omm sottolinea gli impatti crescenti del riscaldamento globale sul continente.",
+      "link": "https://www.lifegate.it/africa-clima-eventi-estremi-omm",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "cambiamenti-climatici"
+      ],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T08:26:37+00:00"
+    },
+    {
+      "titolo": "Pfas, anche in Italia parte il monitoraggio obbligatorio dell’acqua potabile",
+      "sommario": "Dopo il rinvio di sei mesi, è operativo anche nel nostro paese l’obbligo di monitoraggio dei PFAS nelle acque potabili Continue Reading Pfas, anche in Italia parte il monitoraggio obbligatorio dell&#8217;acqua potabile\nL'articolo Pfas, anche in Italia parte il monitoraggio obbligatorio dell&#8217;acqua potabile proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/pfas-aparte-monitoraggio-acqua-potabile/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "fiume-po"
+      ],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T07:00:12+00:00"
+    },
+    {
+      "titolo": "La guerra in Ucraina ha già cambiato la fauna selvatica",
+      "sommario": "Modifiche comportamentali e gravi rischi ecologici a lungo termine. Uno studio nella zona di esclusione di Chernobyl svela l’impatto dei conflitti armati sugli animali",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/19/news/la_guerra_in_ucraina_ha_gia_cambiato_la_fauna_selvatica-425420570/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-06-19",
+      "data_iso": "2026-06-19T06:55:00+00:00"
+    },
+    {
+      "titolo": "I sostituti dei Cfc hanno creato un nuovo problema ambientale",
+      "sommario": "Nati per sostituire le sostanze responsabili del buco dell'ozono, potrebbero aver involontariamente favorito la diffusione del Tfa, composto dannoso per gli ecosistemi acquatici e potenzialmente tossico per la riproduzione",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/18/news/i_sostituti_dei_cfc_hanno_creato_un_nuovo_problema_ambientale-425414634/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T18:00:00+00:00"
+    },
+    {
+      "titolo": "Ddl caccia, doppiette anche nelle aree protette e sulla spiaggia: i rischi per la biodiversità",
+      "sommario": "Più specie cacciabili anche con visori notturni. Il provvedimento approda il Senato tra le polemiche degli ambientalisti. Papa Leone XIV risponde all’appello della Lipu: “Una questione di rilevanza morale”",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/17/news/ddl_caccia_aree_protette_e_spiaggia-425416888/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "biodiversità"
+      ],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T14:57:49+00:00"
+    },
+    {
+      "titolo": "La partita della plastica nei Mondiali FIFA: il paradosso della sostenibilità nei grandi eventi",
+      "sommario": "I Mondiali FIFA mostrano il paradosso della sostenibilità: progressi su materiali riciclati e gestione dei rifiuti, ma persiste l’uso diffuso di plastica monouso. La natura temporanea dell’evento e i consumi intensivi rendono difficile una vera circolarità. A essere messa in discussione deve essere la logica dei granti eventi Continue Reading La partita della plastica nei Mondiali FIFA: il paradosso della sostenibilità nei grandi eventi\nL'articolo La partita della plastica nei Mondiali FIFA: il ",
+      "link": "https://economiacircolare.com/mondiali-fifa-plastica-grandi-eventi/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T10:00:19+00:00"
+    },
+    {
+      "titolo": "United Nations University: La transizione ingiusta è servita",
+      "sommario": "Report United Nations University Institute for Water, Environment and Health: “Lo sviluppo delle tecnologie che rendono possibile un futuro sostenibile sta generando gravi crisi ambientali e sanitarie, spesso nascoste, che il mondo non riesce a individuare né ad affrontare” Continue Reading United Nations University: La transizione ingiusta è servita\nL'articolo United Nations University: La transizione ingiusta è servita proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/united-nations-university-transizione-ingiusta/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "fiume-po"
+      ],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T07:00:01+00:00"
+    },
+    {
+      "titolo": "La qualità delle acque di balneazione in Europa rimane stabile",
+      "sommario": "L’Agenzia Europea dell’Ambiente pubblica ogni anno una relazione sulla qualità delle acque di balneazione in Europa. Secondo quanto riportato  nell’ultimo Rapporto annuale riferito al 2025  , dall’Atlantico al Mediterraneo la qualità delle acque di balneazione sembra rimanere stabile se paragonata all’anno precedente con il 96% di tutti i siti UE monitorati (22.200 siti) che soddisfano i requisiti minimi di qualità UE, e solo l'1,5% classificato come scarso. Austria, Bulgaria, Cipro e Grecia det",
+      "link": "https://www.isprambiente.gov.it/it/news/la-qualita-delle-acque-di-balneazione-in-europa-rimane-stabile",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T06:52:00+00:00"
+    },
+    {
+      "titolo": "Contest Fotografico: \"Il consumo di suolo in Italia 2026\"",
+      "sommario": "Uno scatto per raccontare il cambiamento   ISPRA e SNPA rinnovano l'iniziativa del contest fotografico per coinvolgere professionisti, amatori della fotografia di paesaggio e della street photography, e chiunque voglia testimoniare l’effetto del consumo di suolo sul nostro territorio. L'obiettivo è documentare visivamente come i nuovi cantieri, gli edifici, le infrastrutture, i capannoni industriali, la logistica e la grande distribuzione abbiano modificato, e continuino a modificare, profondame",
+      "link": "https://www.isprambiente.gov.it/it/news/contest-fotografico-il-consumo-di-suolo-in-italia-2026",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "gis",
+        "consumo-suolo"
+      ],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T06:32:00+00:00"
+    },
+    {
+      "titolo": "Unicef: un miliardo di bambini esposto almeno a “tre rischi climatici”",
+      "sommario": "Secondo l’Onu metà della popolazione minorile affronta alluvioni, alte temperature, inquinamento. Incluso chi vive nei Paesi ad alto reddito. “In Italia 6 milioni di bambini esposti a ondate di caldo e siccità”. La storia dei ragazzi in Nuova Guinea costretti a nuotare nel fiume...",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/16/news/unicef_bambini_rischi_climatici-425414947/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "siccità",
+        "alluvione",
+        "corsi-d-acqua"
+      ],
+      "data": "2026-06-17",
+      "data_iso": "2026-06-17T12:51:52+00:00"
+    },
+    {
+      "titolo": "Alla piattaforma ISPRA IdroGEO lo Smartphone D'Oro",
+      "sommario": "La piattaforma ISPRA    IdroGEO    ha vinto lo  Smartphone D'Oro  per l'innovazione, il premio  dedicato alle migliori esperienze di comunicazione e informazione digitale di enti e aziende pubbliche realizzato da Fondazione Italia Digitale.    La piattaforma nazionale sul dissesto idrogeologico potenziata grazie al progetto PNRR GeoSciences IR, rende dati e informazioni su frane e alluvioni sempre più accessibili a professionisti, cittadini e decisori politici, grazie a nuove funzionalità e a un",
+      "link": "https://www.isprambiente.gov.it/it/news/alla-piattaforma-ispra-idrogeo-lo-smartphone-doro",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "alluvione",
+        "dissesto-idrogeologico",
+        "frana"
+      ],
+      "data": "2026-06-17",
+      "data_iso": "2026-06-17T12:16:00+00:00"
+    },
+    {
+      "titolo": "Salone della CSR, nella 14° edizione l’importanza del confronto per la transizione ecologica",
+      "sommario": "Si prepara la 14° edizione del Salone della CSR e dell’innovazione sociale, dal 6 al 8 ottobre 2026 all'Università Bocconi di Milano. Oltre 100 incontri, 6 percorsi tematici, e un Premio a cui iscriversi gratuitamente. EconomiaCircolare.com è media partner dell'evento Continue Reading Salone della CSR, nella 14° edizione l’importanza del confronto per la transizione ecologica\nL'articolo Salone della CSR, nella 14° edizione l’importanza del confronto per la transizione ecologica proviene da Econo",
+      "link": "https://economiacircolare.com/salone-della-csr-14-edizione/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-06-17",
+      "data_iso": "2026-06-17T12:00:10+00:00"
+    },
+    {
+      "titolo": "Mountain Wilderness e Milano Cortina: la voce delle montagne nel tempo dell’Olimpiade.",
+      "sommario": "Ci sono eventi che durano poche settimane e lasciano segni destinati a rimanere per decenni. Le Olimpiadi invernali Milano Cortina 2026 appartengono a questa categoria. Mentre i riflettori si accendono sugli stadi, sulle piste e sulle cerimonie, nelle vallate alpine si consuma una trasformazione più silenziosa, fatta di cantieri, strade &#8230;\nL'articolo Mountain Wilderness e Milano Cortina: la voce delle montagne nel tempo dell’Olimpiade. proviene da Mountain Wilderness Italia ONLUS.",
+      "link": "https://www.mountainwilderness.it/editoriale/mountain-wilderness-e-milano-cortina-la-voce-delle-montagne-nel-tempo-dellolimpiade/",
+      "fonte": "Mountain Wilderness Italia",
+      "categoria_fonte": "associazionismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "fiume-po",
+        "alpi",
+        "grandi-eventi-montagna",
+        "wilderness",
+        "montagna",
+        "aree-protette"
+      ],
+      "data": "2026-06-17",
+      "data_iso": "2026-06-17T08:41:24+00:00"
+    },
     {
       "titolo": "Dalla neve ai fiumi: un’Italia “capovolta” aspetta l’estate",
       "sommario": "Nord in difficoltà, mentre al Sud gli invasi sono pieni. La crisi del clima disegna una nuova geografia dell’acqua. Intanto il volume delle risorse idriche prodotto dalla fusione della neve cala del 48% rispetto agli anni scorsi. Il lago Trasimeno sceso di altri 8 centimetri",
       "link": "https://www.repubblica.it/green-and-blue/2026/06/16/news/fiumi_italia_acqua_estate_2026-425414691/?rss",
       "fonte": "Repubblica Ambiente",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
       "temi": [
         "cambiamenti-climatici",
         "natura-biodiversita",
@@ -26,6 +244,7 @@
       "link": "https://www.repubblica.it/green-and-blue/2026/06/17/news/alberi_co2_fotosintesi-425412638/?rss",
       "fonte": "Repubblica Ambiente",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
       "temi": [
         "emissioni",
         "ambiente-clima",
@@ -35,11 +254,29 @@
       "data_iso": "2026-06-17T05:00:00+00:00"
     },
     {
+      "titolo": "Biodiversità: fermare la revisione della Strategia nazionale e passare finalmente all’azione",
+      "sommario": "Le principali associazioni ambientaliste italiane , Club Alpino Italiano, Federazione Nazionale Pro Natura, Greenpeace Italia, Italia Nostra, Legambiente, Lipu e Mountain Wilderness Italia , hanno scritto al Ministro dell’Ambiente e della Sicurezza Energetica Gilberto Pichetto Fratin per chiedere di fermare il processo di revisione del Programma di attuazione della Strategia &#8230;\nL'articolo Biodiversità: fermare la revisione della Strategia nazionale e passare finalmente all’azione proviene d",
+      "link": "https://www.mountainwilderness.it/editoriale/biodiversita-fermare-la-revisione-della-strategia-nazionale-e-passare-finalmente-allazione/",
+      "fonte": "Mountain Wilderness Italia",
+      "categoria_fonte": "associazionismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "alpi",
+        "biodiversità",
+        "wilderness",
+        "montagna",
+        "aree-protette"
+      ],
+      "data": "2026-06-16",
+      "data_iso": "2026-06-16T12:14:54+00:00"
+    },
+    {
       "titolo": "Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi”",
       "sommario": "Giovanni Carrosio, docente di Sociologia dell’ambiente all’Università di Trieste, è “d’accordo dal punto di vista valoriale, bisogna però interrogarsi sulle conseguenze nell'opinione pubblica” Continue Reading Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi”\nL'articolo Carrosio (UniTS): “Stop alle pubblicità ‘fossili’? Non sono contrario, ma vedo dei rischi” proviene da EconomiaCircolare.com.",
       "link": "https://economiacircolare.com/carrosio-units-pubblicita-fonti-fossili/",
       "fonte": "Economia Circolare",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
       "temi": [
         "geografia",
         "friuli"
@@ -53,6 +290,7 @@
       "link": "https://economiacircolare.com/net-zero-imprese-rapporto-bsi/",
       "fonte": "Economia Circolare",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
       "temi": [
         "natura-biodiversita",
         "ambiente-clima",
@@ -63,27 +301,12 @@
       "data_iso": "2026-06-16T10:00:01+00:00"
     },
     {
-      "titolo": "Dalla piattaforma CliNE al nuovo quadro sul cambiamento climatico in Friuli Venezia Giulia",
-      "sommario": "È stato pubblicato online il documento “Il Friuli Venezia Giulia nel cambiamento climatico” (Stato dell’arte a maggio 2026) che utilizza le proiezioni climatiche elaborate attraverso CliNE per fornire un quadro aggiornato delle conoscenze sul clima regionale e sui possibili sviluppi futuri.",
-      "link": "https://www.snpambiente.it/notizie/temi/report-intertematici/cambiamenti-climatici/dalla-piattaforma-cline-al-nuovo-quadro-sul-cambiamento-climatico-in-friuli-venezia-giulia/?utm_source=rss&utm_medium=rss&utm_campaign=dalla-piattaforma-cline-al-nuovo-quadro-sul-cambiamento-climatico-in-friuli-venezia-giulia",
-      "fonte": "SNPA",
-      "categoria_fonte": "istituzionale",
-      "temi": [
-        "cambiamenti-climatici",
-        "veneto",
-        "ambiente-clima",
-        "geografia",
-        "friuli"
-      ],
-      "data": "2026-06-16",
-      "data_iso": "2026-06-16T09:14:31+00:00"
-    },
-    {
       "titolo": "Cibi importati nell’Unione europea: Slow Food invoca misure specchio. I casi studio di mais e grano",
       "sommario": "Chiedendo l'introduzione di misure specchio, Slow Food evidenzia la necessità che i cibi importati nell'Unione europea, come mais e grano, rispettino gli stessi standard di quelli prodotti nell'Ue.",
       "link": "https://www.lifegate.it/slow-food-misure-specchio-cibi-importati",
       "fonte": "LifeGate",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
       "temi": [
         "food"
       ],
@@ -96,6 +319,7 @@
       "link": "https://www.lifegate.it/decarbonizzare-filiera-agroalimentare-mc0",
       "fonte": "LifeGate",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
       "temi": [
         "emissioni",
         "ambiente-clima",
@@ -110,6 +334,7 @@
       "link": "https://economiacircolare.com/banking-on-climate-chaos-2026/",
       "fonte": "Economia Circolare",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
       "temi": [
         "droni"
       ],
@@ -122,6 +347,7 @@
       "link": "https://www.repubblica.it/green-and-blue/2026/06/15/news/giornata_mondiale_del_vento_legambiente_guida_parchi_del_vento-425411894/?rss",
       "fonte": "Repubblica Ambiente",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
       "temi": [
         "ambiente-clima",
         "geografia",
@@ -140,6 +366,7 @@
       "link": "https://www.isprambiente.gov.it/it/news/incendi-boschivi-nel-2025-aumenta-la-superficie-andata-in-fumo-necessario-investire-nella-prevenzione",
       "fonte": "ISPRA",
       "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
       "temi": [
         "droni",
         "gis",
@@ -152,38 +379,15 @@
       "data_iso": "2026-06-15T08:27:00+00:00"
     },
     {
-      "titolo": "No ai data center per l’IA, Cittadina della California blocca la costruzione con un referendum",
-      "sommario": "Oltre l’86% degli elettori di Monterey Park ha bocciato la richiesta di costruzione. E’ la prima volta che accade negli Stati Uniti",
-      "link": "https://www.repubblica.it/green-and-blue/2026/06/12/news/data_center_referendum_california-425401548/?rss",
-      "fonte": "Repubblica Ambiente",
-      "categoria_fonte": "giornalismo",
-      "temi": [],
-      "data": "2026-06-15",
-      "data_iso": "2026-06-15T07:45:00+00:00"
-    },
-    {
       "titolo": "Le false promesse della filiera degli allevamenti intensivi",
       "sommario": "Torniamo a parlare di allevamenti intensivi, questa volta concentrandoci sulla comunicazione. È sempre più evidente come l’industria della carne e dei latticini abbia un modus operandi preciso volto a nascondere il suo impatto ambientale e mostrarsi positivo per la salute. Nonostante sempre più studi e report mostrino il contrario Continue Reading Le false promesse della filiera degli allevamenti intensivi\nL'articolo Le false promesse della filiera degli allevamenti intensivi proviene da Economi",
       "link": "https://economiacircolare.com/le-false-promesse-della-filiera-degli-allevamenti-intensivi/",
       "fonte": "Economia Circolare",
       "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
       "temi": [],
       "data": "2026-06-15",
       "data_iso": "2026-06-15T07:00:20+00:00"
-    },
-    {
-      "titolo": "Cibo, Biodiversità e Desertificazione",
-      "sommario": "In occasione della  Giornata mondiale contro la desertificazione e la siccità   l  ’Ordine degli Architetti P.P.C. della provincia di Messina e la Fondazione Architetti nel Mediterraneo Messina, con il patrocinio dell’Istituto Nazionale di Bioarchitettura e in collaborazione con Assocea Messina, propongono la giornata formativa dal titolo:  “ Cibo, Biodiversità e Desertificazione ”.    Saranno affrontati i temi relativi al rapporto tra cambiamenti climatici, tutela della biodiversità, alimentazi",
-      "link": "https://www.unccd.int/events/desertification-drought-day/2026",
-      "fonte": "ISPRA",
-      "categoria_fonte": "istituzionale",
-      "temi": [
-        "siccità",
-        "cambiamenti-climatici",
-        "biodiversità"
-      ],
-      "data": "2026-06-15",
-      "data_iso": "2026-06-15T06:36:00+00:00"
     }
   ]
 }
