@@ -73,6 +73,22 @@ HEADERS = {
 }
 
 
+MESI_IT = {
+    1: "gennaio",
+    2: "febbraio",
+    3: "marzo",
+    4: "aprile",
+    5: "maggio",
+    6: "giugno",
+    7: "luglio",
+    8: "agosto",
+    9: "settembre",
+    10: "ottobre",
+    11: "novembre",
+    12: "dicembre",
+}
+
+
 def normalize_url(url: str) -> str:
     """Rimuove parametri UTM e query string per deduplicazione robusta."""
     p = urlparse(url)
@@ -171,6 +187,31 @@ def tema_label(temi: list) -> str:
     return " · ".join(labels.get(t, t) for t in temi)
 
 
+
+def update_rassegna_date(html: str, date: datetime | None = None) -> str:
+    """Aggiorna la data della rassegna tra i marker RASSEGNA_DATE."""
+    if date is None:
+        date = datetime.now()
+
+    data_it = f"{date.day} {MESI_IT[date.month]} {date.year}"
+    marker_start = "<!-- RASSEGNA_DATE:START -->"
+    marker_end = "<!-- RASSEGNA_DATE:END -->"
+    new_block = f"{marker_start}Rassegna quotidiana — {data_it}{marker_end}"
+
+    if marker_start not in html or marker_end not in html:
+        print("  ⚠️  Marker RASSEGNA_DATE non trovato in index.html")
+        return html
+
+    html = re.sub(
+        rf"{re.escape(marker_start)}.*?{re.escape(marker_end)}",
+        new_block,
+        html,
+        flags=re.DOTALL,
+    )
+    print(f"  ✅ Data rassegna aggiornata: {data_it}")
+    return html
+
+
 def update_html(items: list, html_path: str):
     """Aggiorna il blocco notizie in index.html tra i marker SOTTOSUOLI."""
     if not Path(html_path).exists():
@@ -206,6 +247,9 @@ def update_html(items: list, html_path: str):
         print(f"  ✅ {html_path} aggiornato con {min(len(items), MAX_ITEMS_OUTPUT)} notizie")
     else:
         print(f"  ⚠️  Marker SOTTOSUOLI non trovato in {html_path}")
+
+    # Aggiorna anche la data testuale della rassegna nello stesso index.html
+    html = update_rassegna_date(html)
 
     Path(html_path).write_text(html, encoding="utf-8")
 

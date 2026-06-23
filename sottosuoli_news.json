@@ -1,7 +1,64 @@
 {
-  "aggiornato": "2026-06-22T20:28:05.189987+00:00",
-  "totale": 31,
+  "aggiornato": "2026-06-23T16:20:09.114806+00:00",
+  "totale": 37,
   "articoli": [
+    {
+      "titolo": "101 ciclisti uccisi dall’inizio dell’anno: ci vuole il coraggio di chiamarla strage",
+      "sommario": "Secondo i dati dell'ASAPS sono 101 i ciclisti uccisi dall'inizio dell'anno. Il direttore di Bikeitalia: \"Continuare a chiamarli incidenti è il modo più comodo per non vedere il sistema che li produce\".",
+      "link": "https://www.italiachecambia.org/news/ciclisti-uccisi-chiamarla-strage/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-06-23",
+      "data_iso": "2026-06-23T07:40:47+00:00"
+    },
+    {
+      "titolo": "Due diligence, la Commissione avvia una nuova consultazione sulla sostenibilità aziendale",
+      "sommario": "Dopo averne semplificato i contenuti e averne rinviato l’applicazione, la Commissione europea chiede alle parti interessate un parere sulla direttiva due diligence (direttiva 2024/1760). Per offrire un nuovo “orientamento pratico alle imprese”. Un altro passo indietro per la sostenibilità aziendale? Continue Reading Due diligence, la Commissione avvia una nuova consultazione sulla sostenibilità aziendale\nL'articolo Due diligence, la Commissione avvia una nuova consultazione sulla sostenibilità a",
+      "link": "https://economiacircolare.com/direttiva-due-diligence-sostenibilita-aziende-consultazione/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "fiume-po"
+      ],
+      "data": "2026-06-23",
+      "data_iso": "2026-06-23T07:00:09+00:00"
+    },
+    {
+      "titolo": "Il bilancio energetico della Terra è raddoppiato negli ultimi decenni",
+      "sommario": "Il nostro pianeta sta accumulando calore molto più velocemente che in passato: anche a questo si devono le attuali ondate di calore",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/22/news/il_bilancio_energetico_della_terra_e_raddoppiato_negli_ultimi_decenni-425421912/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-06-22",
+      "data_iso": "2026-06-22T18:00:00+00:00"
+    },
+    {
+      "titolo": "Specie aliene, nel Salento il primo esemplare mediterraneo di ricciola giapponese",
+      "sommario": "Catturata al largo di Nardò, la  Seriola quinqueradiata  non era mai stata documentata nel Mediterraneo. L’identificazione, confermata anche dall’analisi genetica, riapre il dibattito sulle vie d’ingresso dei “nuovi invasori”",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/22/news/specie_aliene_mediterraneo_ricciola_giapponese-425426445/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-06-22",
+      "data_iso": "2026-06-22T18:00:00+00:00"
+    },
+    {
+      "titolo": "Auto più circolari: il Parlamento europeo approva le nuove regole su design e fine vita dei veicoli.",
+      "sommario": "Il Parlamento europeo ha dato il via libera definitivo a un nuovo regolamento che (finalmente!) cambierà il modo in cui le auto vengono progettate, vendute e smaltite in Europa.",
+      "link": "https://www.lifegate.it/auto-piu-circolari-parlamento-europeo-nuove-regole-fine-vita",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-06-22",
+      "data_iso": "2026-06-22T11:56:46+00:00"
+    },
     {
       "titolo": "Il Circular Economy Act non può scordare chi ripara, riusa e riduce",
       "sommario": "Nel parere del Comitato Economico e Sociale Europeo (CESE) sul futuro Circular Economy Act c’è una richiesta che va oltre il mercato delle materie prime seconde: riconoscere le persone, le cooperative, le imprese sociali e le comunità locali come infrastruttura politica della transizione. Per un'economia circolare che sia anche sociale Continue Reading Il Circular Economy Act non può scordare chi ripara, riusa e riduce\nL'articolo Il Circular Economy Act non può scordare chi ripara, riusa e riduc",
@@ -56,6 +113,17 @@
       "temi": [],
       "data": "2026-06-22",
       "data_iso": "2026-06-22T05:00:00+00:00"
+    },
+    {
+      "titolo": "Heatwaves fuel dangerous smog across Europe as civil society calls for methane cuts",
+      "sommario": "22 June 2026, Brussels – Parts of Europe are suffering through the second heatwave of the year leading to dangerous spikes in ground-level ozone pollution with devastating […]",
+      "link": "https://eeb.org/en/heatwaves-fuel-dangerous-smog-across-europe-as-civil-society-calls-for-methane-cuts/",
+      "fonte": "European Environmental",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-06-21",
+      "data_iso": "2026-06-21T22:01:42+00:00"
     },
     {
       "titolo": "L’ondata di caldo africano in Europa non è un’anomalia, ma il volto della nuova estate mediterranea",
