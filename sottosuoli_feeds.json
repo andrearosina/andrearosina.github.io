@@ -1,0 +1,241 @@
+{
+  "aggiornato": "2026-06-24T20:22:42",
+  "totale": 26,
+  "attivi": 26,
+  "feeds": [
+    {
+      "nome": "Acqua bene comune PD",
+      "url": "https://www.acquabenecomunepadova.org/feed/",
+      "categoria": "associazione",
+      "tema": "acqua_fiumi",
+      "tema_label": "acqua e fiumi",
+      "attivo": 1,
+      "punteggio": 6
+    },
+    {
+      "nome": "Ambiente non solo",
+      "url": "https://ambientenonsolo.com/feed/",
+      "categoria": "giornalismo",
+      "tema": "altro",
+      "tema_label": "altro",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "CMCC",
+      "url": "https://www.cmcc.it/feed",
+      "categoria": "istituzionale",
+      "tema": "cambiamenti_climatici",
+      "tema_label": "cambiamenti climatici",
+      "attivo": 1,
+      "punteggio": 7
+    },
+    {
+      "nome": "Copernicus",
+      "url": "https://www.copernicus.eu/en/rss.xml",
+      "categoria": "europea",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
+      "attivo": 1,
+      "punteggio": 7
+    },
+    {
+      "nome": "Corriere Ambiente",
+      "url": "https://www.corriere.it/rss/ambiente.xml",
+      "categoria": "giornalismo",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 6
+    },
+    {
+      "nome": "Economia Circolare",
+      "url": "https://economiacircolare.com/feed/",
+      "categoria": "giornalismo",
+      "tema": "altro",
+      "tema_label": "altro",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "European Environmental",
+      "url": "https://eeb.org/en/feed/",
+      "categoria": "associazione",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "Geospatial World",
+      "url": "https://geospatialworld.net/feed/",
+      "categoria": "rivista",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "Global Project",
+      "url": "https://globalproject.info/feed",
+      "categoria": "associazione",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "Global VEZ",
+      "url": "https://www.vez.news/feed",
+      "categoria": "giornalismo",
+      "tema": "locale_nordest",
+      "tema_label": "locale / nord-est",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "Gruppo int. Giuridico",
+      "url": "https://gruppodinterventogiuridicoweb.com/feed/",
+      "categoria": "associazione",
+      "tema": "politiche_istituzioni",
+      "tema_label": "politiche e istituzioni",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "IlFatto Ambiente",
+      "url": "https://www.ilfattoquotidiano.it/category/ambiente/feed/",
+      "categoria": "giornalismo",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "ISDE",
+      "url": "https://www.isdenews.it/feed/",
+      "categoria": "associazione",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "ISPRA",
+      "url": "http://www.isprambiente.gov.it/it/news/notizie/RSS",
+      "categoria": "istituzionale",
+      "tema": "politiche_istituzioni",
+      "tema_label": "politiche e istituzioni",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "Italia che Cambia",
+      "url": "https://www.italiachecambia.org/feed/",
+      "categoria": "giornalismo",
+      "tema": "altro",
+      "tema_label": "altro",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "Laboratorio Inchiesta",
+      "url": "https://www.laboratorioinchiesta.it/feed/",
+      "categoria": "giornalismo",
+      "tema": "cultura_immaginario",
+      "tema_label": "cultura e immaginario",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "Legambiente Veneto",
+      "url": "https://legambienteveneto.it/feed/",
+      "categoria": "associazione",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 7
+    },
+    {
+      "nome": "Legambiente Veneto Comunicati",
+      "url": "https://legambienteveneto.it/category/comunicati-stampa/feed/",
+      "categoria": "associazione",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 7
+    },
+    {
+      "nome": "LifeGate",
+      "url": "https://www.lifegate.it/feed",
+      "categoria": "giornalismo",
+      "tema": "altro",
+      "tema_label": "altro",
+      "attivo": 1,
+      "punteggio": 6
+    },
+    {
+      "nome": "Medicina Democratica",
+      "url": "https://www.medicinademocratica.org/wp/feed/",
+      "categoria": "associazione",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "Mountain Wilderness Italia",
+      "url": "https://www.mountainwilderness.it/feed/",
+      "categoria": "associazionismo",
+      "tema": "altro",
+      "tema_label": "altro",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "OGC",
+      "url": "https://www.ogc.org/feed/",
+      "categoria": "rivista",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "PFAS Land",
+      "url": "https://pfas.land/feed/",
+      "categoria": "associazione",
+      "tema": "acqua_fiumi",
+      "tema_label": "acqua e fiumi",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "Repubblica Ambiente",
+      "url": "https://www.repubblica.it/rss/ambiente/rss2.0.xml",
+      "categoria": "giornalismo",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 6
+    },
+    {
+      "nome": "Salviamo il Paesaggio",
+      "url": "https://www.salviamoilpaesaggio.it/blog/feed/",
+      "categoria": "associazione",
+      "tema": "territorio_paesaggio",
+      "tema_label": "territorio e paesaggio",
+      "attivo": 1,
+      "punteggio": 5
+    },
+    {
+      "nome": "VEZ Ecosistemi",
+      "url": "https://www.vez.news/categoria/ecosistemi/feed",
+      "categoria": "giornalismo",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 5
+    }
+  ]
+}
