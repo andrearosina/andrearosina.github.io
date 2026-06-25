@@ -1,0 +1,32 @@
+{
+  "name": "sottosuoli",
+  "short_name": "sottosuoli",
+  "description": "Osservatorio in parole, mappe e numeri per raccontare l’attualità ambientale.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7b8879",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-sottosuoli.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-sottosuoli.png",
+      "sizes": "1080x1080",
+      "type": "image/png"
+    }
+  ]
+}
