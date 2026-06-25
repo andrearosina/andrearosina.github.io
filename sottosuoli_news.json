@@ -1,7 +1,114 @@
 {
-  "aggiornato": "2026-06-24T20:09:54.906919+00:00",
-  "totale": 49,
+  "aggiornato": "2026-06-25T12:14:49.312827+00:00",
+  "totale": 57,
   "articoli": [
+    {
+      "titolo": "Allo Stato Brado: nella valle dell’Agno film e laboratori su ecologia, attivismo e beni comuni",
+      "sommario": "Sabato 4 e 11, venerdì 17 e sabato 25 luglio 2026, nella Valle dell’Agno in provincia di Vicenza si terrà il ciclo di laboratori e proiezioni Allo Stato Brado, una serie di eventi a tema ecologico organizzati dalla Scuola del Filò in collaborazione con Kollettivo Karburo, Legambiente Valle Agno, Cinema Super, Livello 4, Teste Mobili e Studio Progetto. \nL'articolo Allo Stato Brado: nella valle dell&#8217;Agno film e laboratori su ecologia, attivismo e beni comuni proviene da VEZ.",
+      "link": "https://www.vez.news/sensi/allo-stato-brado-nella-valle-dellagno-film-e-laboratori-su-ecologia-attivismo-e-beni-comuni",
+      "fonte": "Global VEZ",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "locale_nordest",
+      "temi": [
+        "evento",
+        "agno"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T09:38:43+00:00"
+    },
+    {
+      "titolo": "Il caldo estremo, e non più eccezionale, avvolge mezza Europa",
+      "sommario": "Un’ondata di caldo estremo sta colpendo numerose nazioni europee: è il portato della crisi climatica. E andrà sempre peggio.",
+      "link": "https://www.lifegate.it/caldo-estremo-europa",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "caldo-estremo",
+        "estate2026"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T08:48:13+00:00"
+    },
+    {
+      "titolo": "Blackout, l’Italia senza corrente per condizionatori e cavi surriscaldati. Ecco cosa fare",
+      "sommario": "Torino, Milano, Napoli: nelle ultime settimane diverse città italiane hanno subito interruzioni di corrente a causa dell'ondata di calore. Consigli su comportamenti utili.",
+      "link": "https://www.italiachecambia.org/news/blackout-italia-cosa-fare/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "caldo-estremo",
+        "estate2026"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T07:55:54+00:00"
+    },
+    {
+      "titolo": "Il verde pubblico riguarda tutti",
+      "sommario": "In questo articolo della rubrica “Il punto di rugiada”, Stefano Passerotti riflette sul verde pubblico e sul nostro rapporto quotidiano con gli spazi comuni: alberi, aiuole, marciapiedi, piccoli pezzi di terra che spesso attraversiamo senza più sentirli nostri.",
+      "link": "https://www.italiachecambia.org/2026/06/verde-pubblico-riguarda-tutti/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "verde pubblico"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T06:22:29+00:00"
+    },
+    {
+      "titolo": "Urbanistica di genere a Roma: cos’è il documento e perché cambia il modo di progettare la città",
+      "sommario": "L’urbanistica di genere a Roma entra al centro del dibattito sulla pianificazione urbana grazie al nuovo documento promosso da Roma Capitale, che propone un modello [&#8230;]\nL'articolo Urbanistica di genere a Roma: cos’è il documento e perché cambia il modo di progettare la città proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/urbanistica-di-genere-a-roma-cose-il-documento-e-perche-cambia-il-modo-di-progettare-la-citta/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "urbanistica"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T05:12:00+00:00"
+    },
+    {
+      "titolo": "La Regione Liguria come gestisce le terre collettive?",
+      "sommario": "Molti non sanno neppure che esistono. Almeno altrettanti fan finta che non esistano Sono le terre collettive in Italia. In tutta Italia sono presenti boschi, pascoli, terreni agricoli, zone umide, litorali di proprietà collettiva, sebbene spesso tuttora oggetto di mire speculative e utilizzi incongrui. Ma qual’è la loro estensione? Si stima che costituiscano il 7-10% [&#8230;]",
+      "link": "https://gruppodinterventogiuridicoweb.com/2026/06/25/la-regione-liguria-come-gestisce-le-terre-collettive/",
+      "fonte": "Gruppo int. Giuridico",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "terre collettive"
+      ],
+      "data": "2026-06-24",
+      "data_iso": "2026-06-24T23:05:00+00:00"
+    },
+    {
+      "titolo": "OGM, via libera europeo alle nuove tecniche genomiche: 21 associazioni denunciano una svolta pericolosa",
+      "sommario": "Ventuno associazioni italiane impegnate nella difesa dell’agricoltura contadina, biologica e biodinamica hanno espresso forte preoccupazione per il voto definitivo del Parlamento europeo sul regolamento relativo alle piante ottenute con le...\nL'articolo OGM, via libera europeo alle nuove tecniche genomiche: 21 associazioni denunciano una svolta pericolosa proviene da ISDE News.",
+      "link": "https://www.isdenews.it/ogm-via-libera-europeo-alle-nuove-tecniche-genomiche-21-associazioni-denunciano-una-svolta-pericolosa/",
+      "fonte": "ISDE",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "ogm"
+      ],
+      "data": "2026-06-24",
+      "data_iso": "2026-06-24T19:15:07+00:00"
+    },
+    {
+      "titolo": "L’acqua può nascere nelle profondità della Terra: la scoperta che cambia la ricerca della vita",
+      "sommario": "Uno studio internazionale mostra che l’idrogeno può reagire con minerali anidri generando nuova acqua nella crosta e nel mantello. Un processo che può influenzare magmi e terremoti e ampliare i luoghi in cui cercare vita. Anche fuori dal nostro pianeta",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/24/news/l_acqua_puo_nascere_nelle_profondita_della_terra-425419487/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "geologia"
+      ],
+      "data": "2026-06-24",
+      "data_iso": "2026-06-24T18:00:00+00:00"
+    },
     {
       "titolo": "Il ddl sulla caccia ha il primo via libera tra le proteste delle associazioni",
       "sommario": "Via libera del Senato al disegno di legge che allarga le aree venatorie, allunga i calendari, depotenzia l'Ispra e aumenta le specie cacciabili.",
