@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-06-30T18:28:50",
-  "totale": 26,
-  "attivi": 26,
+  "aggiornato": "2026-06-30T16:26:20",
+  "totale": 28,
+  "attivi": 28,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -47,6 +47,15 @@
       "tema_label": "ambiente e clima",
       "attivo": 1,
       "punteggio": 6
+    },
+    {
+      "nome": "Data mobility",
+      "url": "https://datamobility.it/feed",
+      "categoria": "giornalismo",
+      "tema": "urbanistica_infrastrutture",
+      "tema_label": "urbanistica e infrastrutture",
+      "attivo": 1,
+      "punteggio": 5
     },
     {
       "nome": "Economia Circolare",
@@ -189,6 +198,15 @@
       "categoria": "associazionismo",
       "tema": "altro",
       "tema_label": "altro",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "Nature",
+      "url": "https://www.nature.com/nmat.rss",
+      "categoria": "giornalismo",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
       "attivo": 1,
       "punteggio": 8
     },
