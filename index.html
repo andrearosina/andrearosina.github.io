@@ -136,6 +136,18 @@
   .method-item strong { display:block; color:var(--green-2); margin-bottom:4px; }
   .method-item p { color:var(--muted); font-size:14px; }
 
+  /* SUBSCRIBE CARDS — Newsletter Substack + canale Telegram, affiancati */
+  .subscribe-grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; margin-top:18px; }
+  .subscribe-card { background:white; border:1px solid var(--border); border-radius:16px;
+                    padding:26px 24px; display:flex; flex-direction:column; gap:10px; }
+  .subscribe-card h3 { font-size:20px; color:var(--green-2); margin:0; }
+  .subscribe-card p { color:var(--muted); font-size:14.5px; line-height:1.55; margin:0; flex-grow:1; }
+  .subscribe-icon { width:44px; height:44px; border-radius:12px; background:var(--green-pale);
+                    color:var(--green-2); display:flex; align-items:center; justify-content:center;
+                    font-size:22px; margin-bottom:4px; }
+  .subscribe-meta { font-size:12px; color:var(--muted); margin-top:2px; margin-bottom:6px; }
+  .subscribe-card .btn { align-self:flex-start; }
+
   .quote { background:var(--green-2); color:white; border-radius:24px; padding:34px; }
   .quote p { font-family:'Lora', serif; font-size:24px; line-height:1.35; }
   .quote small { display:block; margin-top:14px; color:var(--green-light); font-size:13px; }
@@ -167,6 +179,7 @@
     .hero-grid, .news-layout, .bio { grid-template-columns:1fr; }
     .cards, .post-grid, .reading-feature { grid-template-columns:1fr; }
     .method { grid-template-columns:1fr; }
+    .subscribe-grid { grid-template-columns:1fr; }
     .side-panel { position:static; }
     .quote { padding:24px; }
     .quote p { font-size:20px; }
@@ -237,12 +250,7 @@ Rassegna quotidiana — 30 giugno 2026
     <div class="news-layout">
       <div class="sottosuoli-news" id="sottosuoliNews">
       <!-- SOTTOSUOLI:START -->
-      <div class="sottosuoli-intro"><p>test3</p></div>
-      <a class="news-item" href="https://www.cmcc.it/article/increasing-the-efficiency-of-buildings-in-europe" target="_blank">
-        <div class="news-tag">CMCC</div>
-        <div class="news-title">Increasing the efficiency of buildings in Europe</div>
-        <div class="news-date">2026-06-30</div>
-      </a>
+      <div class="sottosuoli-intro"><p>Buongiorno</p></div>
       <!-- SOTTOSUOLI:END -->
       </div>
       <aside class="side-panel">
@@ -330,13 +338,25 @@ Rassegna quotidiana — 30 giugno 2026
 <section class="section alt" id="newsletter">
   <div class="wrap">
     <div class="section-head">
-      <div class="kicker">Newsletter</div>
-      <h2>La selezione ragionata</h2>
-      <p class="lead">Una volta alla settimana scelgo alcune notizie dalla rassegna, le collego tra loro e provo a capire cosa raccontano del territorio in cui viviamo. Una o due volte al mese arrivano anche approfondimenti più lunghi, con dati, mappe e contesto.</p>
+      <div class="kicker">Resta in contatto</div>
+      <h2>Due modi per seguire Sottosuoli</h2>
+      <p class="lead">La rassegna quotidiana arriva sul canale Telegram, breve e diretta. La newsletter settimanale collega le notizie tra loro e prova a capire cosa raccontano del territorio. Scegli il ritmo che preferisci, o iscriviti a entrambi.</p>
     </div>
-    <div class="cta-row">
-      <a class="btn btn-primary" style="background:var(--green);color:white;" href="https://sottosuoli.substack.com" target="_blank" rel="noopener">✉ Iscriviti alla newsletter</a>
-      <a class="btn" style="border:1px solid var(--border);background:white;color:var(--green-2);" href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Leggi su Substack</a>
+    <div class="subscribe-grid">
+      <div class="subscribe-card">
+        <div class="subscribe-icon" aria-hidden="true">✉</div>
+        <h3>Newsletter settimanale</h3>
+        <p>Una selezione ragionata di quello che ho letto durante la settimana, con le notizie collegate tra loro per capire cosa raccontano del territorio. Una volta al mese arriva anche un approfondimento più lungo, con dati e contesto.</p>
+        <div class="subscribe-meta">Su Substack · gratuita</div>
+        <a class="btn btn-primary" style="background:var(--green);color:white;" href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Iscriviti alla newsletter</a>
+      </div>
+      <div class="subscribe-card">
+        <div class="subscribe-icon" aria-hidden="true">📡</div>
+        <h3>Canale Telegram</h3>
+        <p>La rassegna del giorno con 5 notizie scelte e un breve commento. Nessuna notifica invadente, niente discussioni: solo il flusso quotidiano per chi vuole stare aggiornato in tempo reale.</p>
+        <div class="subscribe-meta">@sottosuoli · canale pubblico</div>
+        <a class="btn btn-primary" style="background:#0088cc;color:white;" href="https://t.me/sottosuoli" target="_blank" rel="noopener">Iscriviti al canale</a>
+      </div>
     </div>
   </div>
 </section>
@@ -387,6 +407,7 @@ Le parole di Michelle Bachelet, di Papa Francesco. E poi le nostre, quelle di pe
         <a class="pill" href="https://www.instagram.com/andrea_rosina__/" target="_blank" rel="noopener">Instagram</a>
         <a class="pill" href="https://open.spotify.com/show/4DFO1TUfdTAAenUVn9j13b" target="_blank" rel="noopener">Podcast</a>
         <a class="pill" href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Substack</a>
+        <a class="pill" href="https://t.me/sottosuoli" target="_blank" rel="noopener">Telegram</a>
       </div>
     </div>
   </div>
@@ -406,7 +427,7 @@ Le parole di Michelle Bachelet, di Papa Francesco. E poi le nostre, quelle di pe
 <footer class="footer">
   <div class="wrap footer-grid">
     <div><strong>Sottosuoli</strong><br>Osservatorio sul territorio a cura di Andrea Rosina.</div>
-    <div><a href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="mailto:andrea.rosina77@gmail.com">Email</a> · <a href="archivio.html">Archivio</a> · <a href="metodo.html">Metodo</a> · <a href="fonti.html">Fonti</a></div>
+    <div><a href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="https://t.me/sottosuoli" target="_blank" rel="noopener">Telegram</a> · <a href="mailto:andrea.rosina77@gmail.com">Email</a> · <a href="archivio.html">Archivio</a> · <a href="metodo.html">Metodo</a> · <a href="fonti.html">Fonti</a></div>
   </div>
 </footer>
 
