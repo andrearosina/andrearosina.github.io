@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-06-30T15:06:32.719213+00:00",
-  "totale": 87,
+  "aggiornato": "2026-06-30T15:49:19.886793+00:00",
+  "totale": 88,
   "articoli": [
     {
       "titolo": "Increasing the efficiency of buildings in Europe",
@@ -12,6 +12,19 @@
       "temi": [],
       "data": "2026-06-30",
       "data_iso": "2026-06-30T10:00:15+00:00"
+    },
+    {
+      "titolo": "SYNFONY 2026 – Primo monitoraggio: un inizio straordinario in tutto il Mediterraneo",
+      "sommario": "Il primo monitoraggio di SYNFONY 2026 – Synoptic Ferry Observation Network, una nuova iniziativa di monitoraggio del Mediterraneo che nasce dall'eredità del progetto  LIFE CONCEPTU MARIS  e dalla consolidata esperienza della rete FLT Med Net (Fixed Line Transect Mediterranean monitoring Network - marine species and threats) – ha restituito un quadro estremamente incoraggiante della biodiversità marina del Mar Mediterraneo. I team di ricerca hanno infatti documentato una straordinaria varietà di ",
+      "link": "https://www.isprambiente.gov.it/it/news/synfony-2026",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "biodiversità"
+      ],
+      "data": "2026-06-30",
+      "data_iso": "2026-06-30T06:28:00+00:00"
     },
     {
       "titolo": "La Sella del Diavolo e la tutela da un turismo solo apparentemente ecologico",
