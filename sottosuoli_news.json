@@ -1,7 +1,129 @@
 {
-  "aggiornato": "2026-07-02T10:37:33.937799+00:00",
-  "totale": 103,
+  "aggiornato": "2026-07-03T12:20:48.541286+00:00",
+  "totale": 135,
   "articoli": [
+    {
+      "titolo": "XIII edizione dell’Ecoforum nazionale sull’economia circolare i dati di “Comuni Ricicloni 2026” di Legambiente e quelli dell’Osservatorio Appalti Verdi sull’applicazione dei CAM e GPP nei comuni capoluoghi di provincia e non",
+      "sommario": "Roma 2 luglio 2026                                                                                              Comunicato stampa  XIII edizione dell’Ecoforum [&#8230;]\nL'articolo XIII edizione dell’Ecoforum nazionale sull’economia circolare i dati di “Comuni Ricicloni 2026” di Legambiente e quelli dell’Osservatorio Appalti Verdi sull’applicazione dei CAM e GPP nei comuni capoluoghi di provincia e non  proviene da Legambiente Veneto.",
+      "link": "https://legambienteveneto.it/xiii-edizione-dellecoforum-nazionale-sulleconomia-circolare-i-dati-di-comuni-ricicloni-2026-di-legambiente-e-quelli-dellosservatorio-appalti-verdi-sull/",
+      "fonte": "Legambiente Veneto",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "rifiuti",
+        "riciclaggio"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T07:30:37+00:00"
+    },
+    {
+      "titolo": "Go Caro ed Erasmus+: due progetti in Italia e Slovenia per giovani under 30",
+      "sommario": "Due opportunità gratuite pensate per giovani dai 18 ai 30 anni nell’ambito dei progetti internazionali “Digital Youth Voices\" ed “EcoFem Permaculture Design Course”. \nL'articolo Go Caro ed Erasmus+: due progetti in Italia e Slovenia per giovani under 30 proviene da VEZ.",
+      "link": "https://www.vez.news/territori/vicenza/go-caro-ed-erasmus-due-progetti-in-italia-e-slovenia-per-giovani-under-30",
+      "fonte": "Global VEZ",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "locale_nordest",
+      "temi": [
+        "progetto",
+        "digital",
+        "permacultura"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T07:05:44+00:00"
+    },
+    {
+      "titolo": "L’estate ai tempi del caldo record: come la crisi climatica ridisegna le nostre vacanze",
+      "sommario": "Le vacanze non sono più quelle di una volta. Il caldo estremo sta ridisegnando le nostre abitudini estive, non solo in città, ma anche nei nostri viaggi. Ma gli effetti non riguardano solo la sfera personale: l'impatto si estende ai flussi turistici, alle economie locali e all’ambiente Continue Reading L&#8217;estate ai tempi del caldo record: come la crisi climatica ridisegna le nostre vacanze\nL'articolo L&#8217;estate ai tempi del caldo record: come la crisi climatica ridisegna le nostre vacan",
+      "link": "https://economiacircolare.com/estate-caldo-record-vacanze/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "cambiamenti-climatici",
+        "caldo-estremo"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T07:00:05+00:00"
+    },
+    {
+      "titolo": "Cala Finanza: le proteste bloccano un progetto turistico in un’area protetta – 3/7/2026",
+      "sommario": "In Sardegna il governo revoca l'autorizzazione al mega resort di Cala Finanza; l'Unione Europea vuole velocizzare le miniere di minerali critici proprio nelle zone più colpite da siccità; due giardinieri a confronto.",
+      "link": "https://www.italiachecambia.org/podcast/cala-finanza-proteste-bloccano-progetto/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "siccità",
+        "aree-protette",
+        "cittadinanza",
+        "proteste"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T06:19:07+00:00"
+    },
+    {
+      "titolo": "Laura Reali spiega in 100 secondi perchè l’inquinamento atmosferico rappresenta un rischio particolarmente grave per i bambini",
+      "sommario": "Ambiente e salute in 100 secondi&#160;apre una nuova serie di video-interviste dedicate all’inquinamento atmosferico, tema al centro della campagna&#160;“Cambiamo aria”, promossa da&#160;ISDE Italia&#160;in collaborazione con [&#8230;]\nL'articolo Laura Reali spiega in 100 secondi perchè l’inquinamento atmosferico rappresenta un rischio particolarmente grave per i bambini proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/laura-reali-spiega-in-100-secondi-perche-linquinamento-atmosferico-rappresenta-un-rischio-particolarmente-grave-per-i-bambini/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "inquinamento"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T05:44:00+00:00"
+    },
+    {
+      "titolo": "Impianti di sci, cacciatori e moto sui sentieri: così la montagna è sotto assedio",
+      "sommario": "Dal Blog a cura di Mountain Wilderness su Il Fatto Quotidiano Che l&#8217;industria dello sci abbia alimentato per decenni l&#8217;economia di alcune aree di montagna è senz&#8217;altro vero, però ha completamente trasformato il territorio. l presidente degli impiantisti di Confindustria Trento,&#160;Luca&#160;Guadagnini, ha dichiarato: “Gli ambientalisti possono stare tranquilli, il paesaggio &#8230;\nL'articolo Impianti di sci, cacciatori e moto sui sentieri: così la montagna è sotto assedio pr",
+      "link": "https://www.mountainwilderness.it/editoriale/impianti-di-sci-cacciatori-e-moto-sui-sentieri-cosi-la-montagna-e-sotto-assedio/",
+      "fonte": "Mountain Wilderness Italia",
+      "categoria_fonte": "associazionismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "wilderness",
+        "montagna",
+        "aree-protette"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T04:00:00+00:00"
+    },
+    {
+      "titolo": "Cala Finanza, la Struttura di missione ZES revoca l’autorizzazione unica. Il “mattone ZES” si sbriciola.",
+      "sommario": "La Struttura di missione ZES, con provvedimento dell’1 luglio 2026, ha revocato in via di autotutela l’autorizzazione unica&#160;ZES&#160;n. 74 del 9 febbraio 2026&#160;in favore della Tavolara Bay s.r.l., la società immobiliare interessata al progetto speculativo immobiliare sul litorale gallurese&#160;fra&#160;Cala Finanza&#160;e&#160;Punta La Greca, davanti all’Isola di Tavolara. La revoca è avvenuta “a seguito della revoca della [&#8230;]",
+      "link": "https://gruppodinterventogiuridicoweb.com/2026/07/03/cala-finanza-la-struttura-di-missione-zes-revoca-lautorizzazione-unica-il-mattone-zes-si-sbriciola/",
+      "fonte": "Gruppo int. Giuridico",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [],
+      "data": "2026-07-02",
+      "data_iso": "2026-07-02T23:05:00+00:00"
+    },
+    {
+      "titolo": "Marmolada, svelate le cause della valanga: caldo record e acqua nei crepacci",
+      "sommario": "Grazie al modello tridimensionale messo a punto da ricercatori italiani sono state ricostruite le condizioni prima del crollo costato la vita a 11 persone: le alte temperature, la fusione del ghiaccio, l’enorme massa d’acqua intrappolata hanno destabilizzato la calotta di Punta...",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/02/news/marmolada_cause_valanga-425447214/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "cambiamenti-climatici"
+      ],
+      "data": "2026-07-02",
+      "data_iso": "2026-07-02T17:49:22+00:00"
+    },
+    {
+      "titolo": "Appello del mondo sanitario e civile contro la securitizzazione della cura",
+      "sommario": "Il mondo sanitario e civile lancia un appello contro il rischio che il Nuovo Patto Europeo su Migrazione e Asilo trasformi la tutela della salute delle persone migranti in uno...\nL'articolo Appello del mondo sanitario e civile contro la securitizzazione della cura proviene da ISDE News.",
+      "link": "https://www.isdenews.it/appello-del-mondo-sanitario-e-civile-contro-la-securitizzazione-della-cura/",
+      "fonte": "ISDE",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [],
+      "data": "2026-07-02",
+      "data_iso": "2026-07-02T12:35:48+00:00"
+    },
     {
       "titolo": "La Commissione chiarisce le norme sul riciclo delle bottiglie di plastica",
       "sommario": "La Commissione europea ha diffuso l’atto di esecuzione sul riciclo delle bottiglie per bevande in plastica monouso realizzate principalmente in polietilene tereftalato (PET). Viene introdotta una metodologia unica per il contenuto riciclato. Spazio al riciclo chimico, ma la priorità resta il riciclo meccanico Continue Reading La Commissione chiarisce le norme sul riciclo delle bottiglie di plastica\nL'articolo La Commissione chiarisce le norme sul riciclo delle bottiglie di plastica proviene da E",
@@ -28,6 +150,20 @@
       ],
       "data": "2026-07-02",
       "data_iso": "2026-07-02T09:52:45+00:00"
+    },
+    {
+      "titolo": "Progetto SINTESI, la Toscana sperimenta un nuovo sistema intelligente per monitorare e prevedere i rischi meteo-idrogeologici",
+      "sommario": "La crescente frequenza di eventi meteorologici estremi, dalle precipitazioni intense alle alluvioni improvvise, sta spingendo le amministrazioni pubbliche a investire in strumenti sempre più avanzati [&#8230;]\nL'articolo Progetto SINTESI, la Toscana sperimenta un nuovo sistema intelligente per monitorare e prevedere i rischi meteo-idrogeologici proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/progetto-sintesi-la-toscana-sperimenta-un-nuovo-sistema-intelligente-per-monitorare-e-prevedere-i-rischi-meteo-idrogeologici/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "alluvione",
+        "dissesto-idrogeologico"
+      ],
+      "data": "2026-07-02",
+      "data_iso": "2026-07-02T09:28:00+00:00"
     },
     {
       "titolo": "Venezia non si USA!",
@@ -70,6 +206,35 @@
       ],
       "data": "2026-07-02",
       "data_iso": "2026-07-02T05:00:00+00:00"
+    },
+    {
+      "titolo": "Corsi d’acqua tombati, corsi d’acqua rinaturalizzati.",
+      "sommario": "L’uomo (Homo sapiens) passa per essere la&#160;specie animale&#160;più&#160;intelligente&#160;della Terra, ma sono innumerevoli i fatti che evidenziano una robusta&#160;costante di idiozia, trasversale nei luoghi e nei tempi. Una delle attività umane frutto di avidità e idiozia ai più elevati livelli è la tombatura dei corsi d’acqua. Nel corso del tempo – anche in Italia – abbiamo [&#8230;]",
+      "link": "https://gruppodinterventogiuridicoweb.com/2026/07/02/corsi-dacqua-tombati-corsi-dacqua-rinaturalizzati/",
+      "fonte": "Gruppo int. Giuridico",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "ambiente-clima",
+        "dissesto-idrogeologico",
+        "newsletter"
+      ],
+      "data": "2026-07-02",
+      "data_iso": "2026-07-02T04:11:32+00:00"
+    },
+    {
+      "titolo": "Gas influence and RES % in the mix vs Average Electricity Price (2026)",
+      "sommario": "The figure shows gas influence on the electricity price, renewable energy source percentage in the electricity mix, as well as the average electricity price for eight European countries (seven electricity markets, as Germany and Luxembourg operate a joint electricity market (first 16 weeks of 2026)).",
+      "link": "https://www.eea.europa.eu/en/analysis/publications/renewable-electricity-buffering-gas-prices/gas-influence-and-res",
+      "fonte": "EEA Map",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "gis_dati",
+      "temi": [
+        "rinnovabili",
+        "energia"
+      ],
+      "data": "2026-07-01",
+      "data_iso": "2026-07-01T22:01:00+00:00"
     },
     {
       "titolo": "Auto elettriche, meno emissioni in città ma aumentano dove si produce l’energia per costruirle",
@@ -228,6 +393,21 @@
       "data_iso": "2026-07-01T05:53:56+00:00"
     },
     {
+      "titolo": "A Milano nascerà un mega data center: i consumi dell’intelligenza artificiale ora si vedono",
+      "sommario": "Il progetto di un gigantesco data center previsto a Milano rende sempre più attuale il dibattitto sui consumi delle risorse – soprattutto energia e acqua – dell'intelligenza artificiale e delle tecnologie informatiche, che hanno un impatto reale sempre più preoccupante.",
+      "link": "https://www.italiachecambia.org/2026/07/data-center-consumi-si-vedono/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "cambiamenti-climatici",
+        "ai",
+        "newsletter"
+      ],
+      "data": "2026-07-01",
+      "data_iso": "2026-07-01T05:53:10+00:00"
+    },
+    {
       "titolo": "Caldo estremo, l’OMS aggiorna la guida per i piani salute: non bastano gli allarmi, servono città e servizi preparati",
       "sommario": "Il caldo estremo non è più un’emergenza eccezionale, ma una condizione ricorrente con cui i sistemi sanitari, le città e i servizi sociali devono imparare [&#8230;]\nL'articolo Caldo estremo, l’OMS aggiorna la guida per i piani salute: non bastano gli allarmi, servono città e servizi preparati proviene da Ambientenonsolo.",
       "link": "https://ambientenonsolo.com/caldo-estremo-loms-aggiorna-la-guida-per-i-piani-salute-non-bastano-gli-allarmi-servono-citta-e-servizi-preparati/",
@@ -269,6 +449,21 @@
       ],
       "data": "2026-06-30",
       "data_iso": "2026-06-30T12:36:00+00:00"
+    },
+    {
+      "titolo": "cafoscariNEWS: Articolo",
+      "sommario": "Il progetto MARINA, svilupperà un sistema cloud per prevedere in tempo quasi reale il rischio di allagamento costiero causato dalle onde durante le mareggiate. Il progetto nasce dai risultati dell’ERC Starting Grant WARMCOASTS e punta a portare la ricerca verso un prototipo validato e potenzialmente utilizzabile da comuni costieri, protezione civile e gestori del territorio. Primi test in Liguria e Veneto.",
+      "link": "https://www.unive.it/web/it/15165/articolo/8506",
+      "fonte": "Ca Foscari ambiente",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "veneto",
+        "rischio-idrogeologico",
+        "progetto"
+      ],
+      "data": "2026-06-30",
+      "data_iso": "2026-06-30T12:00:00+00:00"
     },
     {
       "titolo": "Aree protette: scoppia il caso dei tagli dal Ministero dell’Ambiente",
@@ -332,6 +527,20 @@
       "data_iso": "2026-06-30T07:00:51+00:00"
     },
     {
+      "titolo": "Il tempo rubato dalla mobilità inefficiente è una questione sociale e urbana",
+      "sommario": "Ogni giorno milioni di persone perdono tempo negli spostamenti. Non solo per il traffico, ma anche per attese imprevedibili, coincidenze mancate, autobus in ritardo, servizi [&#8230;]\nL'articolo Il tempo rubato dalla mobilità inefficiente è una questione sociale e urbana proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/il-tempo-rubato-dalla-mobilita-inefficiente-e-una-questione-sociale-e-urbana/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "mobilita",
+        "newsletter"
+      ],
+      "data": "2026-06-29",
+      "data_iso": "2026-06-29T13:26:00+00:00"
+    },
+    {
       "titolo": "Ingiustizia climatica: a Padova nei quartieri poveri +50% calore e maggiori rischi idrogeologici",
       "sommario": "Nei quartieri poveri di Padova, il rischio calore è mediamente superiore del 50% rispetto a quello dei quartieri in cui abita l’élite. E il rischio idrogeologico è concentrato proprio nelle stesse aree: Arcella, Altichiero, Montà, Stanga, Mortise, Zona Industriale. Sono i risultati ai quali arrivano Romano Mazzon e Gianni Belloni in un articolo pubblicato da Lies.\nL'articolo Ingiustizia climatica: a Padova nei quartieri poveri +50% calore e maggiori rischi idrogeologici proviene da VEZ.",
       "link": "https://www.vez.news/geografie/ingiustizia-climatica-a-padova-nei-quartieri-poveri-50-calore-e-maggiori-rischi-idrogeologici",
@@ -357,6 +566,37 @@
       ],
       "data": "2026-06-29",
       "data_iso": "2026-06-29T07:35:33+00:00"
+    },
+    {
+      "titolo": "L’assalto alla montagna. Impiantisti, turistificazione e futuro delle terre alte (3 di 3)",
+      "sommario": "Come l&#8217;industria turistica sta trasformando la natura in infrastruttura. Di Luigi Casanova La narrazione dominante presenta il turismo come soluzione universale per la montagna: occupazione, benessere economico, contrasto allo spopolamento. Tuttavia, nelle località dove il turismo si è trasformato in monocultura economica, emergono fenomeni che raccontano una realtà più complessa. &#8230;\nL'articolo L’assalto alla montagna. Impiantisti, turistificazione e futuro delle terre alte (3 di 3) p",
+      "link": "https://www.mountainwilderness.it/editoriale/lassalto-alla-montagna-impiantisti-turistificazione-e-futuro-delle-terre-alte-3-di-3/",
+      "fonte": "Mountain Wilderness Italia",
+      "categoria_fonte": "associazionismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "wilderness",
+        "montagna",
+        "aree-protette",
+        "newsletter"
+      ],
+      "data": "2026-06-29",
+      "data_iso": "2026-06-29T04:00:00+00:00"
+    },
+    {
+      "titolo": "Città 30, l’altra velocità",
+      "sommario": "di Franco Pistono gli articoli / video di Franco per Ambientenonsolo In questo video presenta Città 30, l’altra velocità, promosso e concesso gratuitamente da Intermezzi [&#8230;]\nL'articolo Città 30, l’altra velocità proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/citta-30-laltra-velocita/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "mobilita",
+        "mobilita-dolce",
+        "newsletter"
+      ],
+      "data": "2026-06-28",
+      "data_iso": "2026-06-28T08:58:00+00:00"
     },
     {
       "titolo": "Portare la scuola a casa, contro i talebani",
@@ -422,6 +662,22 @@
       "data_iso": "2026-06-27T05:00:00+00:00"
     },
     {
+      "titolo": "L’assalto alla montagna. Impiantisti, turistificazione e futuro delle terre alte (2 di 3)",
+      "sommario": "Come l&#8217;industria turistica sta trasformando la natura in infrastruttura. Di Luigi Casanova L&#8217;aumento della capacità di trasporto verso le alte quote produce inevitabilmente una domanda crescente di servizi, attrazioni e infrastrutture. La montagna viene così progressivamente adattata alle aspettative di un turismo che ricerca consumo, intrattenimento e comfort, spesso indipendentemente &#8230;\nL'articolo L’assalto alla montagna. Impiantisti, turistificazione e futuro delle terre alte",
+      "link": "https://www.mountainwilderness.it/editoriale/lassalto-alla-montagna-impiantisti-turistificazione-e-futuro-delle-terre-alte-2-di-3/",
+      "fonte": "Mountain Wilderness Italia",
+      "categoria_fonte": "associazionismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "wilderness",
+        "montagna",
+        "aree-protette",
+        "newsletter"
+      ],
+      "data": "2026-06-27",
+      "data_iso": "2026-06-27T04:00:00+00:00"
+    },
+    {
       "titolo": "Come salvare una specie faunistica ammazzandone gli esemplari, la storia dei Cervi di Eld nello zoo di Zurigo.",
       "sommario": "Il Cervo di Eld (Rucervus eldii thamin), detto anche Tameng della Birmania, è una specie di Cervo a rischio di estinzione, che sopravvive nel sud est asiatico a caccia, distruzione degli habitat naturali, bracconaggio, guerre e guerriglie di ogni tipo. Vi sono vari programmi conservazionistici in corso, sia nei luoghi di sopravvivenza dell’Ungulato, sia presso [&#8230;]",
       "link": "https://gruppodinterventogiuridicoweb.com/2026/06/27/come-salvare-una-specie-faunistica-ammazzandone-gli-esemplari-la-storia-dei-cervi-di-eld-nello-zoo-di-zurigo/",
@@ -473,6 +729,21 @@
       ],
       "data": "2026-06-26",
       "data_iso": "2026-06-26T11:44:41+00:00"
+    },
+    {
+      "titolo": "Inquinamento atmosferico e salute: gli indici di qualità dell’aria devono diventare strumenti di prevenzione",
+      "sommario": "L’inquinamento atmosferico è il secondo fattore di rischio di morte a livello globale e nel 2023 è stato associato a circa 8 milioni di decessi. Quasi tutta la popolazione mondiale...\nL'articolo Inquinamento atmosferico e salute: gli indici di qualità dell’aria devono diventare strumenti di prevenzione proviene da ISDE News.",
+      "link": "https://www.isdenews.it/inquinamento-atmosferico-e-salute-gli-indici-di-qualita-dellaria-devono-diventare-strumenti-di-prevenzione/",
+      "fonte": "ISDE",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "droni",
+        "inquinamento",
+        "newsletter"
+      ],
+      "data": "2026-06-26",
+      "data_iso": "2026-06-26T11:11:41+00:00"
     },
     {
       "titolo": "Finanza sostenibile, il Consiglio UE riscrive la SFDR: nuove regole per contrastare il greenwashing",
@@ -671,6 +942,21 @@
       "data_iso": "2026-06-25T07:55:54+00:00"
     },
     {
+      "titolo": "Depurazione dei corsi d’acqua padovani: promossi Brenta e Brentella, criticità su Piovego e soprattutto Bacchiglione",
+      "sommario": "Padova, 25 giugno 2026                                                                                          Comunicato stampa Depurazione dei corsi d’acqua padovani: [&#8230;]\nL'articolo Depurazione dei corsi d’acqua padovani: promossi Brenta e Brentella, criticità su Piovego e soprattutto Bacchiglione proviene da Legambiente Veneto.",
+      "link": "https://legambienteveneto.it/depurazione-dei-corsi-dacqua-padovani-promossi-brenta-e-brentella-criticita-su-piovego-e-soprattutto-bacchiglione/",
+      "fonte": "Legambiente Veneto",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "veneto",
+        "fiumi",
+        "newsletter"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T07:28:01+00:00"
+    },
+    {
       "titolo": "Il verde pubblico riguarda tutti",
       "sommario": "In questo articolo della rubrica “Il punto di rugiada”, Stefano Passerotti riflette sul verde pubblico e sul nostro rapporto quotidiano con gli spazi comuni: alberi, aiuole, marciapiedi, piccoli pezzi di terra che spesso attraversiamo senza più sentirli nostri.",
       "link": "https://www.italiachecambia.org/2026/06/verde-pubblico-riguarda-tutti/",
@@ -695,6 +981,23 @@
       ],
       "data": "2026-06-25",
       "data_iso": "2026-06-25T05:12:00+00:00"
+    },
+    {
+      "titolo": "L’assalto alla montagna. Impiantisti, turistificazione e futuro delle terre alte (1 di 3)",
+      "sommario": "Come l&#8217;industria turistica sta trasformando la natura in infrastruttura. Di Luigi Casanova. Le montagne stanno attraversando una trasformazione profonda e accelerata. Ciò che per secoli è stato uno spazio caratterizzato da limiti naturali, fragilità ecologica, culture locali e biodiversità, viene oggi sottoposto a una pressione crescente da parte dell&#8217;industria turistica &#8230;\nL'articolo L’assalto alla montagna. Impiantisti, turistificazione e futuro delle terre alte (1 di 3) provi",
+      "link": "https://www.mountainwilderness.it/editoriale/lassalto-alla-montagna-impiantisti-turistificazione-e-futuro-delle-terre-alte-1-di-3/",
+      "fonte": "Mountain Wilderness Italia",
+      "categoria_fonte": "associazionismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "biodiversità",
+        "wilderness",
+        "montagna",
+        "aree-protette",
+        "newsletter"
+      ],
+      "data": "2026-06-25",
+      "data_iso": "2026-06-25T04:00:00+00:00"
     },
     {
       "titolo": "La Regione Liguria come gestisce le terre collettive?",
@@ -758,6 +1061,19 @@
       "data_iso": "2026-06-24T09:10:00+00:00"
     },
     {
+      "titolo": "Piano Nazionale di Ripristino della Natura: elemento fondativo che non può restare sulla carta",
+      "sommario": "Il 24 giugno si chiude la consultazione pubblica per la definizione del Piano Nazionale di Ripristino: il Forum Salviamo il Paesaggio chiede trasparenza sugli esiti. [...]",
+      "link": "https://www.salviamoilpaesaggio.it/blog/2026/06/piano-nazionale-di-ripristino-della-natura-elemento-fondativo-che-non-puo-restare-sulla-carta/",
+      "fonte": "Salviamo il Paesaggio",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "territorio_paesaggio",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-24",
+      "data_iso": "2026-06-24T08:24:38+00:00"
+    },
+    {
       "titolo": "Gentrificazione e gestione privatistica degli spazi ed edifici pubblici a Padova",
       "sommario": "Pubblichiamo un intervento del gruppo Urbanistica e Contesto di Padova. La questione degli spazi pubblici a Padova richiederebbe una politica orientata a farne ambiti orizzontali, fruibili dalla cittadinanza in modo aperto e gratuito e gestiti a tutti gli effetti come beni comuni. Nelle righe seguenti si dimostrerà la distanza dell’Amministrazione Comunale da questa idea, attraverso i casi dell'ex Macello, ex Palazzina Coni, ex Configliachi e ex caserma Prandina.\nThe post Gentrificazione e gesti",
       "link": "https://www.laboratorioinchiesta.it/2026/06/gentrificazione-e-gestione-privatistica-degli-spazi-ed-edifici-pubblici-a-padova/",
@@ -769,6 +1085,19 @@
       ],
       "data": "2026-06-24",
       "data_iso": "2026-06-24T07:23:42+00:00"
+    },
+    {
+      "titolo": "Latte e polveri tossiche: Intervista a Lorenzo Feltrin ed Emanuele Leonardi su ecologia e classe",
+      "sommario": "Questa estate escono i libri Workers and the World: Fighting Ecological Crisis from Within di Lorenzo Feltrin e",
+      "link": "https://globalproject.info/2026/6/latte-e-polveri-tossiche-intervista-a-lorenzo-feltrin-ed-emanuele-leonardi-su-ecologia-e-classe",
+      "fonte": "Global Project",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-24",
+      "data_iso": "2026-06-24T07:00:00+00:00"
     },
     {
       "titolo": "Torna El Niño, il suolo sarà uno dei primi banchi di prova",
@@ -795,6 +1124,32 @@
       "data_iso": "2026-06-23T23:05:00+00:00"
     },
     {
+      "titolo": "Studio: PFAS nel sangue del 98,8% del campione di cittadini USA",
+      "sommario": "Risultati dei test su un amplissimo campione (10mila persone) pubblicati sul Journal of Occupational and Environmental Hygiene provano quanto sia difficile liberarsi dei PFAS anche quando esistono restrizioni globali Continue Reading Studio: PFAS nel sangue del 98,8% del campione di cittadini USA\nL'articolo Studio: PFAS nel sangue del 98,8% del campione di cittadini USA proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/studio-pfas-sangue-98-campione-cittadini-usa/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-23",
+      "data_iso": "2026-06-23T10:00:54+00:00"
+    },
+    {
+      "titolo": "Ambulatori verdi, Ilaria Mariotti racconta la salute sostenibile fin dai primi mille giorni",
+      "sommario": "Ambiente e salute in 100 secondi&#160;ha realizzato una nuova serie di video-interviste dedicate all’inquinamento atmosferico, tema al centro della campagna&#160;“Cambiamo aria”, promossa da&#160;ISDE Italia&#160;in collaborazione [&#8230;]\nL'articolo Ambulatori verdi, Ilaria Mariotti racconta la salute sostenibile fin dai primi mille giorni proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/ambulatori-verdi-ilaria-mariotti-racconta-la-salute-sostenibile-fin-dai-primi-mille-giorni/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-23",
+      "data_iso": "2026-06-23T08:30:00+00:00"
+    },
+    {
       "titolo": "101 ciclisti uccisi dall’inizio dell’anno: ci vuole il coraggio di chiamarla strage",
       "sommario": "Secondo i dati dell'ASAPS sono 101 i ciclisti uccisi dall'inizio dell'anno. Il direttore di Bikeitalia: \"Continuare a chiamarli incidenti è il modo più comodo per non vedere il sistema che li produce\".",
       "link": "https://www.italiachecambia.org/news/ciclisti-uccisi-chiamarla-strage/",
@@ -817,6 +1172,19 @@
       ],
       "data": "2026-06-23",
       "data_iso": "2026-06-23T07:00:09+00:00"
+    },
+    {
+      "titolo": "Petizioni e sit in contro la legge sulla caccia selvaggia. Il parere dell’etologa",
+      "sommario": "Oggi si vota in Senato per il DDL 1552, il disegno di legge sulla \"caccia selvaggia\". Mobilitazioni e proteste previste a Roma, mentre l'etologa Chiara Grasso spiega perché è fondamentale che il testo non venga approvato.",
+      "link": "https://www.italiachecambia.org/2026/06/sit-in-contro-legge-caccia-selvaggia/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-23",
+      "data_iso": "2026-06-23T06:20:17+00:00"
     },
     {
       "titolo": "Economia circolare in Italia: oltre 250 buone pratiche, cresce la rete ma serve accelerare",
@@ -933,6 +1301,33 @@
       "data_iso": "2026-06-22T10:00:46+00:00"
     },
     {
+      "titolo": "La transizione ecologica entra nei CdA: ecco perché la sostenibilità non è più un progetto parallelo",
+      "sommario": "Dall'eco-design alla finanza sostenibile, fino all'impatto dell'Intelligenza Artificiale Generativa: le aziende italiane cercano leader capaci di trasformare i vincoli normativi in vantaggi competitivi. Italian Tech Academy e Talent Garden lanciano la decima edizione del Master...",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/22/news/la_transizione_ecologica_entra_nei_cda_ecco_perche_la_sostenibilita_non_e_piu_un_progetto_parallelo-425427001/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-22",
+      "data_iso": "2026-06-22T10:00:00+00:00"
+    },
+    {
+      "titolo": "Italia ambiente ed energia un secolo di trasformazioni tra consumo di suolo crisi climatica e transizione incompiuta",
+      "sommario": "Un secolo di dati racconta un’Italia profondamente cambiata nel rapporto con il territorio l’energia il clima e i rifiuti. Il nuovo approfondimento Istat “Storie di [&#8230;]\nL'articolo Italia ambiente ed energia un secolo di trasformazioni tra consumo di suolo crisi climatica e transizione incompiuta proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/italia-ambiente-ed-energia-un-secolo-di-trasformazioni-tra-consumo-di-suolo-crisi-climatica-e-transizione-incompiuta/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "consumo-suolo",
+        "newsletter"
+      ],
+      "data": "2026-06-22",
+      "data_iso": "2026-06-22T08:01:00+00:00"
+    },
+    {
       "titolo": "Materie prime critiche, arriva il primo elenco UE per valorizzarne il recupero",
       "sommario": "Il Joint Research Centre individua prodotti e flussi di rifiuti con il maggiore potenziale di recupero di materie prime critiche. Un passaggio chiave per attuare l'articolo 26 del Critical Raw Materials Act, supportare le misure nazionali e trasformare l’economia circolare in una leva concreta di autonomia strategica europea Continue Reading Materie prime critiche, arriva il primo elenco UE per valorizzarne il recupero\nL'articolo Materie prime critiche, arriva il primo elenco UE per valorizzarne",
       "link": "https://economiacircolare.com/materie-prime-critiche-ue-misure-circolarita/",
@@ -1000,6 +1395,20 @@
       ],
       "data": "2026-06-21",
       "data_iso": "2026-06-21T19:03:56+00:00"
+    },
+    {
+      "titolo": "Il 15% del riscaldamento globale arriva da “gas serra indiretti” (che nessuno considera)",
+      "sommario": "Una ricerca pubblicata su “Science” attribuisce circa 0,3 gradi dell'aumento delle temperature a composti rimasti fuori dai grandi accordi sul clima. Sono i gas serra indiretti, e ridurli porterebbe benefici rapidi al clima e all'aria che respiriamo",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/21/news/gas_serra_indiretti_riscaldamento_globale-425414220/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "cambiamenti-climatici",
+        "newsletter"
+      ],
+      "data": "2026-06-21",
+      "data_iso": "2026-06-21T18:00:36+00:00"
     },
     {
       "titolo": "L’ondata di caldo africano in Europa non è un’anomalia, ma il volto della nuova estate mediterranea",
@@ -1094,6 +1503,19 @@
       ],
       "data": "2026-06-18",
       "data_iso": "2026-06-18T14:57:49+00:00"
+    },
+    {
+      "titolo": "La partita della plastica nei Mondiali FIFA: il paradosso della sostenibilità nei grandi eventi",
+      "sommario": "I Mondiali FIFA mostrano il paradosso della sostenibilità: progressi su materiali riciclati e gestione dei rifiuti, ma persiste l’uso diffuso di plastica monouso. La natura temporanea dell’evento e i consumi intensivi rendono difficile una vera circolarità. A essere messa in discussione deve essere la logica dei granti eventi Continue Reading La partita della plastica nei Mondiali FIFA: il paradosso della sostenibilità nei grandi eventi\nL'articolo La partita della plastica nei Mondiali FIFA: il ",
+      "link": "https://economiacircolare.com/mondiali-fifa-plastica-grandi-eventi/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-18",
+      "data_iso": "2026-06-18T10:00:19+00:00"
     },
     {
       "titolo": "United Nations University: La transizione ingiusta è servita",
@@ -1352,6 +1774,19 @@
       "data_iso": "2026-06-15T08:27:00+00:00"
     },
     {
+      "titolo": "No ai data center per l’IA, Cittadina della California blocca la costruzione con un referendum",
+      "sommario": "Oltre l’86% degli elettori di Monterey Park ha bocciato la richiesta di costruzione. E’ la prima volta che accade negli Stati Uniti",
+      "link": "https://www.repubblica.it/green-and-blue/2026/06/12/news/data_center_referendum_california-425401548/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "newsletter"
+      ],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T07:45:00+00:00"
+    },
+    {
       "titolo": "Le false promesse della filiera degli allevamenti intensivi",
       "sommario": "Torniamo a parlare di allevamenti intensivi, questa volta concentrandoci sulla comunicazione. È sempre più evidente come l’industria della carne e dei latticini abbia un modus operandi preciso volto a nascondere il suo impatto ambientale e mostrarsi positivo per la salute. Nonostante sempre più studi e report mostrino il contrario Continue Reading Le false promesse della filiera degli allevamenti intensivi\nL'articolo Le false promesse della filiera degli allevamenti intensivi proviene da Economi",
       "link": "https://economiacircolare.com/le-false-promesse-della-filiera-degli-allevamenti-intensivi/",
@@ -1361,6 +1796,22 @@
       "temi": [],
       "data": "2026-06-15",
       "data_iso": "2026-06-15T07:00:20+00:00"
+    },
+    {
+      "titolo": "Cibo, Biodiversità e Desertificazione",
+      "sommario": "In occasione della  Giornata mondiale contro la desertificazione e la siccità   l  ’Ordine degli Architetti P.P.C. della provincia di Messina e la Fondazione Architetti nel Mediterraneo Messina, con il patrocinio dell’Istituto Nazionale di Bioarchitettura e in collaborazione con Assocea Messina, propongono la giornata formativa dal titolo:  “ Cibo, Biodiversità e Desertificazione ”.    Saranno affrontati i temi relativi al rapporto tra cambiamenti climatici, tutela della biodiversità, alimentazi",
+      "link": "https://www.unccd.int/events/desertification-drought-day/2026",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "siccità",
+        "cambiamenti-climatici",
+        "biodiversità",
+        "newsletter"
+      ],
+      "data": "2026-06-15",
+      "data_iso": "2026-06-15T06:36:00+00:00"
     }
   ]
 }

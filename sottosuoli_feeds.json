@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-02T12:37:33",
-  "totale": 26,
-  "attivi": 26,
+  "aggiornato": "2026-07-03T14:20:48",
+  "totale": 37,
+  "attivi": 37,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -20,6 +20,33 @@
       "tema_label": "altro",
       "attivo": 1,
       "punteggio": 5
+    },
+    {
+      "nome": "Atmospheric Science Data Center (ASDC)",
+      "url": "https://asdc.larc.nasa.gov/rss",
+      "categoria": "istituzionale",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "Ca Foscari ambiente",
+      "url": "https://rss.app/feeds/zTCCFTyFWNPEvoP7.xml",
+      "categoria": "istituzionale",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "Climate Change UNI MAINE",
+      "url": "https://climatechange.umaine.edu/feed/",
+      "categoria": "istituzionale",
+      "tema": "cambiamenti_climatici",
+      "tema_label": "cambiamenti climatici",
+      "attivo": 1,
+      "punteggio": 9
     },
     {
       "nome": "CMCC",
@@ -56,6 +83,24 @@
       "tema_label": "altro",
       "attivo": 1,
       "punteggio": 5
+    },
+    {
+      "nome": "EEA Map",
+      "url": "https://www.eea.europa.eu/en/newsroom/rss-feeds/maps-and-charts/rss.xml",
+      "categoria": "istituzionale",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "EEA Press Release",
+      "url": "https://www.eea.europa.eu/en/newsroom/rss-feeds/eeas-press-releases-rss/rss.xml",
+      "categoria": "istituzionale",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 9
     },
     {
       "nome": "European Environmental",
@@ -101,6 +146,15 @@
       "tema_label": "politiche e istituzioni",
       "attivo": 1,
       "punteggio": 5
+    },
+    {
+      "nome": "Il Bo Live",
+      "url": "https://ilbolive.unipd.it/it/rss.xml",
+      "categoria": "istituzionale",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 9
     },
     {
       "nome": "IlFatto Ambiente",
@@ -191,6 +245,51 @@
       "tema_label": "altro",
       "attivo": 1,
       "punteggio": 8
+    },
+    {
+      "nome": "NASA Earth Observatory (NEO) - Image of the Day",
+      "url": "https://science.nasa.gov/feed/?science_org=19791%2C22453",
+      "categoria": "istituzionale",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "NASA earthdata",
+      "url": "https://www.earthdata.nasa.gov/rss.xml",
+      "categoria": "istituzionale",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "Nature",
+      "url": "https://www.nature.com/nature.rss",
+      "categoria": "giornalismo",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "NEO - Natural Hazards",
+      "url": "https://science.nasa.gov/feed/?science_org=22414%2C19791",
+      "categoria": "istituzionale",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "Non Sprecare",
+      "url": "https://www.nonsprecare.it/feed",
+      "categoria": "giornalismo",
+      "tema": "energia_transizione",
+      "tema_label": "energia e transizione",
+      "attivo": 1,
+      "punteggio": 7
     },
     {
       "nome": "OGC",
