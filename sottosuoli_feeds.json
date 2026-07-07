@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-06T13:46:48",
-  "totale": 37,
-  "attivi": 37,
+  "aggiornato": "2026-07-07T08:19:12",
+  "totale": 39,
+  "attivi": 39,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -137,6 +137,15 @@
       "tema_label": "locale / nord-est",
       "attivo": 1,
       "punteggio": 5
+    },
+    {
+      "nome": "Greenpeace Italia",
+      "url": "https://www.greenpeace.org/italy/feed",
+      "categoria": "associazione",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 8
     },
     {
       "nome": "Gruppo int. Giuridico",
@@ -317,6 +326,15 @@
       "tema_label": "ambiente e clima",
       "attivo": 1,
       "punteggio": 6
+    },
+    {
+      "nome": "Rete Ambientalista",
+      "url": "https://www.rete-ambientalista.it/feed",
+      "categoria": "associazione",
+      "tema": "salute_ambiente",
+      "tema_label": "salute e ambiente",
+      "attivo": 1,
+      "punteggio": 5
     },
     {
       "nome": "Salviamo il Paesaggio",
