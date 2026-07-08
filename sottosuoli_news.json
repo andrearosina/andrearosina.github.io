@@ -1,7 +1,115 @@
 {
-  "aggiornato": "2026-07-07T06:19:12.351976+00:00",
-  "totale": 158,
+  "aggiornato": "2026-07-08T05:17:29.251398+00:00",
+  "totale": 174,
   "articoli": [
+    {
+      "titolo": "Il GrIG segnala alla magistratura opere e tagli della vegetazione mediterranea effettuati a Cala Finanza (Loiri Porto S. Paolo).",
+      "sommario": "Il Gruppo d’Intervento Giuridico (GrIG) ha provveduto (7 luglio 2026), dopo la precedente del 6 aprile 2026, a segnalare formalmente alla Procura della Repubblica presso il Tribunale di Tempio Pausania, al Corpo Forestale e di Vigilanza Ambientale e ai Carabinieri del Nucleo Tutela Patrimonio Culturale le varie opere edilizie realizzate e i tagli della vegetazione [&#8230;]",
+      "link": "https://gruppodinterventogiuridicoweb.com/2026/07/08/il-grig-segnala-alla-magistratura-opere-e-tagli-della-vegetazione-mediterranea-effettuati-a-cala-finanza-loiri-porto-s-paolo/",
+      "fonte": "Gruppo int. Giuridico",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "fiume-po",
+        "gis"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T23:05:00+00:00"
+    },
+    {
+      "titolo": "Mare senza tutele: il nuovo report di Greenpeace",
+      "sommario": "Greenpeace denuncia pesca a strascico, bracconaggio e sversamenti illegali nei Siti di Importanza Comunitaria del Mediterraneo, aree protette dove la biodiversità resta senza una tutela efficace.",
+      "link": "https://www.greenpeace.org/italy/rapporto/31278/mare-senza-tutele-il-nuovo-report-di-greenpeace/",
+      "fonte": "Greenpeace Italia",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "mare",
+        "biodiversità",
+        "pesca"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T22:05:00+00:00"
+    },
+    {
+      "titolo": "Climate spread: The cost of warming for Italy’s public finances and economic growth",
+      "sommario": "For the first time a report quantifies the link between climate risk and Italy’s public finances, showing how climate change",
+      "link": "https://www.cmcc.it/article/climate-spread-the-cost-of-warming-for-italys-public-finances-and-economic-growth",
+      "fonte": "CMCC",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "cambiamenti_climatici",
+      "temi": [
+        "cambiamenti-climatici"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T16:53:39+00:00"
+    },
+    {
+      "titolo": "Stuck in the past: EU Livestock Strategy presents no route out for a sector in crisis",
+      "sommario": "Brussels, 7 July 2026 – The European Commission today published its Livestock Strategy and long-awaited Protein Plan, but the two send starkly different signals about Europe’s […]",
+      "link": "https://eeb.org/en/stuck-in-the-past-eu-livestock-strategy-presents-no-route-out-for-a-sector-in-crisis/",
+      "fonte": "European Environmental",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "alimentazione",
+        "allevamenti-intensivi"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T15:15:40+00:00"
+    },
+    {
+      "titolo": "Trentino, ok alla caccia al cinghiale con arco e frecce. Sì dell’Ispra ma è polemica",
+      "sommario": "La sperimentazione avallata per tentare di contenere l'aumento dei cinghiali e il rischio della peste suina. Su questo c'è l'ok anche dell'Ispra, che resta però molto scettico sul ddl Caccia ora al vaglio della Camera. Animalisti sul piede di guerra",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/07/news/trentino_caccia_cinghiale_arco-425456359/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "caccia"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T13:06:03+00:00"
+    },
+    {
+      "titolo": "Fragole contaminate da PFAS e pesticidi, svela indagine di Greenpeace e PAN EUROPE",
+      "sommario": "Mix di sostanze altamente tossiche nei campioni analizzati nell'UE: decreto Omnibus mette a rischio la nostra salute.",
+      "link": "https://www.greenpeace.org/italy/comunicato-stampa/31295/fragole-contaminate-da-pfas-e-pesticidi-svela-indagine-di-greenpeace-e-pan-europe/",
+      "fonte": "Greenpeace Italia",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T09:39:25+00:00"
+    },
+    {
+      "titolo": "Inquinamento atmosferico e salute respiratoria: come si misurano gli effetti. Lo spiega Giovanni Viegi in 100 secondi",
+      "sommario": "Ambiente e salute in 100 secondi&#160;apre una nuova serie di video-interviste dedicate all’inquinamento atmosferico, tema al centro della campagna&#160;“Cambiamo aria”, promossa da&#160;ISDE Italia&#160;in collaborazione con [&#8230;]\nL'articolo Inquinamento atmosferico e salute respiratoria: come si misurano gli effetti. Lo spiega Giovanni Viegi in 100 secondi proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/inquinamento-atmosferico-e-salute-respiratoria-come-si-misurano-gli-effetti-lo-spiega-giovanni-viegi-in-100-secondi/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "salute",
+        "inquinamento"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T09:12:00+00:00"
+    },
+    {
+      "titolo": "Trattato globale sulla plastica, a Nairobi si prova ad uscire dallo stallo negoziale",
+      "sommario": "Lo scorso fine settimana si è tenuto un incontro informale dei capi delegazione dell’INC per preparare il terreno alla ripresa del negoziato. Il prossimo incontro a settembre. Le ONG: sbagliano escluderci  Continue Reading Trattato globale sulla plastica, a Nairobi si prova ad uscire dallo stallo negoziale\nL'articolo Trattato globale sulla plastica, a Nairobi si prova ad uscire dallo stallo negoziale proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/trattato-globale-plastica-nairobi/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "inquinamento",
+        "plastica"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T07:14:10+00:00"
+    },
     {
       "titolo": "Mari sempre più caldi: nel 2025 secondo valore più alto mai registrato",
       "sommario": "Temperature sopra la media. Crisi idrica sotto monitoraggio. I dati del nuovo rapporto SNPA sul clima in Italia. del Sistema Nazionale per la Protezione dell&#8217;Ambiente [...]",
@@ -50,6 +158,23 @@
       "data_iso": "2026-07-07T04:00:00+00:00"
     },
     {
+      "titolo": "L’asfalto mangia-smog creato con gli scarti degli ulivi",
+      "sommario": "Sperimentato a Barcellona in una strada dell'Eixample. Una tecnologia, quella del biochar, che sequestra la CO2 e trasforma un rifiuto in una risorsa preziosa",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/07/news/l_asfalto_mangia-smog_creato_con_gli_scarti_degli_ulivi-425454391/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "cambiamenti-climatici",
+        "emissioni",
+        "inquinamento",
+        "adattamento",
+        "co2"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T01:00:00+00:00"
+    },
+    {
       "titolo": "Emissioni impianti industriali Gruppo SARAS, il GrIG parte civile.",
       "sommario": "Presso il Tribunale penale di Cagliar, iniziata il 27 febbraio 2026, &#160;è proseguita l’udienza preliminare riguardo le contestazioni di vari episodi avvenuti negli anni scorsi di emissioni “fuori norma” dagli impianti Sarlux da parte della Procura della Repubblica. Indagini e consulenze tecniche hanno accertato sforamenti dei limiti di legge che avrebbero “determinato una situazione concretamente [&#8230;]",
       "link": "https://gruppodinterventogiuridicoweb.com/2026/07/07/emissioni-impianti-industriali-gruppo-saras-il-grig-parte-civile/",
@@ -61,6 +186,19 @@
       ],
       "data": "2026-07-06",
       "data_iso": "2026-07-06T23:05:00+00:00"
+    },
+    {
+      "titolo": "La prima smagliatura nell'ozono? Risale al 1957 e si deve a un solvente",
+      "sommario": "Ricostruendo la chimica del secolo scorso con i sensori di oggi, i ricercatori del Mit collocano il primo segnale del futuro buco dell’ozono negli anni ’50. E il responsabile non furono i clorofluorocarburi, ma il tetracloruro di carbonio",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/06/news/buco_ozono_solvente-425448951/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "inquinamento"
+      ],
+      "data": "2026-07-06",
+      "data_iso": "2026-07-06T18:00:00+00:00"
     },
     {
       "titolo": "Crisi idrica in Veneto: vigneti monitorati con foglie elettroniche e droni",
@@ -88,6 +226,17 @@
       ],
       "data": "2026-07-06",
       "data_iso": "2026-07-06T12:26:52+00:00"
+    },
+    {
+      "titolo": "SPECIALE | Crisi della differenziata",
+      "sommario": "Dalla plastica all'intera raccolta differenziata: così la crisi di un settore rischia di espandersi sempre di più in questa torrida estate 2026. Come mai? Affrontiamo i motivi e indichiamo le possibili soluzioni in questo Speciale. Sotto i riflettori le difficoltà di una filiera che finora è stata raccontata come un'eccellenza Continue Reading SPECIALE &#124; Crisi della differenziata\nL'articolo SPECIALE | Crisi della differenziata proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/speciale-crisi-della-differenziata/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-07-06",
+      "data_iso": "2026-07-06T12:00:24+00:00"
     },
     {
       "titolo": "La mucca gigante, dopo la panchina gigante, salverà la montagna. O forse no.",
@@ -131,6 +280,37 @@
       ],
       "data": "2026-07-06",
       "data_iso": "2026-07-06T10:06:00+00:00"
+    },
+    {
+      "titolo": "Crisi della plastica, il Veneto amplia gli stoccaggi. Non escluso incenerimento della differenziata",
+      "sommario": "L’assessora Venturini: “Dobbiamo garantire la continuità del sistema, individuando nuovi spazi di stoccaggio e valutando, solo come estrema soluzione e per quantitativi limitati, il recupero energetico del materiale” Continue Reading Crisi della plastica, il Veneto amplia gli stoccaggi. Non escluso incenerimento della differenziata\nL'articolo Crisi della plastica, il Veneto amplia gli stoccaggi. Non escluso incenerimento della differenziata proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/crisi-riciclo-raccolta-plastica-veneto/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "veneto",
+        "rifiuti",
+        "inquinamento",
+        "plastica"
+      ],
+      "data": "2026-07-06",
+      "data_iso": "2026-07-06T10:00:45+00:00"
+    },
+    {
+      "titolo": "Auto e salute, uno studio denuncia i costi nascosti della mobilità privata",
+      "sommario": "Le auto non sono soltanto un mezzo di trasporto: sono anche una delle principali fonti di danno per la salute umana, l’equità sociale e gli [&#8230;]\nL'articolo Auto e salute, uno studio denuncia i costi nascosti della mobilità privata proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/auto-e-salute-uno-studio-denuncia-i-costi-nascosti-della-mobilita-privata/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "mobilita",
+        "auto",
+        "costi"
+      ],
+      "data": "2026-07-06",
+      "data_iso": "2026-07-06T09:20:00+00:00"
     },
     {
       "titolo": "Isole di calore urbane: fino a 4°C in meno con riforestazione e depavimentazioni",
@@ -289,6 +469,20 @@
       "data_iso": "2026-07-04T15:24:02+00:00"
     },
     {
+      "titolo": "Secondo il governo la caccia ora “concorre alla tutela della biodiversità e dell’ecosistema”.",
+      "sommario": "Il Senato dà il via libera al disegno di legge che ridisegna le regole dell’attività venatoria in Italia: più poteri alle Regioni, scontro aperto con le associazioni ambientaliste (ENPA, LAC, LAV, Legambiente, LIPU-Birdlife Italia e WWF Italia) e con l’Unione Europea  per le violazioni delle Direttive Uccelli e Habitat in particolare in relazione all’estensione della &#8230; Leggi tutto \"Secondo il governo la caccia ora “concorre alla tutela della biodiversità e dell’ecosistema”.\"",
+      "link": "https://www.rete-ambientalista.it/2026/07/04/secondo-il-governo-la-caccia-ora-concorre-alla-tutela-della-biodiversita-e-dellecosistema/",
+      "fonte": "Rete Ambientalista",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "biodiversità",
+        "caccia"
+      ],
+      "data": "2026-07-04",
+      "data_iso": "2026-07-04T15:19:40+00:00"
+    },
+    {
       "titolo": "Transizione della mobilità urbana: i costi e i benefici secondo EIT Urban Mobility",
       "sommario": "La decarbonizzazione del trasporto urbano è uno degli obiettivi più ambiziosi del Green Deal europeo. Lo studio condotto da EIT Urban Mobility &#8220;EIT Urban Mobility study charts [&#8230;]\nL'articolo Transizione della mobilità urbana: i costi e i benefici secondo EIT Urban Mobility proviene da Ambientenonsolo.",
       "link": "https://ambientenonsolo.com/transizione-della-mobilita-urbana-i-costi-e-i-benefici-secondo-eit-urban-mobility/",
@@ -320,6 +514,17 @@
       "data_iso": "2026-07-03T16:03:00+00:00"
     },
     {
+      "titolo": "Antartide, nel mare di Bellingshausen il ghiaccio marino resta sotto la media stagionale",
+      "sommario": "Il ghiaccio marino antartico continua a mostrare segnali di forte anomalia in una delle aree più sensibili del continente bianco. Nel mare di Bellingshausen, lungo [&#8230;]\nL'articolo Antartide, nel mare di Bellingshausen il ghiaccio marino resta sotto la media stagionale proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/antartide-nel-mare-di-bellingshausen-il-ghiaccio-marino-resta-sotto-la-media-stagionale/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T13:16:00+00:00"
+    },
+    {
       "titolo": "CIEL: “Ecco le 9 strategie della disinformazione sull’inquinamento da plastica”",
       "sommario": "In un report pubblicato alla vigilia di una delle sessioni preparatorie del Trattato globale contro l’inquinamento da plastica, Il Center for International Environmental Law prova a svelare le tattiche comunicative che mirano a depotenziare l’iniziativa: “Un modello sistematico di disinformazione che influenza il modo in cui l’inquinamento viene definito, compreso, discusso e regolamentato” Continue Reading CIEL: “Ecco le 9 strategie della disinformazione sull’inquinamento da plastica”\nL'articol",
       "link": "https://economiacircolare.com/ciel-strategie-disinformazione-inquinamento-plastica/",
@@ -332,6 +537,20 @@
       ],
       "data": "2026-07-03",
       "data_iso": "2026-07-03T12:00:05+00:00"
+    },
+    {
+      "titolo": "Niente procedura d’urgenza per il Ddl Caccia. Lipu: “vinta la prima partita”",
+      "sommario": "La riforma della legge venatoria non arriverà in Aula prima dell'estate. La Commissione Agricoltura procederà con audizioni e tempi ordinari, dopo le pressioni di Quirinale e Ue.",
+      "link": "https://www.italiachecambia.org/news/niente-procedura-urgenza-ddl-caccia/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "antropocentrismo",
+        "caccia"
+      ],
+      "data": "2026-07-03",
+      "data_iso": "2026-07-03T11:22:39+00:00"
     },
     {
       "titolo": "XIII edizione dell’Ecoforum nazionale sull’economia circolare i dati di “Comuni Ricicloni 2026” di Legambiente e quelli dell’Osservatorio Appalti Verdi sull’applicazione dei CAM e GPP nei comuni capoluoghi di provincia e non",

@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-07T08:19:12",
-  "totale": 39,
-  "attivi": 39,
+  "aggiornato": "2026-07-08T07:17:29",
+  "totale": 40,
+  "attivi": 40,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -315,6 +315,15 @@
       "categoria": "associazione",
       "tema": "acqua_fiumi",
       "tema_label": "acqua e fiumi",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "ProPubblica",
+      "url": "https://www.propublica.org/feed",
+      "categoria": "giornalismo",
+      "tema": "ambiente_clima",
+      "tema_label": "ambiente e clima",
       "attivo": 1,
       "punteggio": 9
     },
