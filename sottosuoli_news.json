@@ -1,7 +1,132 @@
 {
-  "aggiornato": "2026-07-08T05:17:29.251398+00:00",
-  "totale": 174,
+  "aggiornato": "2026-07-09T10:33:01.389967+00:00",
+  "totale": 184,
   "articoli": [
+    {
+      "titolo": "Torta di pere con lo yogurt bianco",
+      "sommario": "Aggiungete un pizzico di sale e di cannella. Deve cuocere poco più di mezz'ora.",
+      "link": "https://www.nonsprecare.it/ricetta-torta-pere",
+      "fonte": "Non Sprecare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "energia_transizione",
+      "temi": [],
+      "data": "2026-07-09",
+      "data_iso": "2026-07-09T06:00:01+00:00"
+    },
+    {
+      "titolo": "Isole di calore. Meno asfalto, più alberi: così le città italiane possono perdere 4 gradi",
+      "sommario": "Dal progetto Mirificus la ricetta contro gli effetti del climate change: riforestazione urbana, depavimentazione e superfici più riflettenti possono ridurre le temperature nelle ore più calde. I casi di Roma e Firenze indicano una strada concreta: intervenire sugli hotspot...",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/09/news/isole_di_calore_meno_asfalto_piu_alberi_cosi_le_citta_italiane_possono_perdere_4_gradi-425456223/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "cambiamenti-climatici",
+        "rigenerazione-urbana",
+        "isole-di-calore"
+      ],
+      "data": "2026-07-09",
+      "data_iso": "2026-07-09T05:00:00+00:00"
+    },
+    {
+      "titolo": "Super Typhoon Bavi",
+      "sommario": "The third category 5 tropical cyclone of 2026 crossed the U.S. Northern Mariana Islands and Guam before continuing toward Asia.\nThe post Super Typhoon Bavi appeared first on NASA Science.",
+      "link": "https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/",
+      "fonte": "NASA Earth Observatory (NEO) - Image of the Day",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "gis_dati",
+      "temi": [
+        "eventi-estremi"
+      ],
+      "data": "2026-07-09",
+      "data_iso": "2026-07-09T04:01:00+00:00"
+    },
+    {
+      "titolo": "Lavori green, quando la domanda supera l'offerta",
+      "sommario": "Nel mondo cresce la richiesta di competenze per la sostenibilità. In Italia sempre più cercati i sustainability manager, ma anche i geologi. I report di LinkedIn mostrano perché, investire in una professione green, è vantaggioso",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/08/news/lavori_green_quando_la_domanda_supera_l_offerta-425459180/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "geologia",
+        "lavoro"
+      ],
+      "data": "2026-07-08",
+      "data_iso": "2026-07-08T15:03:19+00:00"
+    },
+    {
+      "titolo": "Strategia europea per la zootecnia, le associazioni: “Una visione del futuro degli allevamenti che lascia immutato il modello attuale”",
+      "sommario": "Greenpeace Italia, Isde, Lipu, Slow Food Italia, Terra! e WWF Italia sulla Livestock Strategy presentata a Bruxelles: una “non strategia” che lascia aperti i problemi causati dal sistema a società, ambiente e salute.",
+      "link": "https://www.greenpeace.org/italy/comunicato-stampa/31388/strategia-europea-per-la-zootecnia-le-associazioni-una-visione-del-futuro-degli-allevamenti-che-lascia-immutato-il-modello-attuale/",
+      "fonte": "Greenpeace Italia",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "allevamenti-intensivi",
+        "agricoltura",
+        "zootecnia"
+      ],
+      "data": "2026-07-08",
+      "data_iso": "2026-07-08T14:37:31+00:00"
+    },
+    {
+      "titolo": "L'Europa occidentale non aveva mai vissuto un giugno così caldo",
+      "sommario": "L'Europa occidentale non aveva mai vissuto un giugno così caldoantonio.massariolo\nMer, 07/08/2026 - 16:35\n\n    9 Luglio 2026\n\n    Language\nItalian\n    Antonio Massariolo\n    Sembra quasi banale dirlo ma: è stato un mese di giugno decisamente caldo. L'ondata di calore che nelle ultime settimane ha investito gran parte dell'Europa infatti, non è stata soltanto una sensazione e la conferma arriva dai dati di Copernicus. Son passati solo pochi giorni da quando raccontavamo che la superficie del mare",
+      "link": "https://ilbolive.unipd.it/it/news/societa/leuropa-occidentale-non-aveva-mai-vissuto-giugno",
+      "fonte": "Il Bo Live",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "earth-observation",
+        "caldo-estremo"
+      ],
+      "data": "2026-07-08",
+      "data_iso": "2026-07-08T14:35:14+00:00"
+    },
+    {
+      "titolo": "Kopczyńska, direttrice della mobilità europea: “86 miliardi di euro per la mobilità sostenibile”",
+      "sommario": "L’Ue vuole tagliare del 90% le emissioni dei trasporti entro il 2050. Magda Kopczyńska, del Directorate-General for Mobility and Transport, ci spiega come e perché",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/08/news/magda_kopczynska_mobilita_sostenibile_ue-425458951/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "emissioni",
+        "mobilita",
+        "mobilità-sostenibile"
+      ],
+      "data": "2026-07-08",
+      "data_iso": "2026-07-08T13:45:02+00:00"
+    },
+    {
+      "titolo": "Pesca a strascico e sversamenti illegali scoperti in diversi siti marini protetti italiani, svela indagine di Greenpeace nella Giornata del Mediterraneo",
+      "sommario": "Pesca con metodi dannosi come lo strascico, sversamenti illegali e bracconaggio sono una pratica comune in alcuni siti marini italiani. È la denuncia che arriva da un’indagine di Greenpeace Italia realizzata in quattro SIC",
+      "link": "https://www.greenpeace.org/italy/comunicato-stampa/31274/pesca-a-strascico-e-sversamenti-illegali-scoperti-in-diversi-siti-marini-protetti-italiani-svela-indagine-di-greenpeace-nella-giornata-del-mediterraneo/",
+      "fonte": "Greenpeace Italia",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "aree-protette",
+        "pesca"
+      ],
+      "data": "2026-07-08",
+      "data_iso": "2026-07-08T07:00:00+00:00"
+    },
+    {
+      "titolo": "Intergenerational mobility fosters innovation in Europe",
+      "sommario": "Nature, Published online: 08 July 2026; doi:10.1038/s41586-026-10736-9The EUROPE-IGM-ATLAS reveals spatiotemporal trends that characterize the changing geography of opportunity in Europe and its relationship with regional innovation.",
+      "link": "https://www.nature.com/articles/s41586-026-10736-9",
+      "fonte": "Nature",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "mobilita",
+        "intergenerazionale"
+      ],
+      "data": "2026-07-08",
+      "data_iso": "2026-07-08T00:00:00+00:00"
+    },
     {
       "titolo": "Il GrIG segnala alla magistratura opere e tagli della vegetazione mediterranea effettuati a Cala Finanza (Loiri Porto S. Paolo).",
       "sommario": "Il Gruppo d’Intervento Giuridico (GrIG) ha provveduto (7 luglio 2026), dopo la precedente del 6 aprile 2026, a segnalare formalmente alla Procura della Repubblica presso il Tribunale di Tempio Pausania, al Corpo Forestale e di Vigilanza Ambientale e ai Carabinieri del Nucleo Tutela Patrimonio Culturale le varie opere edilizie realizzate e i tagli della vegetazione [&#8230;]",
@@ -15,6 +140,19 @@
       ],
       "data": "2026-07-07",
       "data_iso": "2026-07-07T23:05:00+00:00"
+    },
+    {
+      "titolo": "Specie profonde mai riprese prima! - PNRR MER Seamounts",
+      "sommario": "Negli abissi del Mar Mediterraneo, a oltre 2.000 metri di profondità, le montagne sottomarine rivelano un mondo che fino a poco tempo fa non potevamo vedere. Grazie a un ROV, (Remotely Operated Vehicle) Work Class - utilizzato nell'ambito del progetto  PNRR MER  - un vero e proprio ‘veicolo robotico’, la ricerca ISPRA entra in questi ambienti e osserva da vicino le specie che li abitano: pesci, crostacei, cefalopodi e cartilaginei. In condizioni estreme, la vita trova soluzioni sorprendenti, com",
+      "link": "https://www.isprambiente.gov.it/it/news/pnnr-mer-seamounts-e-specie-profonde",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "fiume-po"
+      ],
+      "data": "2026-07-07",
+      "data_iso": "2026-07-07T22:30:00+00:00"
     },
     {
       "titolo": "Mare senza tutele: il nuovo report di Greenpeace",

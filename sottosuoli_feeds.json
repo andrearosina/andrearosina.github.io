@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-08T07:17:29",
-  "totale": 40,
-  "attivi": 40,
+  "aggiornato": "2026-07-09T12:33:01",
+  "totale": 41,
+  "attivi": 41,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -42,6 +42,15 @@
     {
       "nome": "Climate Change UNI MAINE",
       "url": "https://climatechange.umaine.edu/feed/",
+      "categoria": "istituzionale",
+      "tema": "cambiamenti_climatici",
+      "tema_label": "cambiamenti climatici",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
+      "nome": "Climate Justice",
+      "url": "https://www.climate-justice.earth/feed/",
       "categoria": "istituzionale",
       "tema": "cambiamenti_climatici",
       "tema_label": "cambiamenti climatici",
