@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-09T12:33:01",
-  "totale": 41,
-  "attivi": 41,
+  "aggiornato": "2026-07-11T14:18:51",
+  "totale": 43,
+  "attivi": 42,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -85,6 +85,15 @@
       "punteggio": 6
     },
     {
+      "nome": "Eco Magazine",
+      "url": "https://eco-magazine.info/feed",
+      "categoria": "giornalismo",
+      "tema": "cambiamenti_climatici",
+      "tema_label": "cambiamenti climatici",
+      "attivo": 1,
+      "punteggio": 9
+    },
+    {
       "nome": "Economia Circolare",
       "url": "https://economiacircolare.com/feed/",
       "categoria": "giornalismo",
@@ -117,6 +126,15 @@
       "categoria": "associazione",
       "tema": "ambiente_clima",
       "tema_label": "ambiente e clima",
+      "attivo": 1,
+      "punteggio": 8
+    },
+    {
+      "nome": "GEO Smart Magazine",
+      "url": "https://geosmartmagazine.it/feed",
+      "categoria": "rivista",
+      "tema": "gis_dati",
+      "tema_label": "GIS e dati",
       "attivo": 1,
       "punteggio": 8
     },
@@ -306,7 +324,7 @@
       "categoria": "giornalismo",
       "tema": "energia_transizione",
       "tema_label": "energia e transizione",
-      "attivo": 1,
+      "attivo": 0,
       "punteggio": 7
     },
     {
