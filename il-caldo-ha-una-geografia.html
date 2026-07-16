@@ -111,15 +111,19 @@
 <figcaption>Figura 1 — Anomalia della temperatura media globale (terre e oceani), rispetto al periodo 1951–1980. Ridisegnata dai dati aperti NASA GISTEMP v4.</figcaption>
 </figure>
 <p>Questo è il riscaldamento già osservato. Quanto continuerà dipende dalle emissioni future, e per ragionarci l'IPCC usa cinque scenari illustrativi — dal mondo che azzera le emissioni a metà secolo a quello che continua ad accelerarle. La forbice a fine secolo va da un grado e mezzo a oltre quattro: non una previsione, ma la mappa delle conseguenze delle scelte possibili. Ed è una forbice che si scaricherà, amplificata, proprio su territori come il nostro.</p>
-<figure><div class="figure-pending" role="note"><strong>Figura 2 </strong>Scenari IPCC e riscaldamento globale a fine secolo.</div>
-<img alt="Grafico delle proiezioni di riscaldamento globale scenari IPCC" src="https://andrearosina.com/lst_monselice/fig_scenari_ipcc.png"/>
+<figure>
+<img alt="Grafico degli scenari IPCC di riscaldamento globale" src="https://andrearosina.com/lst_monselice/fig_scenari_ipcc.png"/>
 <figcaption>Figura 2 — Il riscaldamento globale proiettato nei cinque scenari IPCC: stima centrale e intervallo <em>very likely</em> per il 2081–2100, con il medio termine 2041–2060 a confronto. Ridisegnata dai valori valutati in IPCC AR6 WG1, Tabella SPM.1.</figcaption>
 </figure>
 <p>Il primo passo del metodo è quindi la discesa di scala: cosa dicono le temperature <em>qui</em>, nella zona di Monselice? Non esiste una stazione meteorologica secolare in paese, ma esiste una cosa chiamata rianalisi: la ricostruzione fisicamente coerente dell'atmosfera passata, fatta assimilando in un modello tutte le osservazioni disponibili — stazioni, palloni sonda, satelliti. In pratica, i moderni modelli matematici vengono fatti girare sui dati storici, ricostruendo la climatologia passata anche nei punti dove non esistevano rilevamenti: la temperatura locale viene interpolata proprio dai modelli. ERA5, la rianalisi europea di Copernicus, copre in modo omogeneo il periodo dal 1940 a oggi, e ci permette di estrarre la serie dei giugni per il punto di griglia locale.</p>
 <figure>
 <img alt="Grafico a barre delle anomalie di temperatura dei giugni a Monselice dal 1940 al 2026" src="https://andrearosina.com/lst_monselice/fig_storico_giugno.png"/>
 <figcaption>Figura 3 — Anomalia della temperatura media dell'aria di giugno nella zona di Monselice, 1940–2026, rispetto alla baseline 1961–1990. <em>Nota sul dato: la serie viene dalla rianalisi ERA5 di Copernicus (ECMWF), interrogata sul punto di griglia della zona di Monselice. Per i trend di lungo periodo è preferibile a una stazione reale proprio per la sua omogeneità: tratta il 1950 e il 2020 con lo stesso metodo, senza risentire di spostamenti o ricalibrazioni degli strumenti. Il valore rappresenta la temperatura dell'aria a 2 metri, mediata su un'area di parecchi chilometri di lato: alla sua risoluzione non vede l'isola di calore urbana — dice quanto si scalda il clima di sfondo, sopra il quale la geografia delle superfici fa le sue differenze.</em></figcaption>
-</figure><p class="editor-note">Da completare: grafico dedicato alle temperature medie e massime di giugno 2026, distinto dalla serie storica delle anomalie.</p>
+</figure>
+<figure>
+<img alt="Temperature medie e massime giornaliere dell'aria a Monselice nel giugno 2026" src="https://andrearosina.com/lst_monselice/fig_temperature_giugno_2026.png"/>
+<figcaption>Figura 4 — Temperature medie e massime giornaliere dell'aria nella zona di Monselice durante giugno 2026. Elaborazione sul punto 45,239° N, 11,749° E a partire dalla rianalisi ERA5-Land. I valori descrivono la temperatura dell'aria a due metri e non la temperatura superficiale rilevata da Landsat.</figcaption>
+</figure>
 <div class="box">
 <strong>Il trentennio climatologico</strong>
       Per convenzione dell'Organizzazione meteorologica mondiale, il "clima" di un luogo si descrive con le medie calcolate su trent'anni — abbastanza lunghi da assorbire le annate anomale, abbastanza brevi da fotografare un'epoca. Le anomalie del grafico sono riferite al trentennio 1961–1990: una scelta deliberata, perché è il clima in cui è stata costruita e pensata gran parte del territorio che abitiamo. Misurare la distanza da lì significa misurare quanto il contesto è cambiato sotto ciò che abbiamo edificato.
@@ -137,15 +141,15 @@
 <h3>Il metodo, in breve</h3>
 <p>Ho elaborato le immagini Landsat 8 e 9 (Collection 2, Level 2) su un'area di 3 chilometri di raggio centrata sul nucleo urbano di Monselice. Per ogni giugno dal 2022 al 2026 ho costruito il composito mediano delle scene "pulite". Pulite in che senso? Ogni immagine satellitare porta con sé delle bande di qualità, una specie di pagella pixel per pixel: dicono dove ci sono nuvole, dove cadono le loro ombre, dove il sensore è andato in saturazione. Ho usato quelle pagelle per mascherare — cioè scartare — i pixel inaffidabili, tenendo di ciascuna scena solo la parte limpida; la mediana dei pixel superstiti costruisce poi, giugno per giugno, un'immagine "tipica" del mese, robusta ai valori estremi. Infine ho preso la mediana delle cinque mediane annuali: in questo modo ogni anno pesa uguale, a prescindere da quante scene buone ha offerto il satellite. Una scena del 12 giugno 2026, contaminata da residui non catturati dalle maschere, è stata esclusa a mano: anche questo fa parte del metodo dichiarato. Accanto alla temperatura, per ogni pixel ho calcolato due indici: NDVI, che misura il vigore della vegetazione, e NDBI, che evidenzia il costruito.</p>
 <h3>Cosa emerge</h3>
-<figure><div class="figure-pending" role="note"><strong>Figura 4 in preparazione</strong>Mappa dell’anomalia della temperatura superficiale a Monselice.</div>
-
-<figcaption>Figura 4 — Anomalia della temperatura di superficie rispetto alla media d'area, composito dei giugni 2022–2026.</figcaption>
+<figure>
+<img alt="Mappa dell'anomalia della temperatura superficiale a Monselice" src="https://andrearosina.com/lst_monselice/fig_4_anomalia_temperatura_superficiale.png"/>
+<figcaption>Figura 5 — Anomalia della temperatura di superficie rispetto alla media d'area, composito dei giugni 2022–2026.</figcaption>
 </figure>
 <p>La geografia del caldo di Monselice è nitida e stabile. Il blocco fresco dei versanti boscati verso i Colli, la campagna intorno, e in mezzo un corridoio caldo che dal centro scende verso sud lungo la SR10 — la zona commerciale, i piazzali, i capannoni. Nel giugno 2026 quel corridoio segnava in media 48,4 °C di superficie contro i 45,5 della media d'area: <span class="numero">quasi tre gradi</span> di scarto strutturale, non un episodio. Lo stesso disegno compare infatti nel composito pluriennale 2022–2026 e coincide con il prodotto istituzionale ISPRA/SNPA sulle estati 2019–2024, consultabile da chiunque sull'EcoAtlante<sup><a href="#nota2" id="rif2">2</a></sup>: elaborazioni indipendenti, stessa geografia.</p>
 <p>Il caldo di Monselice non è "quest'anno che è andata male": è la mappa delle sue superfici, è la somma del cambiamento climatico e dell'urbanizzazione selvaggia.</p>
 <figure>
 <img alt="Grafico a dispersione tra indice di vegetazione NDVI e temperatura di superficie" src="https://andrearosina.com/lst_monselice/fig4_ndvi_lst.png"/>
-<figcaption>Figura 5 — Relazione tra vegetazione (NDVI) e temperatura di superficie, giugno 2026: 31.483 pixel, retta di regressione e R².</figcaption>
+<figcaption>Figura 6 — Relazione tra vegetazione (NDVI) e temperatura di superficie, giugno 2026: 31.483 pixel, retta di regressione e R².</figcaption>
 </figure>
 <p>Il legame con la vegetazione è la spina dorsale di tutto il ragionamento. Mettendo in relazione, pixel per pixel, l'indice di vegetazione con la temperatura di superficie, la regressione dice <span class="numero">−14,7 °C per unità di NDVI</span>: è il salto teorico completo, da superficie totalmente spoglia ad area con verde pieno. Tradotta a passi realistici, ogni decimo di indice guadagnato — un po' più di verde in un piazzale, un filare in più — vale circa un grado e mezzo di superficie in meno, e la relazione spiega da sola il 61% della variabilità termica (R² 0,61).</p>
 <p>Certo, questo non lo scopro io: è fisica nota. Ma misurarla sul proprio territorio, con i propri numeri, è un'altra cosa che leggerla su un paper. E per averne una prova basta prendere la bicicletta, partire dal centro e dirigersi verso la campagna: la sensazione di raffrescamento sta tutta dentro quella pendenza.</p>
@@ -154,9 +158,17 @@
 <h2>3. L'esperimento dei parcheggi: cosa può un intervento</h2>
 <h3>L'ipotesi</h3>
 <p>Se il verde raffredda le superfici con quella pendenza, cosa succederebbe depavimentando i grandi piazzali del corridoio SR10? Ho disegnato i poligoni di nove parcheggi lungo l'asse commerciale — circa 3,6 ettari in tutto — e ho costruito uno scenario di sostituzione dichiaratamente semplice: non un modello climatico, ma valori misurati spostati dentro la stessa immagine. Ai pixel dei parcheggi ho assegnato la temperatura che, nella stessa scena, hanno le superfici con NDVI 0,45 — un verde urbano realistico, non un bosco. Quella temperatura, 46,6 °C, non esce da una formula: è validata dai quasi 5.000 pixel dell'area che quel verde ce l'hanno davvero, e che segnano 46,8 °C di mediana. Lo scenario, in altre parole, chiede all'immagine stessa quanto varrebbe il cambio di superficie.</p>
-<figure><div class="figure-pending" role="note"><strong>Figura 6 in preparazione</strong>Confronto prima/dopo dello scenario di depavimentazione dei parcheggi.</div>
-
-<figcaption>Figura 6 — Zoom prima/dopo sui nove parcheggi del corridoio SR10, scenario di sostituzione a NDVI 0,45.</figcaption>
+<figure>
+<img alt="Localizzazione dei nove parcheggi analizzati lungo il corridoio commerciale di Monselice" src="https://andrearosina.com/lst_monselice/fig_parcheggi.png"/>
+<figcaption>Figura 7 — I nove parcheggi analizzati lungo il corridoio commerciale della SR10, per una superficie complessiva di circa 3,6 ettari.</figcaption>
+</figure>
+<figure>
+<img alt="Confronto dell'anomalia termica prima e dopo lo scenario di depavimentazione" src="https://andrearosina.com/lst_monselice/fig_6_confronto_parcheggi_anomalia.png"/>
+<figcaption>Figura 8 — Confronto dell'anomalia termica prima e dopo lo scenario di sostituzione dei parcheggi con superfici equivalenti a un NDVI di 0,45.</figcaption>
+</figure>
+<figure>
+<img alt="Zoom sulle temperature superficiali dei parcheggi prima e dopo lo scenario" src="https://andrearosina.com/lst_monselice/fig_6b_confronto_zoom_lst.png"/>
+<figcaption>Figura 9 — Dettaglio delle temperature superficiali nei parcheggi prima e dopo lo scenario. L'effetto locale è netto, ma diminuisce rapidamente quando si allarga l'area sulla quale si calcola la media.</figcaption>
 </figure>
 <h3>I due numeri, entrambi veri</h3>
 <p>Sui singoli parcheggi l'effetto è netto: da −1,9 a −3,9 °C di temperatura superficiale, a seconda di quanto erano caldi in partenza. Sono i numeri che generalmente finiscono nei titoli, e sono veri. Ma c'è un secondo numero, che di solito nessuno calcola — o che, con ogni probabilità, viene calcolato e lasciato in secondo piano — perché non fa titolo: ho allargato lo sguardo a un buffer di 300 metri intorno ai poligoni, 232 ettari corrispondenti all'intorno urbano del corridoio, e mi sono chiesto quanto cambia la media di quella zona.</p>
@@ -176,17 +188,16 @@
 <strong>Che cos'è la correlazione di Pearson</strong>
       Immaginate il grafico a dispersione qui sotto: un punto per sezione, fragilità sulle ascisse, temperatura sulle ordinate. La correlazione di Pearson misura quanto quei punti si dispongono lungo una retta: vale +1 se crescono sempre insieme, −1 se una cresce quando l'altra cala, 0 se la nuvola è informe e sapere una cosa non dice nulla dell'altra. Il suo quadrato (R²) è la frazione di variabilità "spiegata": lo 0,61 del legame verde-temperatura è una relazione forte; lo 0,17 tra fragilità e caldo, elevato al quadrato, dà un misero 3% — statisticamente, quasi nulla.
     </div>
-<figure><div class="figure-pending" role="note"><strong>Figura 7 in preparazione</strong>Relazione tra sensibilità sociale e temperatura superficiale.</div>
-
-
-<figcaption>Figura 7 — Sopra: sensibilità sociale e temperatura di superficie per sezione (dimensione dei punti proporzionale alla popolazione; in evidenza la sezione dove i due assi coincidono davvero). Sotto: distribuzione della temperatura per quartile di sensibilità.</figcaption>
+<figure>
+<img alt="Relazione tra sensibilità sociale e temperatura superficiale nelle sezioni di censimento" src="https://andrearosina.com/lst_monselice/fig_7_relazione_sensibilita_temp_sup.png"/>
+<figcaption>Figura 10 — Sopra: sensibilità sociale e temperatura di superficie per sezione (dimensione dei punti proporzionale alla popolazione; in evidenza la sezione dove i due assi coincidono davvero). Sotto: distribuzione della temperatura per quartile di sensibilità.</figcaption>
 </figure>
 <h3>Tre condizioni, quattro sezioni</h3>
 <p>Ho quindi classificato le sezioni con tre condizioni dichiarate, ognuna verificabile su una colonna della tabella: <em>calda</em> se sopra la media termica dell'area; <em>fragile</em> se la sezione si trova nel quartile alto dell'indice di sensibilità; <em>nuda</em> se almeno un quinto della sua superficie ha un NDVI sotto 0,25 — asfalto, tetti, sterrati, cioè spazio fisico dove un intervento è materialmente possibile. Quest'ultima condizione non spiega nulla di nuovo (verde e temperatura sono già legati, l'abbiamo misurato), ma risponde alla domanda operativa: c'è margine per agire?</p>
 <figure>
 <img alt="Mappa delle sezioni di censimento classificate per priorità di intervento, vista d'insieme" src="https://andrearosina.com/lst_monselice/fig8_totale.png"/>
 <img alt="Zoom della mappa delle classi sulle sezioni prioritarie" src="https://andrearosina.com/lst_monselice/fig8_zoom.png" style="margin-top:12px;"/>
-<figcaption>Figura 8 — La classificazione a tre condizioni: in alto la vista d'insieme, in basso lo zoom sulle sezioni prioritarie (calde, fragili e povere di verde). In grigio le sezioni fuori analisi.</figcaption>
+<figcaption>Figura 11 — La classificazione a tre condizioni: in alto la vista d'insieme, in basso lo zoom sulle sezioni prioritarie (calde, fragili e povere di verde). In grigio le sezioni fuori analisi.</figcaption>
 </figure>
 <p>Le sezioni che soddisfano tutte e tre le condizioni sono quattro, e ci abitano <span class="numero">585 persone</span>. Due sono piccole; due sono luoghi veri e riconoscibili.</p>
 <p>La prima conta 275 residenti ed è la sezione con l'indice di fragilità più alto di tutto il comune: qui vivono, in proporzione, più anziani e più persone sole che in qualunque altra parte di Monselice. Allo stesso tempo, un terzo della sua superficie è privo di vegetazione e la sua temperatura sta a +2,6 °C dalla media d'area. È il caso in cui i tre assi si sommano: fragilità massima, caldo sopra la media, spazio fisico per intervenire.</p>
@@ -205,7 +216,7 @@
 </section>
 <section>
 <h2>Dati e strumenti</h2>
-<p>Le immagini satellitari sono Landsat 8/9 Collection 2 Level 2 (USGS/NASA), elaborate in Google Earth Engine; gli indicatori sociali vengono dalle basi territoriali ISTAT 2021 e dal censimento permanente 2023; il confronto istituzionale usa il composito estivo LST di ISPRA/SNPA consultabile sull'EcoAtlante e i dati sul consumo di suolo dell'edizione 2025; la serie storica delle temperature è la rianalisi ERA5 di Copernicus, quella globale i dati NASA GISTEMP. Le elaborazioni sono in Python (geopandas, rasterio, rasterstats) e QGIS. Gli script li trovate nel repository GitHub di Sottosuoli, a questo indirizzo: <a href="https://github.com/andrearosina/andrearosina.github.io/tree/main/lst_monselice" rel="noopener" target="_blank">github.com/andrearosina → lst_monselice</a>; per altre richieste e per le obiezioni sul metodo — che sono benvenute — scrivetemi a <a href="mailto:bracc.rosina@gmail.com">bracc.rosina@gmail.com</a>: è così che questo osservatorio intende crescere.</p>
+<p>Le immagini satellitari sono Landsat 8/9 Collection 2 Level 2 (USGS/NASA), elaborate in Google Earth Engine; gli indicatori sociali vengono dalle basi territoriali ISTAT 2021 e dal censimento permanente 2023; il confronto istituzionale usa il composito estivo LST di ISPRA/SNPA consultabile sull'EcoAtlante e i dati sul consumo di suolo dell'edizione 2025; la serie storica delle temperature è la rianalisi ERA5 di Copernicus, quella globale i dati NASA GISTEMP. Le elaborazioni sono in Python (geopandas, rasterio, rasterstats) e QGIS. Il codice JavaScript usato per l'analisi in Google Earth Engine, insieme alla documentazione e agli altri materiali progressivamente resi disponibili, è raccolto nel repository dedicato: <a href="https://github.com/andrearosina/LST-Monselice" rel="noopener" target="_blank">github.com/andrearosina/LST-Monselice</a>; per altre richieste e per le obiezioni sul metodo — che sono benvenute — scrivetemi a <a href="mailto:bracc.rosina@gmail.com">bracc.rosina@gmail.com</a>: è così che questo osservatorio intende crescere.</p>
 </section>
 <section class="footnotes">
 <h2>Note</h2>
