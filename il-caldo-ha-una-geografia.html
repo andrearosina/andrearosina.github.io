@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Leggere le isole di calore a Monselice: satellite, dati aperti e fragilità sociale. Un esercizio di lettura del territorio." name="description"/>
+<meta content="sottosuoli" property="og:site_name"/>
+<meta content="it_IT" property="og:locale"/>
+<meta content="Il caldo ha una geografia — Sottosuoli" property="og:title"/>
+<meta content="Leggere le isole di calore a Monselice: satellite, dati aperti e fragilità sociale. Un esercizio di lettura del territorio." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://andrearosina.com/il-caldo-ha-una-geografia.html" property="og:url"/>
+<meta content="https://andrearosina.com/lst_monselice/fig8_totale.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Il caldo ha una geografia — Sottosuoli" name="twitter:title"/>
+<meta content="Leggere le isole di calore a Monselice: satellite, dati aperti e fragilità sociale." name="twitter:description"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="#7b8879" name="theme-color"/>
+<title>Il caldo ha una geografia — Sottosuoli</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root { --green:#2D6A4F; --green-2:#1F4F3B; --green-light:#95D5B2; --green-pale:#F7FAF8; --orange:#E07B39; --text:#18221C; --muted:#5A6E62; --border:#D8E7DD; --shadow:0 12px 30px rgba(31,79,59,.08); --radius:18px; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Barlow', sans-serif; background:var(--green-pale); color:var(--text); line-height:1.7; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 22px; }
+  a { color:inherit; }
+  .topbar { background:var(--green-2); color:white; font-size:14px; }
+  .topbar .wrap { padding-top:10px; padding-bottom:10px; display:flex; justify-content:space-between; gap:16px; }
+  .topbar a { color:white; text-decoration:none; font-weight:700; }
+  header { background:linear-gradient(145deg,var(--green),var(--green-2)); color:white; padding:58px 0 50px; }
+  .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.14em; color:var(--green-light); font-weight:700; margin-bottom:12px; }
+  h1 { font-family:'Lora', serif; font-size:clamp(36px,6vw,60px); line-height:1.02; letter-spacing:-.03em; margin-bottom:16px; }
+  .lead { color:rgba(255,255,255,.84); font-size:19px; max-width:760px; }
+  .meta { margin-top:18px; font-size:14px; color:rgba(255,255,255,.65); }
+  main { padding:46px 0 70px; }
+  section { background:white; border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; margin-bottom:18px; }
+  h2 { font-family:'Lora', serif; color:var(--green-2); font-size:30px; line-height:1.12; margin-bottom:14px; }
+  h3 { font-family:'Lora', serif; color:var(--green); font-size:21px; line-height:1.2; margin:22px 0 8px; }
+  p { color:#34443A; margin-bottom:12px; }
+  em { font-style:italic; }
+  .disclaimer { background:var(--green-pale); border:1px solid var(--border); border-left:4px solid var(--orange); border-radius:14px; padding:18px 20px; }
+  .disclaimer strong { color:var(--green-2); }
+  .box { background:var(--green-pale); border:1px solid var(--border); border-left:4px solid var(--green); border-radius:14px; padding:16px 18px; margin:16px 0; font-size:15.5px; }
+  .box strong { display:block; color:var(--green-2); margin-bottom:4px; }
+  figure { margin:22px 0; }
+  figure img { width:100%; height:auto; display:block; border:1px solid var(--border); border-radius:12px; background:white; }
+  figcaption { font-size:13.5px; color:var(--muted); line-height:1.55; margin-top:8px; padding:0 4px; }
+  figcaption em { font-style:italic; }
+  .numero { font-family:'Lora', serif; color:var(--orange); font-weight:600; white-space:nowrap; }
+  sup a { color:var(--green); text-decoration:none; font-weight:700; }
+  .footnotes { font-size:14.5px; color:var(--muted); }
+  .footnotes ol { padding-left:20px; }
+  .footnotes li { margin-bottom:10px; }
+  .footnotes a { color:var(--green); }
+  .cta { text-align:center; }
+  .cta a.btn { display:inline-block; background:var(--green); color:white; text-decoration:none; font-weight:700; padding:12px 22px; border-radius:999px; margin-top:8px; }
+  footer { background:var(--green-2); color:rgba(255,255,255,.72); padding:30px 0; font-size:14px; }
+  footer a { color:var(--green-light); text-decoration:none; }
+
+  .data-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px; }
+  .data-item { background:white; border:1px solid var(--border); border-radius:14px; padding:15px; }
+  .data-value { display:block; font-family:'Lora',serif; color:var(--orange); font-size:26px; font-weight:600; line-height:1.05; margin-bottom:5px; }
+  .data-label { display:block; color:var(--muted); font-size:13.5px; line-height:1.35; }
+  .figure-pending { border:1px dashed #9bb7a6; border-radius:12px; background:var(--green-pale); padding:24px; text-align:center; color:var(--muted); }
+  .figure-pending strong { display:block; color:var(--green-2); margin-bottom:5px; }
+  .editor-note { font-size:13.5px; color:var(--muted); border-left:3px solid var(--orange); padding-left:12px; margin-top:12px; }
+  @media (max-width:720px){ .data-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .data-grid{grid-template-columns:1fr;} }
+  @media (max-width:720px){ section{padding:22px;} }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="/">← Sottosuoli</a><a href="archivio.html">Archivio →</a></div></div>
+<header><div class="wrap">
+<div class="eyebrow">Leggere il territorio</div>
+<h1>Il caldo ha una geografia.</h1>
+<p class="lead">Leggere le isole di calore a Monselice con il satellite, i dati aperti e le persone che ci abitano. Un esercizio di metodo, riproducibile da chiunque.</p>
+<div class="meta">di Andrea Rosina · luglio 2026</div>
+</div></header>
+<main class="wrap">
+<section>
+<div class="disclaimer">
+<strong>Prima di cominciare.</strong> Quello che segue non è uno studio commissionato né una consulenza: è un esercizio di lettura del territorio, fatto con dati che chiunque può scaricare e strumenti che chiunque può usare. Il suo scopo è didattico e indicativo — mostrare <em>come</em> si può guardare il caldo urbano di un comune di 17.000 abitanti, non dire l'ultima parola su dove piantare gli alberi. I numeri sono veri, il metodo è dichiarato riga per riga, i limiti sono scritti accanto ai risultati. È, in piccolo, il metodo di Sottosuoli. E nel mio piccolo vi lascerò tutto il codice utilizzato per queste analisi, liberi di modificarlo e riutilizzarlo.
+    </div>
+</section>
+<section aria-labelledby="dati-chiave">
+<h2 id="dati-chiave">I dati che emergono</h2>
+<p>Prima di entrare nel metodo, questi sono i numeri principali restituiti finora dall'analisi. Le temperature satellitari sono temperature della superficie terrestre (<abbr title="Land Surface Temperature">LST</abbr>), non temperature dell'aria: descrivono quanto si scaldano asfalto, tetti, suoli e vegetazione al passaggio del satellite.</p>
+<div class="data-grid">
+<div class="data-item"><span class="data-value">8</span><span class="data-label">scene Landsat 8/9 utilizzate per il composito di giugno 2026</span></div>
+<div class="data-item"><span class="data-value">44,36 °C</span><span class="data-label">temperatura superficiale media nell'area analizzata</span></div>
+<div class="data-item"><span class="data-value">44,69 °C</span><span class="data-label">mediana della temperatura superficiale</span></div>
+<div class="data-item"><span class="data-value">50,06 °C</span><span class="data-label">95° percentile: solo il 5% dei pixel è più caldo</span></div>
+<div class="data-item"><span class="data-value">59,16 °C</span><span class="data-label">valore massimo del composito, da leggere come estremo locale</span></div>
+<div class="data-item"><span class="data-value">61%</span><span class="data-label">quota delle differenze spaziali di LST spiegata dall'NDVI nel modello lineare</span></div>
+<div class="data-item"><span class="data-value">4 sezioni</span><span class="data-label">aree che combinano caldo, fragilità sociale e scarsità di verde</span></div>
+<div class="data-item"><span class="data-value">585 persone</span><span class="data-label">residenti nelle quattro sezioni individuate come prioritarie</span></div>
+<div class="data-item"><span class="data-value">20,9%</span><span class="data-label">quota di territorio comunale consumato a Monselice</span></div>
+</div>
+</section>
+<section>
+<h2>1. Il contesto: un giugno non è più solo un giugno</h2>
+<p>Che il pianeta si stia scaldando non è più una questione aperta: l'IPCC — l'<em>Intergovernmental Panel on Climate Change</em>, il gruppo intergovernativo delle Nazioni Unite che valuta lo stato delle conoscenze sul clima<sup><a href="#nota1" id="rif1">1</a></sup> — nel suo sesto rapporto di valutazione definisce «inequivocabile» il riscaldamento del sistema climatico e altrettanto inequivocabile l'origine umana. Ma le medie globali, per quanto solide, sembrano restare un problema altrui, lontano dal nostro quotidiano. L'Europa meridionale, però, si scalda più in fretta della media globale, e le estati mediterranee più in fretta ancora: è qui che l'astrazione comincia a diventare esperienza. Spingendoci ancora più al locale, il nord Adriatico è un punto critico in tutto questo, tanto difficile da decifrare nelle previsioni quanto stabile nelle valutazioni delle criticità: basti pensare all'innalzamento medio del mare e alla siccità che insiste, costringendo a ripensamenti immediati su come coltivare. E si può aggiungere il combinato disposto dei due fenomeni — innalzamento marino e siccità più acute — per intravedere orizzonti tutt'altro che rosei, con l'intrusione salina che risalirà sempre più all'interno della nostra pianura.</p>
+<figure>
+<img alt="Grafico a barre dell'anomalia della temperatura media globale dal 1880 a oggi" src="https://andrearosina.com/lst_monselice/fig1_globale.png"/>
+<figcaption>Figura 1 — Anomalia della temperatura media globale (terre e oceani), rispetto al periodo 1951–1980. Ridisegnata dai dati aperti NASA GISTEMP v4.</figcaption>
+</figure>
+<p>Questo è il riscaldamento già osservato. Quanto continuerà dipende dalle emissioni future, e per ragionarci l'IPCC usa cinque scenari illustrativi — dal mondo che azzera le emissioni a metà secolo a quello che continua ad accelerarle. La forbice a fine secolo va da un grado e mezzo a oltre quattro: non una previsione, ma la mappa delle conseguenze delle scelte possibili. Ed è una forbice che si scaricherà, amplificata, proprio su territori come il nostro.</p>
+<figure><div class="figure-pending" role="note"><strong>Figura 2 in preparazione</strong>Scenari IPCC e riscaldamento globale a fine secolo.</div>
+
+<figcaption>Figura 2 — Il riscaldamento globale proiettato nei cinque scenari IPCC: stima centrale e intervallo <em>very likely</em> per il 2081–2100, con il medio termine 2041–2060 a confronto. Ridisegnata dai valori valutati in IPCC AR6 WG1, Tabella SPM.1.</figcaption>
+</figure>
+<p>Il primo passo del metodo è quindi la discesa di scala: cosa dicono le temperature <em>qui</em>, nella zona di Monselice? Non esiste una stazione meteorologica secolare in paese, ma esiste una cosa chiamata rianalisi: la ricostruzione fisicamente coerente dell'atmosfera passata, fatta assimilando in un modello tutte le osservazioni disponibili — stazioni, palloni sonda, satelliti. In pratica, i moderni modelli matematici vengono fatti girare sui dati storici, ricostruendo la climatologia passata anche nei punti dove non esistevano rilevamenti: la temperatura locale viene interpolata proprio dai modelli. ERA5, la rianalisi europea di Copernicus, copre in modo omogeneo il periodo dal 1940 a oggi, e ci permette di estrarre la serie dei giugni per il punto di griglia locale.</p>
+<figure>
+<img alt="Grafico a barre delle anomalie di temperatura dei giugni a Monselice dal 1940 al 2026" src="https://andrearosina.com/lst_monselice/fig_storico_giugno.png"/>
+<figcaption>Figura 3 — Anomalia della temperatura media dell'aria di giugno nella zona di Monselice, 1940–2026, rispetto alla baseline 1961–1990. <em>Nota sul dato: la serie viene dalla rianalisi ERA5 di Copernicus (ECMWF), interrogata sul punto di griglia della zona di Monselice. Per i trend di lungo periodo è preferibile a una stazione reale proprio per la sua omogeneità: tratta il 1950 e il 2020 con lo stesso metodo, senza risentire di spostamenti o ricalibrazioni degli strumenti. Il valore rappresenta la temperatura dell'aria a 2 metri, mediata su un'area di parecchi chilometri di lato: alla sua risoluzione non vede l'isola di calore urbana — dice quanto si scalda il clima di sfondo, sopra il quale la geografia delle superfici fa le sue differenze.</em></figcaption>
+</figure><p class="editor-note">Da completare: grafico dedicato alle temperature medie e massime di giugno 2026, distinto dalla serie storica delle anomalie.</p>
+<div class="box">
+<strong>Il trentennio climatologico</strong>
+      Per convenzione dell'Organizzazione meteorologica mondiale, il "clima" di un luogo si descrive con le medie calcolate su trent'anni — abbastanza lunghi da assorbire le annate anomale, abbastanza brevi da fotografare un'epoca. Le anomalie del grafico sono riferite al trentennio 1961–1990: una scelta deliberata, perché è il clima in cui è stata costruita e pensata gran parte del territorio che abitiamo. Misurare la distanza da lì significa misurare quanto il contesto è cambiato sotto ciò che abbiamo edificato.
+    </div>
+<p>La serie copre 87 giugni, dal 1940 al 2026. Nel trentennio di riferimento il giugno medio della zona segnava 20,1 °C. Il giugno 2026 ha segnato 25,3: più di cinque gradi sopra quella normale, <span class="numero">il secondo più caldo</span> dell'intera serie. Il primato resta al 2003 — l'estate che l'Europa ricorda — ma è la classifica nel suo insieme a dire la cosa importante: dei cinque giugni più caldi dal 1940, quattro sono arrivati negli ultimi otto anni (2019, 2022, 2025, 2026). Il 2003 fu un'anomalia; adesso è un vicinato.</p>
+<p>Il grafico è esplicativo: i giugni caldi non sono distribuiti a caso lungo la serie, sono concentrati tutti alla fine. Questo è il contesto in cui tutto il resto va letto, ed è la base di riferimento per le analisi successive — a partire dall'analisi satellitare 2022–2026 che vedremo tra poco, costruita proprio su questi anni.</p>
+<p>Attenzione, però: questa è temperatura <em>dell'aria</em>, la grandezza del meteo e dei termometri. Da qui in poi parleremo di un altro tipo di temperatura, e la differenza è il primo concetto da mettere in cassaforte — perché anche la comunicazione generalista, involontariamente o semplicemente in cerca di click, spesso confonde le due cose.</p>
+</section>
+<section>
+<h2>2. Cosa vede il satellite: la temperatura delle superfici</h2>
+<h3>Perché Landsat</h3>
+<p>Il programma Landsat fotografa la Terra dal 1972, e dal 1982 misura anche l'emissione termica delle superfici. È gratuito, ha una risoluzione di 30 metri — la scala di un parcheggio, di un isolato, di un giardino — e passa sopra Monselice ogni pochi giorni verso le 10:30 del mattino. Per un comune di 17.000 abitanti è lo strumento giusto: abbastanza fine da distinguere il piazzale del supermercato dal filare accanto, abbastanza lungo da costruire serie robuste.</p>
+<h3>LST non è la temperatura dell'aria</h3>
+<p>Quello che il sensore termico misura si chiama LST, <em>Land Surface Temperature</em>: la temperatura della pelle delle superfici — asfalto, tetti, chiome, prati — non quella dell'aria a due metri che leggiamo sulle app meteo. Le due grandezze sono legate ma diverse, e la differenza non è pignoleria: un piazzale può superare i 50 °C di superficie mentre l'aria sopra ne segna 33. E siccome l'asfalto accumula calore di giorno e lo restituisce di notte, il rosso che vedremo nelle mappe delle 10:30 del mattino è anche una promessa di notti tropicali: l'inerzia termica delle superfici è uno dei motori dell'isola di calore urbana. Quando un titolo di giornale dice che depavimentare «abbassa la temperatura di 4 gradi», quasi sempre sta parlando di gradi di superficie, non di gradi d'aria — e quasi mai lo dice. Su questo torneremo.</p>
+<h3>Il metodo, in breve</h3>
+<p>Ho elaborato le immagini Landsat 8 e 9 (Collection 2, Level 2) su un'area di 3 chilometri di raggio centrata sul nucleo urbano di Monselice. Per ogni giugno dal 2022 al 2026 ho costruito il composito mediano delle scene "pulite". Pulite in che senso? Ogni immagine satellitare porta con sé delle bande di qualità, una specie di pagella pixel per pixel: dicono dove ci sono nuvole, dove cadono le loro ombre, dove il sensore è andato in saturazione. Ho usato quelle pagelle per mascherare — cioè scartare — i pixel inaffidabili, tenendo di ciascuna scena solo la parte limpida; la mediana dei pixel superstiti costruisce poi, giugno per giugno, un'immagine "tipica" del mese, robusta ai valori estremi. Infine ho preso la mediana delle cinque mediane annuali: in questo modo ogni anno pesa uguale, a prescindere da quante scene buone ha offerto il satellite. Una scena del 12 giugno 2026, contaminata da residui non catturati dalle maschere, è stata esclusa a mano: anche questo fa parte del metodo dichiarato. Accanto alla temperatura, per ogni pixel ho calcolato due indici: NDVI, che misura il vigore della vegetazione, e NDBI, che evidenzia il costruito.</p>
+<h3>Cosa emerge</h3>
+<figure><div class="figure-pending" role="note"><strong>Figura 4 in preparazione</strong>Mappa dell’anomalia della temperatura superficiale a Monselice.</div>
+
+<figcaption>Figura 4 — Anomalia della temperatura di superficie rispetto alla media d'area, composito dei giugni 2022–2026.</figcaption>
+</figure>
+<p>La geografia del caldo di Monselice è nitida e stabile. Il blocco fresco dei versanti boscati verso i Colli, la campagna intorno, e in mezzo un corridoio caldo che dal centro scende verso sud lungo la SR10 — la zona commerciale, i piazzali, i capannoni. Nel giugno 2026 quel corridoio segnava in media 48,4 °C di superficie contro i 45,5 della media d'area: <span class="numero">quasi tre gradi</span> di scarto strutturale, non un episodio. Lo stesso disegno compare infatti nel composito pluriennale 2022–2026 e coincide con il prodotto istituzionale ISPRA/SNPA sulle estati 2019–2024, consultabile da chiunque sull'EcoAtlante<sup><a href="#nota2" id="rif2">2</a></sup>: elaborazioni indipendenti, stessa geografia.</p>
+<p>Il caldo di Monselice non è "quest'anno che è andata male": è la mappa delle sue superfici, è la somma del cambiamento climatico e dell'urbanizzazione selvaggia.</p>
+<figure>
+<img alt="Grafico a dispersione tra indice di vegetazione NDVI e temperatura di superficie" src="https://andrearosina.com/lst_monselice/fig4_ndvi_lst.png"/>
+<figcaption>Figura 5 — Relazione tra vegetazione (NDVI) e temperatura di superficie, giugno 2026: 31.483 pixel, retta di regressione e R².</figcaption>
+</figure>
+<p>Il legame con la vegetazione è la spina dorsale di tutto il ragionamento. Mettendo in relazione, pixel per pixel, l'indice di vegetazione con la temperatura di superficie, la regressione dice <span class="numero">−14,7 °C per unità di NDVI</span>: è il salto teorico completo, da superficie totalmente spoglia ad area con verde pieno. Tradotta a passi realistici, ogni decimo di indice guadagnato — un po' più di verde in un piazzale, un filare in più — vale circa un grado e mezzo di superficie in meno, e la relazione spiega da sola il 61% della variabilità termica (R² 0,61).</p>
+<p>Certo, questo non lo scopro io: è fisica nota. Ma misurarla sul proprio territorio, con i propri numeri, è un'altra cosa che leggerla su un paper. E per averne una prova basta prendere la bicicletta, partire dal centro e dirigersi verso la campagna: la sensazione di raffrescamento sta tutta dentro quella pendenza.</p>
+</section>
+<section>
+<h2>3. L'esperimento dei parcheggi: cosa può un intervento</h2>
+<h3>L'ipotesi</h3>
+<p>Se il verde raffredda le superfici con quella pendenza, cosa succederebbe depavimentando i grandi piazzali del corridoio SR10? Ho disegnato i poligoni di nove parcheggi lungo l'asse commerciale — circa 3,6 ettari in tutto — e ho costruito uno scenario di sostituzione dichiaratamente semplice: non un modello climatico, ma valori misurati spostati dentro la stessa immagine. Ai pixel dei parcheggi ho assegnato la temperatura che, nella stessa scena, hanno le superfici con NDVI 0,45 — un verde urbano realistico, non un bosco. Quella temperatura, 46,6 °C, non esce da una formula: è validata dai quasi 5.000 pixel dell'area che quel verde ce l'hanno davvero, e che segnano 46,8 °C di mediana. Lo scenario, in altre parole, chiede all'immagine stessa quanto varrebbe il cambio di superficie.</p>
+<figure><div class="figure-pending" role="note"><strong>Figura 6 in preparazione</strong>Confronto prima/dopo dello scenario di depavimentazione dei parcheggi.</div>
+
+<figcaption>Figura 6 — Zoom prima/dopo sui nove parcheggi del corridoio SR10, scenario di sostituzione a NDVI 0,45.</figcaption>
+</figure>
+<h3>I due numeri, entrambi veri</h3>
+<p>Sui singoli parcheggi l'effetto è netto: da −1,9 a −3,9 °C di temperatura superficiale, a seconda di quanto erano caldi in partenza. Sono i numeri che generalmente finiscono nei titoli, e sono veri. Ma c'è un secondo numero, che di solito nessuno calcola — o che, con ogni probabilità, viene calcolato e lasciato in secondo piano — perché non fa titolo: ho allargato lo sguardo a un buffer di 300 metri intorno ai poligoni, 232 ettari corrispondenti all'intorno urbano del corridoio, e mi sono chiesto quanto cambia la media di quella zona.</p>
+<p>Risposta: <span class="numero">−0,05 °C</span>.</p>
+<p>Cinque centesimi di grado. I 3,6 ettari depavimentati sono l'1,6% di quella superficie, e la media si muove di conseguenza.</p>
+<p>I due numeri non si contraddicono, anzi: si spiegano a vicenda. La depavimentazione migliora sensibilmente i luoghi dove si interviene — il piazzale, la fermata dell'autobus accanto, il marciapiede. Ma per migliorare le <em>statistiche</em> di un quartiere si deve cambiare scala: da gesto puntuale a politica sistematica. Ed è esattamente la direzione delle norme europee in arrivo, dalla nature restoration law<sup><a href="#nota3" id="rif3">3</a></sup> all'obiettivo di azzerare il consumo di suolo netto: non un parcheggio-simbolo, ma una pratica ordinaria. Paradossalmente, il numero piccolo è l'argomento più forte a favore della depavimentazione seria — più forte dei titoloni che la stanno vendendo.</p>
+</section>
+<section>
+<h2>4. Per chi è un problema: il caldo incontra la fragilità</h2>
+<h3>Un indice trasparente</h3>
+<p>Fin qui abbiamo risposto a "dov'è il caldo". Ma una mappa del caldo, in un contesto urbano, rischia di rimanere un oggetto sterile: diventa strumento utile solo quando incontra le persone. Per questo ho costruito, con dati liberamente accessibili — le basi territoriali ISTAT e il censimento permanente 2023 a scala di sezione — un indice di sensibilità sociale al caldo.</p>
+<p>Non sono un campione di statistica, e per questo ho cercato di semplificare il più possibile, puntando ai trend generali e ricordando che l'analisi spaziale parte da risoluzioni di 30 metri. Dai dati ISTAT ho selezionato cinque variabili, attribuendo a ciascuna un peso dichiarato: gli over 65, che pesano il 40%; i bambini sotto i 5 anni, i residenti stranieri, la bassa istruzione e le persone sole, il 15% ciascuna. Le cinque quote sono state normalizzate e sommate secondo i pesi: in questo modo il lettore vede esattamente quali variabili contano e quanto. Le sezioni sotto i 20 residenti escono dall'analisi, perché le quote calcolate su numeri così piccoli costituiscono, in genere, solo rumore di fondo<sup><a href="#nota5" id="rif5">5</a></sup>.</p>
+<p>In pratica, una sezione risulta tanto più "fragile" quanto più alto è il suo punteggio complessivo: la somma pesata delle cinque quote, dove il contributo maggiore viene dagli over 65 (più anziani ci sono, più il punteggio sale), seguito dai bambini sotto i 5 anni, dai residenti stranieri, dalla bassa istruzione e dalle persone sole.</p>
+<h3>Il terzo numero onesto</h3>
+<p>Incrociando l'indice con la temperatura di superficie delle 98 sezioni residenziali, la correlazione è debole: <span class="numero">r di Pearson 0,17</span>, che al quadrato fa un 3% di variabilità spiegata. A Monselice, in generale, i più fragili <em>non</em> vivono sistematicamente nelle zone più calde. È vero che il quartile meno fragile abita effettivamente le sezioni più fresche, circa 1,3 gradi sotto le altre, ma oltre quel gradino la relazione si appiattisce.</p>
+<div class="box">
+<strong>Che cos'è la correlazione di Pearson</strong>
+      Immaginate il grafico a dispersione qui sotto: un punto per sezione, fragilità sulle ascisse, temperatura sulle ordinate. La correlazione di Pearson misura quanto quei punti si dispongono lungo una retta: vale +1 se crescono sempre insieme, −1 se una cresce quando l'altra cala, 0 se la nuvola è informe e sapere una cosa non dice nulla dell'altra. Il suo quadrato (R²) è la frazione di variabilità "spiegata": lo 0,61 del legame verde-temperatura è una relazione forte; lo 0,17 tra fragilità e caldo, elevato al quadrato, dà un misero 3% — statisticamente, quasi nulla.
+    </div>
+<figure><div class="figure-pending" role="note"><strong>Figura 7 in preparazione</strong>Relazione tra sensibilità sociale e temperatura superficiale.</div>
+
+
+<figcaption>Figura 7 — Sopra: sensibilità sociale e temperatura di superficie per sezione (dimensione dei punti proporzionale alla popolazione; in evidenza la sezione dove i due assi coincidono davvero). Sotto: distribuzione della temperatura per quartile di sensibilità.</figcaption>
+</figure>
+<h3>Tre condizioni, quattro sezioni</h3>
+<p>Ho quindi classificato le sezioni con tre condizioni dichiarate, ognuna verificabile su una colonna della tabella: <em>calda</em> se sopra la media termica dell'area; <em>fragile</em> se la sezione si trova nel quartile alto dell'indice di sensibilità; <em>nuda</em> se almeno un quinto della sua superficie ha un NDVI sotto 0,25 — asfalto, tetti, sterrati, cioè spazio fisico dove un intervento è materialmente possibile. Quest'ultima condizione non spiega nulla di nuovo (verde e temperatura sono già legati, l'abbiamo misurato), ma risponde alla domanda operativa: c'è margine per agire?</p>
+<figure>
+<img alt="Mappa delle sezioni di censimento classificate per priorità di intervento, vista d'insieme" src="https://andrearosina.com/lst_monselice/fig8_totale.png"/>
+<img alt="Zoom della mappa delle classi sulle sezioni prioritarie" src="https://andrearosina.com/lst_monselice/fig8_zoom.png" style="margin-top:12px;"/>
+<figcaption>Figura 8 — La classificazione a tre condizioni: in alto la vista d'insieme, in basso lo zoom sulle sezioni prioritarie (calde, fragili e povere di verde). In grigio le sezioni fuori analisi.</figcaption>
+</figure>
+<p>Le sezioni che soddisfano tutte e tre le condizioni sono quattro, e ci abitano <span class="numero">585 persone</span>. Due sono piccole; due sono luoghi veri e riconoscibili.</p>
+<p>La prima conta 275 residenti ed è la sezione con l'indice di fragilità più alto di tutto il comune: qui vivono, in proporzione, più anziani e più persone sole che in qualunque altra parte di Monselice. Allo stesso tempo, un terzo della sua superficie è privo di vegetazione e la sua temperatura sta a +2,6 °C dalla media d'area. È il caso in cui i tre assi si sommano: fragilità massima, caldo sopra la media, spazio fisico per intervenire.</p>
+<p>La seconda, 243 residenti, è la più calda tra le sezioni residenziali — +3,4 °C — e ha quasi metà della superficie nuda: la fragilità qui è appena dentro il quartile alto, ma il margine d'intervento è il più ampio di tutta Monselice. Accanto a loro, la classificazione racconta anche i casi intermedi: tredici sezioni calde e fragili ma già verdi, dove il problema c'è ma lo spazio d'intervento sulle superfici è poco; nove calde e spoglie ma non fragili — parecchie lungo il corridoio commerciale, dove il discorso torna ai parcheggi del capitolo precedente.</p>
+<p>Tutte le soglie stanno in testa allo script, dichiarate: sopra la media, quartile alto, un quinto di superficie nuda. Chi non è d'accordo può cambiarle e rifare i conti — le due sezioni grandi restano prioritarie anche stringendo la soglia del verde, visto che stanno al 33% e al 49%. Questo, non l'apparente precisione, è il senso di un esercizio trasparente.</p>
+</section>
+<section>
+<h2>5. Considerazioni finali: il metodo è il messaggio</h2>
+<p>Ricapitolando il percorso: i mesi di giugno si scaldano (contesto), il caldo di Monselice ha una geografia stabile scritta nelle sue superfici (esposizione e urbanizzazione), la quantità di vegetazione spiega da sola il 61% delle differenze di temperatura tra un punto e l'altro del territorio (meccanismo), depavimentare funziona sicuramente sui luoghi ma produce effetti reali solo quando diventa politica sistematica, capace di incrociare la fragilità sociale con i cambiamenti climatici (azione). Nel caso di Monselice la fragilità sociale non coincide col caldo in generale, ma coincide in quattro sezioni precise, dove vivono 585 persone (priorità).</p>
+<p>C'è un dato di fondo che tiene insieme tutto, e che abbiamo già toccato in precedenti lavori: Monselice ha il 20,9% del territorio consumato, contro l'11,9% del Veneto e il 7,2% dell'Italia<sup><a href="#nota4" id="rif4">4</a></sup>. Dal 2006 sono diventati artificiali circa cento ettari; ne sono stati ripristinati otto. Il corridoio caldo della SR10 non è un incidente: è il sedimento di quelle scelte, e la sua temperatura è la loro misura.</p>
+<p>Depavimentare, in quest'ottica, non è soltanto cercare un riequilibrio tra impermeabile e permeabile: vuol dire affrontare anche l'aspetto idraulico, che delle ondate di calore è il rovescio della medaglia — fenomeni sempre più violenti su suoli sempre meno capaci di assorbirli — dentro una nuova ottica di gestione del territorio.</p>
+<p>L'analisi qui condotta mostra ancora una volta come certa comunicazione sia funzionale a se stessa, fuorviando chi legge sul senso delle cose. Ribadisco: depavimentare, rigenerare un paese o una città in ottica green con l'utilizzo di NBS<sup><a href="#nota6" id="rif6">6</a></sup> va benissimo, ma si tratta di piccoli cerotti che ci permettono di sopportare meglio una malattia gravissima che, attualmente, non stiamo sconfiggendo. Concentrare gli sforzi per mitigare la prossima ondata di calore va bene, fintanto che quelle energie non vengono distratte dalla vera lotta ai cambiamenti climatici — che si fa solamente attraverso un cambio di vita radicale e un allontanamento da questo modello di sviluppo economico, sociale, urbanistico.</p>
+<p>Il paradosso è che nel 2026 ci divertiamo a tombinare fossi e scoline per piazzarci sopra una ciclabile senza un briciolo d'ombra, dispersa nella campagna veneta, mentre al contempo il vecchio parcheggio degli autobus viene ripristinato con tecniche NBS, riproducendo quello che "naturalmente" avveniva nei vecchi argini dei fossati: be', ai miei occhi tutto questo assume una connotazione che sfiora la presa in giro.</p>
+<p>Lo so, forse è un monito esagerato, ma se posso lanciare un'allerta, eccola: stiamo attenti, perché il depavimentare non può diventare il pretesto per liberare altre quote di suolo da occupare.</p>
+<p>Nulla di quello che avete letto richiede strumenti riservati: immagini Landsat gratuite, censimento ISTAT, software libero, e le soglie scritte in chiaro. È una proposta di sguardo, non un piano del verde — quello richiede sopralluoghi, progettazione, bilanci e scelte politiche che nessuna mappa può sostituire. Ma è esattamente il tipo di ricognizione che un piccolo comune, o i suoi cittadini, possono permettersi oggi a costo quasi zero: sapere dove guardare prima di decidere dove intervenire. Capire, per scegliere. Ed è anche un monito per chi amministra: da oggi nessuno può più nascondersi dietro l'ignoranza.</p>
+</section>
+<section>
+<h2>Dati e strumenti</h2>
+<p>Le immagini satellitari sono Landsat 8/9 Collection 2 Level 2 (USGS/NASA), elaborate in Google Earth Engine; gli indicatori sociali vengono dalle basi territoriali ISTAT 2021 e dal censimento permanente 2023; il confronto istituzionale usa il composito estivo LST di ISPRA/SNPA consultabile sull'EcoAtlante e i dati sul consumo di suolo dell'edizione 2025; la serie storica delle temperature è la rianalisi ERA5 di Copernicus, quella globale i dati NASA GISTEMP. Le elaborazioni sono in Python (geopandas, rasterio, rasterstats) e QGIS. Gli script li trovate nel repository GitHub di Sottosuoli, a questo indirizzo: <a href="https://github.com/andrearosina/andrearosina.github.io/tree/main/lst_monselice" rel="noopener" target="_blank">github.com/andrearosina → lst_monselice</a>; per altre richieste e per le obiezioni sul metodo — che sono benvenute — scrivetemi a <a href="mailto:bracc.rosina@gmail.com">bracc.rosina@gmail.com</a>: è così che questo osservatorio intende crescere.</p>
+</section>
+<section class="footnotes">
+<h2>Note</h2>
+<ol>
+<li id="nota1">L'IPCC (Intergovernmental Panel on Climate Change) è l'organismo delle Nazioni Unite, istituito nel 1988 da WMO e UNEP, che valuta periodicamente lo stato delle conoscenze scientifiche sul cambiamento climatico, i suoi impatti e le opzioni di mitigazione e adattamento. Non conduce ricerca propria: sintetizza e pesa la letteratura scientifica mondiale attraverso i rapporti di valutazione, redatti da centinaia di scienziati. Sito ufficiale: <a href="https://www.ipcc.ch/" rel="noopener" target="_blank">ipcc.ch</a>. <a href="#rif1">↩</a></li>
+<li id="nota2">EcoAtlante ISPRA/SNPA, percorso "Cambiamento climatico", layer "Temperatura media diurna estiva al suolo": <a href="https://ecoatlante.isprambiente.it/" rel="noopener" target="_blank">ecoatlante.isprambiente.it</a>. <a href="#rif2">↩</a></li>
+<li id="nota3">Regolamento (UE) 2024/1991 sul ripristino della natura (nature restoration law), che introduce tra l'altro obiettivi vincolanti sul verde urbano e il principio di nessuna perdita netta di spazi verdi urbani: <a href="https://eur-lex.europa.eu/eli/reg/2024/1991/oj" rel="noopener" target="_blank">testo su EUR-Lex</a>. <a href="#rif3">↩</a></li>
+<li id="nota4">ISPRA/SNPA, rapporto "Consumo di suolo, dinamiche territoriali e servizi ecosistemici", edizione 2025, tabelle comunali: <a href="https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/suolo/il-consumo-di-suolo" rel="noopener" target="_blank">isprambiente.gov.it</a>. <a href="#rif4">↩</a></li>
+<li id="nota5">Le sezioni escluse dall'analisi sono 149 su 259: 87 senza residenti (campagna, aree produttive, verde non abitato), 61 con meno di 20 residenti e una sezione fittizia — l'indirizzo convenzionale presso il municipio dove l'anagrafe iscrive le persone senza fissa dimora. Complessivamente contano 544 residenti, circa il 3% della popolazione comunale: l'analisi copre quindi il 97% degli abitanti con il 42% dei poligoni, com'è corretto per un'analisi sociale, dove le sezioni servono a contare le persone, non gli ettari. Diverso è il caso delle 12 sezioni residenziali "fuori copertura raster", oltre il buffer di 3 km dell'elaborazione satellitare: lì le persone ci sono, è il dato termico che manca — per questo in mappa hanno un simbolo distinto. <a href="#rif5">↩</a></li>
+<li id="nota6">NBS, Nature-Based Solutions ("soluzioni basate sulla natura"): interventi che usano processi naturali per rispondere a problemi urbani e territoriali — depavimentazione e suoli filtranti, alberature e tetti verdi, giardini della pioggia, rinaturalizzazione di fossi e scoline — ottenendo insieme benefici climatici (ombra, evapotraspirazione), idraulici (assorbimento e laminazione delle piogge) ed ecologici. Sono promosse dalla Commissione europea e sono tra gli strumenti attuativi previsti dal regolamento sul ripristino della natura citato sopra. <a href="#rif6">↩</a></li>
+</ol>
+</section>
+<section class="cta">
+<h2>Se questo pezzo ti è stato utile</h2>
+<p>Sottosuoli è un osservatorio indipendente: la newsletter settimanale raccoglie e rilancia questo lavoro in forma ragionata.</p>
+<a class="btn" href="https://sottosuoli.substack.com" rel="noopener" target="_blank">✉ Iscriviti alla newsletter</a>
+</section>
+</main>
+<footer><div class="wrap">Sottosuoli · Leggere il territorio · <a href="/">Home</a></div></footer>
+</body>
+</html>
