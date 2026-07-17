@@ -1,7 +1,100 @@
 {
-  "aggiornato": "2026-07-13T15:40:22.874247+00:00",
-  "totale": 231,
+  "aggiornato": "2026-07-17T07:38:27.283619+00:00",
+  "totale": 238,
   "articoli": [
+    {
+      "titolo": "Un gruppo di cittadini del Malawi porta in tribunale la multinazionale britannica ABF",
+      "sommario": "Gli abitanti di Kanseche, in Malawi, accusano la ABF di essere responsabile attraverso la sua partecipata Illovo Sugar della devastante alluvione del 2022.",
+      "link": "https://www.lifegate.it/malawi-alluvione-causa",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "alluvione",
+        "lotta"
+      ],
+      "data": "2026-07-15",
+      "data_iso": "2026-07-15T07:48:12+00:00"
+    },
+    {
+      "titolo": "Qualità dell’aria in Piemonte, ISDE Italia: il nuovo Piano metta la tutela della salute al primo posto",
+      "sommario": "ISDE Italia – Associazione Medici per l’Ambiente esprime il proprio apprezzamento per l’approfondito lavoro di analisi tecnica svolto dal Comitato Torino Respira nelle osservazioni alla proposta di modifica del Piano Regionale di...\nL'articolo Qualità dell’aria in Piemonte, ISDE Italia: il nuovo Piano metta la tutela della salute al primo posto proviene da ISDE News.",
+      "link": "https://www.isdenews.it/qualita-dellaria-in-piemonte-isde-italia-il-nuovo-piano-metta-la-tutela-della-salute-al-primo-posto/",
+      "fonte": "ISDE",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "inquinamento",
+        "aria",
+        "qualità-aria"
+      ],
+      "data": "2026-07-14",
+      "data_iso": "2026-07-14T18:17:00+00:00"
+    },
+    {
+      "titolo": "Torino. Quando i cittadini sono più forti di Esselunga",
+      "sommario": "Il Parco Artiglieri da Montagna è salvo. Già ridotto negli anni per la realizzazione di un centro sportivo, il Parco davanti al Tribunale di Torino, [...]",
+      "link": "https://www.salviamoilpaesaggio.it/blog/2026/07/torino-quando-i-cittadini-sono-piu-forti-di-esselunga/",
+      "fonte": "Salviamo il Paesaggio",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "territorio_paesaggio",
+      "temi": [],
+      "data": "2026-07-14",
+      "data_iso": "2026-07-14T04:00:00+00:00"
+    },
+    {
+      "titolo": "Broken promises: ”New” EU pollution rules for pig and poultry farms weakened while cattle continue to get a free pass",
+      "sommario": "Brussels, 13 July – EU Member States today approved new environmental &#8220;operating rules&#8221; for the Union’s largest intensive pig and poultry farms. But instead of tightening controls on […]",
+      "link": "https://eeb.org/en/broken-promises-new-eu-pollution-rules-for-pig-and-poultry-farms-weakened-while-cattle-continue-to-get-a-free-pass/",
+      "fonte": "European Environmental",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-07-13",
+      "data_iso": "2026-07-13T12:13:37+00:00"
+    },
+    {
+      "titolo": "Le donne nigeriane che stanno salvando il Santuario della fauna selvatica del Monte Afi",
+      "sommario": "Un collettivo di donne in Nigeria sta contrastando le attività illegali, portate avanti da uomini, nell’area protetta. E il modello si sta diffondendo in altri villaggi.",
+      "link": "https://www.lifegate.it/nigeria-donne-foresta",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "proteste",
+        "lotta",
+        "protezione-ambientale",
+        "salviamo"
+      ],
+      "data": "2026-07-13",
+      "data_iso": "2026-07-13T11:01:01+00:00"
+    },
+    {
+      "titolo": "“Tutto quello che ha un pizzico di vita dentro merita la nostra attenzione”. Intervista a Michele De Lucchi",
+      "sommario": "L'architetto Michele De Lucchi ripercorre gli anni della sua formazione tra Firenze e Padova, e i primi incontri con i temi ambientali. Da qui nasce una riflessione sulla “trasformabilità” e su un futuro in cui il design deve giocare un ruolo necessariamente positivo per il Pianeta Continue Reading “Tutto quello che ha un pizzico di vita dentro merita la nostra attenzione”. Intervista a Michele De Lucchi\nL'articolo “Tutto quello che ha un pizzico di vita dentro merita la nostra attenzione”. Inte",
+      "link": "https://economiacircolare.com/design-intervista-michele-de-lucchi/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [],
+      "data": "2026-07-13",
+      "data_iso": "2026-07-13T10:00:12+00:00"
+    },
+    {
+      "titolo": "Disinformazione, salute e ambiente: The Lancet lancia una nuova Commissione internazionale",
+      "sommario": "Fake news, sfiducia nella scienza e manipolazione dei rischi sono ormai una minaccia per salute pubblica, clima e democrazia La disinformazione non è soltanto un [&#8230;]\nL'articolo Disinformazione, salute e ambiente: The Lancet lancia una nuova Commissione internazionale proviene da Ambientenonsolo.",
+      "link": "https://ambientenonsolo.com/disinformazione-salute-e-ambiente-the-lancet-lancia-una-nuova-commissione-internazionale/",
+      "fonte": "Ambiente non solo",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "salute",
+        "ambiente",
+        "disinformazione"
+      ],
+      "data": "2026-07-13",
+      "data_iso": "2026-07-13T09:00:00+00:00"
+    },
     {
       "titolo": "EU risks locking low-carbon cements out of the single market, new report warns",
       "sommario": "Brussels, 13 July – The EU is betting its cement transition on costly and uncertain carbon capture plans. A new report by the European Environmental Bureau (EEB) finds that cheaper […]",

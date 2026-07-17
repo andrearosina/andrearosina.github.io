@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-07-13T17:40:22",
-  "totale": 43,
-  "attivi": 42,
+  "aggiornato": "2026-07-17T09:38:27",
+  "totale": 45,
+  "attivi": 44,
   "feeds": [
     {
       "nome": "Acqua bene comune PD",
@@ -29,6 +29,15 @@
       "tema_label": "ambiente e clima",
       "attivo": 1,
       "punteggio": 9
+    },
+    {
+      "nome": "Attac Italia",
+      "url": "https://attac-italia.org/feed",
+      "categoria": "giornalismo",
+      "tema": "cultura_immaginario",
+      "tema_label": "cultura e immaginario",
+      "attivo": 1,
+      "punteggio": 7
     },
     {
       "nome": "Ca Foscari ambiente",
@@ -380,6 +389,15 @@
       "tema_label": "territorio e paesaggio",
       "attivo": 1,
       "punteggio": 5
+    },
+    {
+      "nome": "TESS",
+      "url": "https://www.coalizionetess.com/blog-feed.xml",
+      "categoria": "associazione",
+      "tema": "energia_transizione",
+      "tema_label": "energia e transizione",
+      "attivo": 1,
+      "punteggio": 7
     },
     {
       "nome": "VEZ Ecosistemi",
