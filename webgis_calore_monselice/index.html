@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monselice — Mappa del calore urbano</title>
+  <meta name="description" content="WebGIS divulgativo: temperatura superficiale (LST Landsat), vegetazione, superfici costruite e sensibilità sociale a Monselice." />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <style>
+    :root{
+      --ink: #0b1b3a;
+      --ink-soft: rgba(11,27,58,.65);
+      --heat: #b2182b;
+      --panel-w: 420px;
+      --panel-w-mobile: 92vw;
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+
+    html, body { height: 100%; margin: 0; }
+    body {
+      position: relative; overflow: hidden;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+    }
+
+    #map{ position: absolute; inset: 0; right: 0; transition: right .25s var(--ease); background:#eef0f3; }
+    body.panel-open #map{ right: var(--panel-w); }
+
+    .panel-backdrop{
+      position: absolute; inset: 0; background: rgba(0,0,0,.22);
+      opacity: 0; pointer-events: none; transition: opacity .2s var(--ease); z-index: 8800;
+    }
+    body.panel-open .panel-backdrop{ opacity: 1; pointer-events: auto; }
+
+    /* ---------- Pannello laterale ---------- */
+    #infoPanel.panel{
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: var(--panel-w); max-width: 46vw; background: #fff;
+      border-left: 1px solid rgba(0,0,0,.10);
+      box-shadow: -14px 0 30px rgba(0,0,0,.14);
+      z-index: 9999; display: flex; flex-direction: column;
+      transform: translateX(0); transition: transform .25s var(--ease);
+    }
+    #infoPanel.panel--closed{ transform: translateX(100%); }
+    #infoPanel .panel__header{
+      flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; padding: 14px 14px;
+      background: linear-gradient(180deg, #f7f8fa 0%, #fff 100%);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    #infoPanel .panel__title{ font-weight: 750; letter-spacing: .2px; }
+    #infoPanel .panel__close{
+      border: 1px solid rgba(0,0,0,.10); background: rgba(255,255,255,.9);
+      border-radius: 999px; font-size: 16px; cursor: pointer; line-height: 1; padding: 8px 10px;
+      transition: transform .12s var(--ease), background .12s var(--ease);
+    }
+    #infoPanel .panel__close:hover{ transform: scale(1.04); background: #fff; }
+    #infoPanel .panel__content{ flex: 1 1 auto; overflow-y: auto; padding: 16px; }
+
+    /* ---------- Legenda / controlli ---------- */
+    .legend {
+      position: absolute; z-index: 9100; top: 12px; left: 12px;
+      background: rgba(255,255,255,0.97); padding: 12px 14px;
+      border-radius: 14px; box-shadow: 0 8px 22px rgba(0,0,0,0.16);
+      width: 330px; max-height: calc(100vh - 24px); overflow: auto;
+    }
+    .legend h1 { font-size: 15px; margin: 0; line-height: 1.25; }
+    .legend .subtitle { font-size: 11px; margin: 3px 0 0 0; color: var(--ink-soft); font-weight: 400; }
+    .legend-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:8px; cursor: pointer; }
+    .legend-toggle{
+      flex:0 0 auto; border:1px solid rgba(0,0,0,.12); background:#fff; border-radius:8px;
+      width:26px; height:26px; cursor:pointer; font-size:13px; line-height:1; color:var(--ink-soft);
+    }
+    body.legend-collapsed .legend-body{ display:none; }
+    body.legend-collapsed .legend{ width:auto; }
+
+    .block{ margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,.08); }
+    .block-title{ font-size: 12px; font-weight: 750; margin-bottom: 7px; text-transform: uppercase; letter-spacing: .4px; color: var(--ink-soft); }
+
+    /* Periodo: segmented */
+    .segmented{ display:flex; border:1px solid rgba(11,27,58,.25); border-radius: 10px; overflow:hidden; }
+    .segmented button{
+      flex:1; border:0; background:#fff; padding:8px 4px; font-size:12.5px; cursor:pointer;
+      color:var(--ink); font-weight:600;
+    }
+    .segmented button.active{ background:var(--ink); color:#fff; }
+
+    /* Variabili raster */
+    .var-row{ display:flex; align-items:center; gap:8px; padding:5px 0; font-size:13.5px; }
+    .var-row label{ display:flex; align-items:center; gap:8px; cursor:pointer; flex:1; }
+    .var-info-btn{
+      border:0; background:transparent; cursor:pointer; color:var(--ink-soft);
+      font-size:13px; width:22px; height:22px; border-radius:999px; line-height:1;
+    }
+    .var-info-btn:hover{ background:rgba(11,27,58,.08); }
+    .var-info{
+      font-size:12px; color:var(--ink-soft); line-height:1.4; margin:2px 0 6px 26px;
+      display:none; border-left:2px solid rgba(11,27,58,.15); padding-left:8px;
+    }
+    .var-info.open{ display:block; }
+
+    /* Rampa colore in legenda */
+    .ramp-wrap{ margin:8px 0 2px 26px; }
+    .ramp{
+      height:12px; border-radius:6px; border:1px solid rgba(0,0,0,.15);
+    }
+    .ramp-labels{ display:flex; justify-content:space-between; font-size:11px; color:var(--ink-soft); margin-top:3px; }
+    .ramp-note{ font-size:10.5px; color:var(--ink-soft); margin-top:2px; }
+
+    /* Slider opacità */
+    .opacity-row{ display:flex; align-items:center; gap:10px; margin-top:8px; font-size:12px; color:var(--ink-soft); }
+    .opacity-row input[type=range]{ flex:1; accent-color: var(--ink); }
+
+    /* Sezioni: legenda classi */
+    .cls-item{ display:flex; gap:8px; align-items:center; font-size:12px; margin:4px 0; }
+    .cls-swatch{
+      width:18px; height:12px; border-radius:3px; flex:0 0 auto; border:1px solid rgba(0,0,0,.2);
+    }
+    .cls-swatch.dashed{ border:1.4px dashed #777; }
+
+    .basemap-row{ display:flex; gap:6px; }
+    .basemap-row button{
+      flex:1; font-size:12px; padding:7px 4px; border-radius:9px; cursor:pointer;
+      border:1px solid rgba(11,27,58,.25); background:#fff; color:var(--ink);
+    }
+    .basemap-row button.active{ background:var(--ink); color:#fff; }
+
+    .guide-link{
+      display:block; margin-top:12px; padding-top:10px; border-top:1px solid rgba(0,0,0,.08);
+      font-size:12.5px; color:var(--ink); font-weight:650; cursor:pointer; background:none; border-left:0; border-right:0; border-bottom:0;
+      text-align:left; width:100%;
+    }
+    .guide-link:hover{ text-decoration:underline; }
+    .hint { font-size: 11.5px; color:var(--ink-soft); margin-top: 8px; line-height: 1.35; }
+
+    .loading-badge{
+      position:absolute; z-index: 9200; bottom: 18px; left: 50%; transform: translateX(-50%);
+      background: var(--ink); color:#fff; font-size:12px; padding:7px 14px; border-radius:999px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.25); display:none;
+    }
+    .loading-badge.show{ display:block; }
+
+    /* ---------- Card di lettura nel pannello ---------- */
+    .pt-coords{ font-size:11px; color:var(--ink-soft); margin-bottom:10px; }
+    .read-block{
+      border:1px solid rgba(0,0,0,.09); border-radius:14px; padding:12px 12px 10px 12px; margin-bottom:10px;
+      background:#fcfcfd;
+    }
+    .read-block.active-var{ border-color: rgba(11,27,58,.4); box-shadow: 0 0 0 2px rgba(11,27,58,.06); }
+    .read-head{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+    .read-name{ font-size:12px; font-weight:750; color:var(--ink-soft); }
+    .read-value{ font-size:19px; font-weight:800; color:var(--ink); white-space:nowrap; }
+    .read-value small{ font-size:12px; font-weight:600; color:var(--ink-soft); }
+    .mini-ramp-wrap{ position:relative; margin:9px 0 2px 0; }
+    .mini-ramp{ height:9px; border-radius:5px; border:1px solid rgba(0,0,0,.14); }
+    .mini-marker{
+      position:absolute; top:-6px; width:0; height:0; transform:translateX(-5px);
+      border-left:5px solid transparent; border-right:5px solid transparent;
+      border-top:7px solid var(--ink);
+    }
+    .mini-labels{ display:flex; justify-content:space-between; font-size:10px; color:var(--ink-soft); margin-top:2px; }
+    .read-sentence{ font-size:12.5px; line-height:1.45; margin-top:7px; }
+    .read-tag{
+      display:inline-block; font-size:10.5px; font-weight:750; padding:2px 8px; border-radius:999px;
+      background:rgba(178,24,43,.1); color:var(--heat); margin-top:6px;
+    }
+    .read-nodata{ font-size:12.5px; color:var(--ink-soft); margin-top:4px; }
+
+    /* Card sezione */
+    .sez-card{
+      border:1px solid rgba(0,0,0,.09); border-radius:14px; padding:12px; margin-bottom:12px; background:#fff;
+    }
+    .sez-title{ font-size:13px; font-weight:800; margin-bottom:2px; }
+    .sez-id{ font-size:11px; color:var(--ink-soft); margin-bottom:8px; }
+    .cls-chip{
+      display:inline-flex; align-items:center; gap:7px; font-size:12px; font-weight:700;
+      padding:4px 10px; border-radius:999px; border:1px solid rgba(0,0,0,.12); margin-bottom:9px;
+    }
+    .cls-chip .dot{ width:10px; height:10px; border-radius:3px; }
+    .kv{ display:grid; grid-template-columns: 1fr; gap:7px; font-size:12.5px; }
+    .kv .row{ display:grid; grid-template-columns: 150px 1fr; gap:8px; align-items:baseline; }
+    .kv .k{ color:var(--ink-soft); font-weight:700; }
+    .kv .v{ color:var(--ink); }
+    .kv .expl{ font-size:11px; color:var(--ink-soft); line-height:1.35; grid-column:1 / -1; margin-top:-3px; }
+    .sez-note{
+      font-size:11.5px; color:var(--ink-soft); line-height:1.4; margin-top:9px; padding-top:8px;
+      border-top:1px dashed rgba(0,0,0,.12);
+    }
+    .sens-bar-wrap{ position:relative; height:9px; border-radius:5px; background:linear-gradient(90deg,#f1e6da,#c86b4a,#7a1f1a); border:1px solid rgba(0,0,0,.14); margin-top:4px; }
+    .sens-bar-marker{
+      position:absolute; top:-5px; width:2.5px; height:19px; background:var(--ink); border-radius:2px; transform:translateX(-1px);
+    }
+
+    /* Guida */
+    .guide h2{ font-size:15px; margin:0 0 8px 0; }
+    .guide h3{ font-size:13px; margin:16px 0 5px 0; }
+    .guide p, .guide li{ font-size:12.8px; line-height:1.5; margin:6px 0; }
+    .guide ul{ padding-left:18px; margin:4px 0; }
+    .guide .src{ font-size:11.5px; color:var(--ink-soft); margin-top:14px; padding-top:10px; border-top:1px solid rgba(0,0,0,.08); line-height:1.45; }
+    .guide a{ color:var(--heat); }
+
+    .panel__empty{ opacity: .75; font-size: 13px; line-height:1.5; }
+
+    /* Mobile */
+    @media (max-width: 820px){
+      body.panel-open #map{ right: 0; }
+      #infoPanel.panel{ width: var(--panel-w-mobile); max-width: var(--panel-w-mobile); }
+      .legend{ width: min(330px, calc(100vw - 24px)); max-height: 62vh; }
+    }
+
+    .leaflet-popup-content { margin: 10px 10px; }
+    .leaflet-container { font-family: inherit; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="panelBackdrop" class="panel-backdrop" aria-hidden="true"></div>
+  <div id="loadingBadge" class="loading-badge">Carico i dati…</div>
+
+  <aside id="infoPanel" class="panel panel--closed" aria-label="Dettagli">
+    <div class="panel__header">
+      <div class="panel__title" id="panelTitle">Dettagli</div>
+      <button id="panelClose" class="panel__close" type="button" aria-label="Chiudi">✕</button>
+    </div>
+    <div id="panelContent" class="panel__content">
+      <div class="panel__empty">Tocca un punto della mappa per leggere i valori in quel punto, spiegati.</div>
+    </div>
+  </aside>
+
+  <div class="legend" id="legend">
+    <div class="legend-head" id="legendHead">
+      <div>
+        <h1>Monselice — mappa del calore urbano</h1>
+        <p class="subtitle">Temperatura superficiale Landsat (30&nbsp;m), vegetazione, costruito e sensibilità sociale</p>
+      </div>
+      <button class="legend-toggle" id="legendToggle" type="button" aria-label="Comprimi legenda">–</button>
+    </div>
+
+    <div class="legend-body" id="legendBody">
+
+      <div class="block">
+        <div class="block-title">Periodo</div>
+        <div class="segmented" id="periodSeg"></div>
+        <div class="hint" id="periodHint"></div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Cosa vedi sulla mappa</div>
+        <div id="varList"></div>
+        <div class="opacity-row">
+          <span>Trasparenza</span>
+          <input type="range" id="opacitySlider" min="20" max="100" value="78" />
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Sezioni censuarie</div>
+        <div class="var-row">
+          <label><input type="checkbox" id="chkSezioni" /> <span>Sensibilità × calore × verde</span></label>
+          <button class="var-info-btn" data-info="sezinfo" type="button" title="Cosa significa">ⓘ</button>
+        </div>
+        <div class="var-info" id="info-sezinfo">
+          Le 259 sezioni censuarie ISTAT di Monselice, classificate incrociando tre condizioni calcolate sul composito 2022–2026:
+          <b>calda</b> (LST mediana di sezione sopra la media comunale), <b>fragile</b> (indice di sensibilità sociale ≥&nbsp;0,40)
+          e <b>nuda</b> (almeno il 20% della superficie senza vegetazione). Tocca una sezione per i dettagli.
+        </div>
+        <div id="clsLegend" style="display:none; margin-top:6px;"></div>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Sfondo</div>
+        <div class="basemap-row">
+          <button id="bmLight" class="active" type="button">Mappa chiara</button>
+          <button id="bmSat" type="button">Satellite</button>
+        </div>
+      </div>
+
+      <button class="guide-link" id="guideLink" type="button">ⓘ&nbsp; Come leggere questa mappa</button>
+      <div class="hint">Tocca un punto qualsiasi della mappa: i valori vengono letti e spiegati nel pannello.</div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/georaster@1.6.0/dist/georaster.browser.bundle.min.js"></script>
+  <script src="https://unpkg.com/georaster-layer-for-leaflet@3.10.0/dist/georaster-layer-for-leaflet.min.js"></script>
+
+  <script>
+  "use strict";
+
+  // =====================================================================
+  //  CONFIGURAZIONE — periodi, variabili, palette, testi esplicativi.
+  //  Per aggiungere o modificare un layer si interviene solo qui.
+  // =====================================================================
+
+  const NODATA = -9999;
+  const ARTICLE_URL = "https://andrearosina.com"; // ← aggiorna con l'URL dell'articolo
+
+  const PERIODS = {
+    giugno:  { label: "Giugno 2026", suffix: "giugno2026",
+               hint: "Composito delle scene Landsat di giugno 2026 (mediana dei passaggi senza nuvole)." },
+    mediana: { label: "2022–2026", suffix: "mediana2226",
+               hint: "Composito strutturale: mediana dei cinque mesi di giugno 2022–2026. Ogni anno pesa uguale." }
+  };
+
+  const VARS = {
+    lst: {
+      label: "Temperatura superficiale (LST)",
+      file: "lst", unit: "°C", dec: 1,
+      palette: ["#2b83ba","#80bfab","#ffffbf","#fdae61","#d7191c","#7f0000"],
+      domain: "p2p98",   // stiramento sui percentili 2–98 del raster
+      info: "È la temperatura della <b>superficie</b> misurata dal satellite Landsat in tarda mattinata: asfalto, tetti, campi, chiome degli alberi. <b>Non è la temperatura dell'aria</b> del meteo: nelle ore centrali di una giornata estiva l'asfalto può superare l'aria anche di 15–20 °C. Risoluzione: un valore ogni 30 metri.",
+      interpret: interpretLST
+    },
+    anom: {
+      label: "Anomalia LST",
+      file: "anomalia", unit: "°C", dec: 1,
+      palette: ["#2166ac","#67a9cf","#d1e5f0","#f7f7f7","#fddbc7","#ef8a62","#b2182b"],
+      domain: [-6, 6],
+      info: "Differenza tra la temperatura superficiale del punto e la <b>media dell'area di studio</b> nello stesso periodo. Zero = nella media; rosso = più caldo del resto del territorio; blu = più fresco. È la mappa che mostra <i>il pattern</i> del calore, a prescindere dai valori assoluti.",
+      interpret: interpretAnom
+    },
+    ndvi: {
+      label: "Vegetazione (NDVI)",
+      file: "ndvi", unit: "", dec: 2,
+      palette: ["#a6611a","#dfc27d","#f5f0c8","#a1d99b","#31a354","#00602a"],
+      domain: [0, 0.9],
+      info: "Indice di vegetazione (da −1 a 1): misura quanta vegetazione fotosinteticamente attiva c'è in ciascun pixel. Sotto <b>0,2</b> il suolo è praticamente nudo o artificiale; sopra <b>0,6</b> la vegetazione è densa. È la variabile che nell'analisi spiega meglio la temperatura: più verde, più fresco.",
+      interpret: interpretNDVI
+    },
+    ndbi: {
+      label: "Superfici costruite (NDBI)",
+      file: "ndbi", unit: "", dec: 2,
+      palette: ["#2166ac","#92b6d5","#f7f7f7","#dfa9a0","#b2182b"],
+      domain: [-0.5, 0.35],
+      info: "Indice del costruito (da −1 a 1): valori <b>positivi</b> dove prevalgono superfici artificiali e impermeabili (edifici, asfalto, capannoni), <b>negativi</b> dove prevalgono vegetazione o suoli umidi. È lo specchio dell'NDVI dal lato del cemento.",
+      interpret: interpretNDBI
+    }
+  };
+  const VAR_ORDER = ["lst", "anom", "ndvi", "ndbi"];
+
+  // Classi delle sezioni: colore, ordine di legenda, descrizione
+  const CLASSES = {
+    "priorita' (calda+fragile+nuda)": {
+      label: "Priorità: calda + fragile + nuda",
+      fill: "#a50f15", stroke: "#6d0a0e", fillOpacity: .82, weight: 1.4,
+      desc: "Tutte e tre le condizioni insieme: qui caldo, fragilità sociale e assenza di verde coincidono."
+    },
+    "calda e fragile (verde presente)": {
+      label: "Calda e fragile (verde presente)",
+      fill: "#ef8a62", stroke: "#b35c3c", fillOpacity: .6, weight: 1,
+      desc: "Sezione più calda della media con popolazione sensibile, ma con vegetazione presente."
+    },
+    "calda e nuda (non fragile)": {
+      label: "Calda e nuda (non fragile)",
+      fill: "#fdbe85", stroke: "#c98d4e", fillOpacity: .6, weight: 1,
+      desc: "Sezione calda e con poca vegetazione, ma senza particolare fragilità sociale."
+    },
+    "una condizione": {
+      label: "Una sola condizione",
+      fill: "#f3e7cf", stroke: "#c9b898", fillOpacity: .5, weight: .8,
+      desc: "Una sola delle tre condizioni è presente."
+    },
+    "nessuna condizione": {
+      label: "Nessuna condizione",
+      fill: "#ffffff", stroke: "#9aa3ad", fillOpacity: .22, weight: .8,
+      desc: "Nessuna delle tre condizioni: né particolarmente calda, né fragile, né spoglia."
+    },
+    "fuori copertura raster": {
+      label: "Dato satellitare insufficiente",
+      fill: "#c9ced4", stroke: "#8a9199", fillOpacity: .5, weight: 1, dashArray: "4 3",
+      desc: "Sezione con troppo pochi pixel Landsat validi: assenza di dato, non assenza di problema."
+    },
+    "fuori analisi": {
+      label: "Fuori analisi",
+      fill: "#e4e6e9", stroke: "#c4c8cd", fillOpacity: .3, weight: .5,
+      desc: "Sezione con meno di 20 residenti o non residenziale: l'indice sociale non è calcolato."
+    }
+  };
+  const CLASS_ORDER = Object.keys(CLASSES);
+
+  // =====================================================================
+  //  UTILITÀ
+  // =====================================================================
+
+  const $ = (id) => document.getElementById(id);
+  const fmt = (v, dec) => (v == null || !isFinite(v)) ? "—"
+      : v.toFixed(dec).replace(".", ",").replace("-", "−");
+  const fmtSigned = (v, dec) => (v >= 0 ? "+" : "") + fmt(v, dec);
+  const esc = (s) => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  function hexToRgb(h){
+    const x = h.replace("#","");
+    return [parseInt(x.slice(0,2),16), parseInt(x.slice(2,4),16), parseInt(x.slice(4,6),16)];
+  }
+  function makeColorFn(palette, dmin, dmax){
+    const stops = palette.map(hexToRgb);
+    return (v) => {
+      if (v == null || v === NODATA || !isFinite(v)) return null;
+      let t = (v - dmin) / (dmax - dmin);
+      t = Math.max(0, Math.min(1, t));
+      const x = t * (stops.length - 1);
+      const i = Math.min(Math.floor(x), stops.length - 2);
+      const f = x - i;
+      const c = stops[i].map((a, k) => Math.round(a + (stops[i+1][k] - a) * f));
+      return `rgb(${c[0]},${c[1]},${c[2]})`;
+    };
+  }
+  function cssGradient(palette){
+    const n = palette.length - 1;
+    return "linear-gradient(90deg," + palette.map((c,i)=>`${c} ${Math.round(i/n*100)}%`).join(",") + ")";
+  }
+
+  // Percentile di un valore rispetto ai 101 quantili precalcolati del raster
+  function percentileOf(v, quantili){
+    if (v <= quantili[0]) return 0;
+    if (v >= quantili[100]) return 100;
+    let lo = 0, hi = 100;
+    while (hi - lo > 1){
+      const mid = (lo + hi) >> 1;
+      if (quantili[mid] <= v) lo = mid; else hi = mid;
+    }
+    return lo;
+  }
+
+  function statsKey(varKey, period){
+    return `${VARS[varKey].file}_${PERIODS[period].suffix}`;
+  }
+  function domainFor(varKey, period){
+    const v = VARS[varKey];
+    if (Array.isArray(v.domain)) return v.domain;
+    const q = STATS[statsKey(varKey, period)].quantili;
+    return [q[2], q[98]]; // p2–p98
+  }
+
+  // =====================================================================
+  //  FRASI DI INTERPRETAZIONE — il numero spiegato
+  // =====================================================================
+
+  function interpretLST(v, period){
+    const s = STATS[statsKey("lst", period)];
+    const delta = v - s.mean;
+    const pct = percentileOf(v, s.quantili);
+    let out = `<b>${fmtSigned(delta,1)}&nbsp;°C</b> rispetto alla media dell'area (${fmt(s.mean,1)}&nbsp;°C). ` +
+              `Questo punto è più caldo del <b>${pct}%</b> del territorio analizzato.`;
+    let tag = null;
+    if (pct >= 95) tag = "Hotspot estremo — oltre il 95° percentile";
+    else if (pct >= 75) tag = "Hotspot — oltre il 75° percentile";
+    else if (pct <= 10) tag = "Tra le zone più fresche dell'area";
+    return { sentence: out, tag };
+  }
+
+  function interpretAnom(v, period){
+    const a = Math.abs(v);
+    let out, tag = null;
+    if (a < 1) out = "In linea con la media dell'area di studio: né isola di calore né zona di frescura.";
+    else if (v > 0){
+      out = `<b>${fmtSigned(v,1)}&nbsp;°C</b> sopra la media dell'area: superficie ${a >= 3 ? "molto" : "moderatamente"} più calda del resto del territorio.`;
+      if (a >= 3) tag = "Isola di calore marcata";
+    } else {
+      out = `<b>${fmt(v,1)}&nbsp;°C</b> rispetto alla media: superficie ${a >= 3 ? "molto" : "moderatamente"} più fresca del resto del territorio${a >= 3 ? " — tipicamente vegetazione densa o acqua" : ""}.`;
+    }
+    return { sentence: out, tag };
+  }
+
+  function interpretNDVI(v){
+    let out;
+    if (v < 0)        out = "Valore negativo: acqua o superfici artificiali molto riflettenti.";
+    else if (v < 0.2) out = "Suolo nudo o superfici artificiali: vegetazione praticamente assente. È la condizione che più favorisce il surriscaldamento.";
+    else if (v < 0.4) out = "Vegetazione rada: erba secca, incolti, verde frammentato.";
+    else if (v < 0.6) out = "Vegetazione moderata: prati, coltivi, verde urbano discontinuo.";
+    else              out = "Vegetazione densa e vigorosa: chiome, coltivi rigogliosi. È la superficie che meglio contiene la temperatura.";
+    return { sentence: out, tag: null };
+  }
+
+  function interpretNDBI(v){
+    let out;
+    if (v > 0.1)       out = "Netta prevalenza di superfici costruite e impermeabili: edifici, asfalto, piazzali.";
+    else if (v > 0)    out = "Prevalenza di superfici artificiali, con qualche elemento naturale.";
+    else if (v > -0.2) out = "Tessuto misto: costruito e vegetazione si alternano.";
+    else               out = "Prevalenza di vegetazione o suoli umidi: il costruito qui è minoritario.";
+    return { sentence: out, tag: null };
+  }
+
+  // =====================================================================
+  //  MAPPA E BASEMAP
+  // =====================================================================
+
+  const AOI_BOUNDS = L.latLngBounds([45.2107, 11.7097], [45.2669, 11.7887]);
+  const map = L.map("map", { zoomControl: true });
+  map.fitBounds(AOI_BOUNDS.pad(0.06));
+  map.attributionControl.setPrefix(false);
+  map.attributionControl.addAttribution(
+    'Dati: Landsat 8/9 (USGS/NASA) · ISTAT 2021/2023 · elaborazione <a href="https://andrearosina.com" target="_blank" rel="noopener">A. Rosina</a>'
+  );
+
+  const bmLight = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    maxZoom: 20, attribution: '&copy; OpenStreetMap &copy; CARTO'
+  }).addTo(map);
+  const bmSat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+    maxZoom: 20, attribution: 'Tiles &copy; Esri'
+  });
+
+  $("bmLight").addEventListener("click", () => setBasemap("light"));
+  $("bmSat").addEventListener("click", () => setBasemap("sat"));
+  function setBasemap(which){
+    if (which === "light"){ map.removeLayer(bmSat); bmLight.addTo(map); }
+    else { map.removeLayer(bmLight); bmSat.addTo(map); }
+    $("bmLight").classList.toggle("active", which === "light");
+    $("bmSat").classList.toggle("active", which === "sat");
+  }
+
+  // =====================================================================
+  //  STATO, CARICAMENTO RASTER
+  // =====================================================================
+
+  let STATS = null;                       // statistiche precalcolate per raster
+  const RASTERS = {};                     // cache georaster: RASTERS["lst_giugno2026"] = georaster
+  let currentPeriod = "giugno";
+  let currentVar = "anom";                // layer iniziale: l'anomalia, la mappa del pattern
+  let rasterLayer = null;                 // GeoRasterLayer attivo
+  let globalOpacity = 0.78;
+  let loadCounter = 0;
+
+  function setLoading(on){
+    loadCounter += on ? 1 : -1;
+    $("loadingBadge").classList.toggle("show", loadCounter > 0);
+  }
+
+  async function loadRaster(varKey, period){
+    const key = statsKey(varKey, period);
+    if (RASTERS[key]) return RASTERS[key];
+    setLoading(true);
+    try{
+      const resp = await fetch(`dati/${key}.tif`);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} su ${key}.tif`);
+      const buf = await resp.arrayBuffer();
+      const gr = await parseGeoraster(buf);
+      RASTERS[key] = gr;
+      return gr;
+    } finally { setLoading(false); }
+  }
+
+  // Legge il valore del pixel a una coordinata
+  function pixelValue(gr, lat, lng){
+    const col = Math.floor((lng - gr.xmin) / gr.pixelWidth);
+    const row = Math.floor((gr.ymax - lat) / gr.pixelHeight);
+    if (row < 0 || col < 0 || row >= gr.height || col >= gr.width) return null;
+    const v = gr.values[0][row][col];
+    if (v == null || v === NODATA || !isFinite(v)) return null;
+    return v;
+  }
+
+  async function showRasterLayer(){
+    if (rasterLayer){ map.removeLayer(rasterLayer); rasterLayer = null; }
+    if (!currentVar) { renderRampLegend(); return; }
+    const requested = statsKey(currentVar, currentPeriod);
+    const gr = await loadRaster(currentVar, currentPeriod);
+    // l'utente può aver cambiato selezione durante il fetch
+    if (!currentVar || statsKey(currentVar, currentPeriod) !== requested) return;
+    const [dmin, dmax] = domainFor(currentVar, currentPeriod);
+    const colorFn = makeColorFn(VARS[currentVar].palette, dmin, dmax);
+    rasterLayer = new GeoRasterLayer({
+      georaster: gr,
+      opacity: globalOpacity,
+      resolution: 256,
+      pixelValuesToColorFn: (vals) => colorFn(vals[0])
+    });
+    rasterLayer.addTo(map);
+    if (sezLayer && map.hasLayer(sezLayer)) sezLayer.bringToFront();
+    renderRampLegend();
+    // prefetch silenzioso delle altre variabili del periodo (per la lettura al click)
+    VAR_ORDER.filter(k => k !== currentVar).forEach(k => loadRaster(k, currentPeriod).catch(()=>{}));
+  }
+
+  // =====================================================================
+  //  LEGENDA: periodo, variabili, rampa
+  // =====================================================================
+
+  function buildPeriodSeg(){
+    const seg = $("periodSeg");
+    seg.innerHTML = "";
+    Object.entries(PERIODS).forEach(([key, p]) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = p.label;
+      b.classList.toggle("active", key === currentPeriod);
+      b.addEventListener("click", () => {
+        if (currentPeriod === key) return;
+        currentPeriod = key;
+        buildPeriodSeg();
+        showRasterLayer();
+      });
+      seg.appendChild(b);
+    });
+    $("periodHint").textContent = PERIODS[currentPeriod].hint;
+  }
+
+  function buildVarList(){
+    const box = $("varList");
+    box.innerHTML = "";
+    const mk = (key, label, checked) => {
+      const row = document.createElement("div");
+      row.className = "var-row";
+      row.innerHTML = `<label><input type="radio" name="varsel" value="${key ?? ""}" ${checked ? "checked": ""} /> <span>${label}</span></label>` +
+        (key ? `<button class="var-info-btn" data-info="${key}" type="button" title="Cosa significa">ⓘ</button>` : "");
+      box.appendChild(row);
+      if (key){
+        const info = document.createElement("div");
+        info.className = "var-info"; info.id = `info-${key}`;
+        info.innerHTML = VARS[key].info;
+        box.appendChild(info);
+        if (key === currentVar){
+          const ramp = document.createElement("div");
+          ramp.className = "ramp-wrap"; ramp.id = "rampWrap";
+          box.appendChild(ramp);
+        }
+      }
+    };
+    VAR_ORDER.forEach(k => mk(k, VARS[k].label, k === currentVar));
+    mk(null, "Nessun layer (solo sfondo)", currentVar === null);
+
+    box.querySelectorAll("input[name=varsel]").forEach(r => {
+      r.addEventListener("change", () => {
+        currentVar = r.value || null;
+        buildVarList();
+        showRasterLayer();
+      });
+    });
+  }
+
+  function renderRampLegend(){
+    const wrap = $("rampWrap");
+    if (!wrap || !currentVar || !STATS) return;
+    const v = VARS[currentVar];
+    const [dmin, dmax] = domainFor(currentVar, currentPeriod);
+    const note = Array.isArray(v.domain)
+      ? "Valori oltre gli estremi della scala sono saturati sul colore di bordo."
+      : "Scala adattata al 2°–98° percentile del periodo; gli estremi assoluti sono saturati.";
+    wrap.innerHTML =
+      `<div class="ramp" style="background:${cssGradient(v.palette)}"></div>` +
+      `<div class="ramp-labels"><span>${fmt(dmin, v.dec)}${v.unit ? "&nbsp;"+v.unit : ""}</span>` +
+      `<span>${fmt((dmin+dmax)/2, v.dec)}</span>` +
+      `<span>${fmt(dmax, v.dec)}${v.unit ? "&nbsp;"+v.unit : ""}</span></div>` +
+      `<div class="ramp-note">${note}</div>`;
+  }
+
+  // ⓘ toggle (delegato: vale per variabili e sezioni)
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".var-info-btn");
+    if (!btn) return;
+    const el = $(`info-${btn.dataset.info}`);
+    if (el) el.classList.toggle("open");
+  });
+
+  $("opacitySlider").addEventListener("input", (e) => {
+    globalOpacity = e.target.value / 100;
+    if (rasterLayer) rasterLayer.setOpacity(globalOpacity);
+  });
+
+  // Legenda comprimibile
+  function setLegendCollapsed(on){
+    document.body.classList.toggle("legend-collapsed", on);
+    $("legendToggle").textContent = on ? "+" : "–";
+  }
+  $("legendToggle").addEventListener("click", (e) => {
+    e.stopPropagation();
+    setLegendCollapsed(!document.body.classList.contains("legend-collapsed"));
+  });
+  $("legendHead").addEventListener("click", () => {
+    if (document.body.classList.contains("legend-collapsed")) setLegendCollapsed(false);
+  });
+  if (window.innerWidth <= 820) setLegendCollapsed(true);
+
+  // =====================================================================
+  //  SEZIONI CENSUARIE
+  // =====================================================================
+
+  let sezLayer = null;
+  let sensValues = [];   // valori dell'indice per il percentile tra sezioni
+  let pendingSection = null;
+
+  function classStyle(cls){
+    const c = CLASSES[cls] || CLASSES["fuori analisi"];
+    return {
+      fillColor: c.fill, color: c.stroke, weight: c.weight,
+      fillOpacity: c.fillOpacity, dashArray: c.dashArray || null
+    };
+  }
+
+  async function loadSezioni(){
+    if (sezLayer) return sezLayer;
+    setLoading(true);
+    try{
+      const resp = await fetch("dati/sezioni.geojson");
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} su sezioni.geojson`);
+      const gj = await resp.json();
+      sensValues = gj.features.map(f => f.properties.sens_index)
+                             .filter(v => v != null && isFinite(v)).sort((a,b)=>a-b);
+      sezLayer = L.geoJSON(gj, {
+        style: (f) => classStyle(f.properties.classe),
+        onEachFeature: (f, lyr) => {
+          lyr.on("click", () => { pendingSection = f.properties; });
+          lyr.on("mouseover", () => lyr.setStyle({ weight: 2.2 }));
+          lyr.on("mouseout",  () => lyr.setStyle({ weight: classStyle(f.properties.classe).weight }));
+        }
+      });
+      return sezLayer;
+    } finally { setLoading(false); }
+  }
+
+  function buildClassLegend(){
+    const box = $("clsLegend");
+    box.innerHTML = CLASS_ORDER.map(k => {
+      const c = CLASSES[k];
+      return `<div class="cls-item">` +
+        `<span class="cls-swatch ${c.dashArray ? "dashed" : ""}" style="background:${c.fill}; opacity:${Math.min(1, c.fillOpacity + .18)}; border-color:${c.stroke};"></span>` +
+        `<span>${c.label}</span></div>`;
+    }).join("");
+  }
+
+  $("chkSezioni").addEventListener("change", async (e) => {
+    if (e.target.checked){
+      const lyr = await loadSezioni();
+      lyr.addTo(map); lyr.bringToFront();
+      $("clsLegend").style.display = "block";
+    } else {
+      if (sezLayer && map.hasLayer(sezLayer)) map.removeLayer(sezLayer);
+      $("clsLegend").style.display = "none";
+    }
+  });
+
+  // =====================================================================
+  //  PANNELLO LATERALE
+  // =====================================================================
+
+  const panel = $("infoPanel");
+  function openPanel(title, html){
+    $("panelTitle").textContent = title;
+    $("panelContent").innerHTML = html;
+    panel.classList.remove("panel--closed");
+    document.body.classList.add("panel-open");
+    setTimeout(() => map.invalidateSize(), 260);
+  }
+  function closePanel(){
+    panel.classList.add("panel--closed");
+    document.body.classList.remove("panel-open");
+    setTimeout(() => map.invalidateSize(), 260);
+  }
+  $("panelClose").addEventListener("click", closePanel);
+  $("panelBackdrop").addEventListener("click", closePanel);
+
+  // ---- Card sezione ----
+  function sectionCardHTML(p){
+    const cls = CLASSES[p.classe] || CLASSES["fuori analisi"];
+    let rows = "";
+
+    if (p.P1 != null && p.P1 >= 0){
+      rows += kvRow("Residenti (2021)", `${p.P1}`, null);
+    }
+    if (p.sens_index != null && isFinite(p.sens_index)){
+      const rank = sensValues.length
+        ? Math.round(sensValues.filter(v => v <= p.sens_index).length / sensValues.length * 100) : null;
+      const t = Math.max(0, Math.min(1, p.sens_index));
+      rows += `<div class="row"><span class="k">Indice di sensibilità</span>` +
+              `<span class="v"><b>${fmt(p.sens_index,2)}</b> su 1</span></div>` +
+              `<div class="expl"><div class="sens-bar-wrap"><div class="sens-bar-marker" style="left:${(t*100).toFixed(1)}%"></div></div>` +
+              (rank != null ? `Più sensibile del ${rank}% delle 111 sezioni analizzate. ` : "") +
+              `L'indice combina cinque indicatori censuari: anziani over&nbsp;65 (peso 40%), bambini under&nbsp;5, cittadini stranieri, bassa istruzione e persone sole (15% ciascuno).</div>`;
+    }
+    if (p.lst_median != null && isFinite(p.lst_median)){
+      const an = (p.lst_anom != null && isFinite(p.lst_anom)) ? ` (${fmtSigned(p.lst_anom,1)}&nbsp;°C sulla media comunale)` : "";
+      rows += kvRow("LST mediana d'area", `<b>${fmt(p.lst_median,1)}&nbsp;°C</b>${an}`,
+        "Temperatura superficiale mediana dei pixel della sezione, dal composito giugno 2022–2026.");
+    }
+    if (p.ndvi_median != null && isFinite(p.ndvi_median)){
+      rows += kvRow("NDVI mediano", `<b>${fmt(p.ndvi_median,2)}</b>`,
+        p.ndvi_median < 0.3 ? "Vegetazione scarsa nella sezione." : (p.ndvi_median > 0.5 ? "Sezione ben vegetata." : "Vegetazione intermedia."));
+    }
+    if (p.f_nudo != null && isFinite(p.f_nudo) && p.in_analisi){
+      rows += kvRow("Superficie senza verde", `<b>${fmt(p.f_nudo*100,0)}%</b>`,
+        "Quota di pixel della sezione con NDVI da suolo nudo o artificiale: è il margine potenziale di intervento (depavimentazione, piantumazione).");
+    }
+
+    let note = "";
+    if (!p.in_analisi){
+      note = "Sezione esclusa dall'analisi sociale: meno di 20 residenti o sezione non residenziale (strade, aree produttive, incolti).";
+    } else if (p.classe === "fuori copertura raster"){
+      note = "Qui i pixel Landsat validi sono troppo pochi per una stima affidabile: è assenza di dato, non assenza di problema.";
+    }
+    if (p.sez_speciale) note += (note ? " " : "") + "Codice di sezione speciale ISTAT: dato da interpretare con cautela.";
+    if (p.lst_affidabile === false) note += (note ? " " : "") + "Stima LST poco affidabile (pochi pixel).";
+
+    return `<div class="sez-card">
+      <div class="sez-title">Sezione censuaria</div>
+      <div class="sez-id">ISTAT ${esc(p.SEZ21_ID)}</div>
+      <div class="cls-chip" style="background:${cls.fill}22; border-color:${cls.stroke}66;">
+        <span class="dot" style="background:${cls.fill}; border:1px solid ${cls.stroke};"></span>${cls.label}
+      </div>
+      <div class="expl" style="font-size:11.5px; color:var(--ink-soft); margin:-3px 0 9px 0; line-height:1.4;">${cls.desc}</div>
+      <div class="kv">${rows}</div>
+      ${note ? `<div class="sez-note">${note}</div>` : ""}
+    </div>`;
+  }
+  function kvRow(k, v, expl){
+    return `<div class="row"><span class="k">${k}</span><span class="v">${v}</span></div>` +
+           (expl ? `<div class="expl">${expl}</div>` : "");
+  }
+
+  // ---- Card lettura del punto ----
+  function readingBlockHTML(varKey, value, period){
+    const v = VARS[varKey];
+    if (value == null){
+      return `<div class="read-block">
+        <div class="read-head"><span class="read-name">${v.label}</span><span class="read-value">—</span></div>
+        <div class="read-nodata">Nessun dato in questo punto: fuori dall'area di studio o pixel mascherato (nuvole).</div>
+      </div>`;
+    }
+    const [dmin, dmax] = domainFor(varKey, period);
+    let t = (value - dmin) / (dmax - dmin);
+    t = Math.max(0, Math.min(1, t));
+    const it = v.interpret(value, period);
+    return `<div class="read-block ${varKey === currentVar ? "active-var" : ""}">
+      <div class="read-head">
+        <span class="read-name">${v.label}</span>
+        <span class="read-value">${fmt(value, v.dec)}${v.unit ? `&nbsp;<small>${v.unit}</small>` : ""}</span>
+      </div>
+      <div class="mini-ramp-wrap">
+        <div class="mini-ramp" style="background:${cssGradient(v.palette)}"></div>
+        <div class="mini-marker" style="left:${(t*100).toFixed(1)}%"></div>
+      </div>
+      <div class="mini-labels"><span>${fmt(dmin, v.dec)}</span><span>${fmt(dmax, v.dec)}</span></div>
+      <div class="read-sentence">${it.sentence}</div>
+      ${it.tag ? `<div class="read-tag">${it.tag}</div>` : ""}
+    </div>`;
+  }
+
+  async function handleMapClick(e){
+    const { lat, lng } = e.latlng;
+    const sez = pendingSection; pendingSection = null;
+    if (!STATS) return;
+    if (!AOI_BOUNDS.pad(0.15).contains(e.latlng) && !sez) return;
+
+    openPanel("Lettura del punto",
+      `<div class="pt-coords">Punto: ${lat.toFixed(5)}, ${lng.toFixed(5)} · periodo: <b>${PERIODS[currentPeriod].label}</b></div>` +
+      `<div class="panel__empty">Leggo i valori…</div>`);
+
+    let grs;
+    try{
+      grs = await Promise.all(VAR_ORDER.map(k => loadRaster(k, currentPeriod)));
+    } catch(err){
+      openPanel("Lettura del punto",
+        `<div class="panel__empty">Non riesco a caricare i dati raster (${esc(err.message)}). Se stai aprendo il file in locale, servi la cartella con un piccolo server (vedi README).</div>`);
+      return;
+    }
+
+    let html = `<div class="pt-coords">Punto: ${lat.toFixed(5)}, ${lng.toFixed(5)} · periodo: <b>${PERIODS[currentPeriod].label}</b></div>`;
+    if (sez) html += sectionCardHTML(sez);
+    VAR_ORDER.forEach((k, i) => {
+      html += readingBlockHTML(k, pixelValue(grs[i], lat, lng), currentPeriod);
+    });
+    html += `<div class="hint" style="margin-top:4px;">I quattro valori si riferiscono allo stesso pixel Landsat di 30×30&nbsp;m. Cambia periodo nella legenda per confrontare giugno 2026 con il quadro strutturale 2022–2026.</div>`;
+    openPanel("Lettura del punto", html);
+  }
+  map.on("click", handleMapClick);
+
+  // =====================================================================
+  //  GUIDA ALLA LETTURA
+  // =====================================================================
+
+  function guideHTML(){
+    return `<div class="guide">
+      <h2>Come leggere questa mappa</h2>
+      <p>Questa pagina accompagna l'analisi delle isole di calore di Monselice: mostra <b>dove</b> il territorio si scalda,
+      <b>perché</b> (il legame con vegetazione e superfici costruite) e <b>chi</b> vive nelle zone più esposte.
+      Tocca un punto qualsiasi: i valori vengono letti dal pixel e spiegati in parole.</p>
+
+      <h3>I dati satellitari</h3>
+      <p>Le mappe derivano dalle immagini <b>Landsat 8/9</b> (USGS/NASA), risoluzione 30&nbsp;m, acquisite in tarda mattinata.
+      I pixel con nuvole od ombre sono esclusi tramite le maschere di qualità. Due i periodi disponibili:</p>
+      <ul>
+        <li><b>Giugno 2026</b> — mediana delle scene pulite del mese: la fotografia dell'ultima estate.</li>
+        <li><b>Composito 2022–2026</b> — mediana dei cinque giugni, con ogni anno a peso uguale: il quadro
+        <i>strutturale</i>, che mostra quali pattern si ripetono ogni estate.</li>
+      </ul>
+
+      <h3>Le quattro variabili</h3>
+      <ul>
+        <li><b>LST</b> — temperatura della superficie (asfalto, tetti, chiome), non dell'aria: in una giornata estiva
+        l'asfalto può superare l'aria di 15–20&nbsp;°C.</li>
+        <li><b>Anomalia LST</b> — scostamento dalla media dell'area nello stesso periodo: la mappa del <i>pattern</i> del calore.</li>
+        <li><b>NDVI</b> — quanta vegetazione attiva c'è nel pixel (sotto 0,2: suolo nudo; sopra 0,6: verde denso).</li>
+        <li><b>NDBI</b> — prevalenza di superfici costruite e impermeabili (positivo) o naturali (negativo).</li>
+      </ul>
+
+      <h3>Le sezioni censuarie</h3>
+      <p>Il livello sociale incrocia tre condizioni, calcolate per ciascuna delle sezioni ISTAT con almeno 20 residenti (111 su 259):</p>
+      <ul>
+        <li><b>calda</b> — LST mediana della sezione sopra la media comunale (composito 2022–2026);</li>
+        <li><b>fragile</b> — indice di sensibilità ≥&nbsp;0,40. L'indice (0–1) combina con pesi dichiarati: over&nbsp;65 (40%),
+        under&nbsp;5, stranieri, bassa istruzione, persone sole (15% ciascuno) — fonte censimento ISTAT;</li>
+        <li><b>nuda</b> — almeno il 20% della superficie senza vegetazione (margine di intervento).</li>
+      </ul>
+      <p>Le quattro sezioni che sommano tutte e tre le condizioni sono la classe di <b>priorità</b>: è lì che caldo,
+      fragilità e assenza di verde coincidono.</p>
+
+      <h3>I limiti, dichiarati</h3>
+      <ul>
+        <li>La LST non è la temperatura percepita né quella dell'aria: è un indicatore di <i>dove</i> il territorio accumula calore.</li>
+        <li>Nelle sezioni piccole la stima si basa su pochi pixel: dove non è affidabile, la mappa lo dice.</li>
+        <li>Questa è una proposta di lettura indipendente, a scopo didattico e indicativo — non uno studio commissionato né esaustivo.</li>
+      </ul>
+
+      <div class="src">
+        Analisi ed elaborazione: Andrea Rosina · dati Landsat Collection&nbsp;2 (USGS/NASA) via Google Earth Engine ·
+        geometrie e censimento ISTAT 2021/2023.<br/>
+        L'articolo completo, con metodo e risultati: <a href="${ARTICLE_URL}" target="_blank" rel="noopener">andrearosina.com</a>
+      </div>
+    </div>`;
+  }
+  $("guideLink").addEventListener("click", () => openPanel("Guida", guideHTML()));
+
+  // =====================================================================
+  //  AVVIO
+  // =====================================================================
+
+  (async function init(){
+    setLoading(true);
+    try{
+      const resp = await fetch("dati/statistiche.json");
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      STATS = await resp.json();
+    } catch(err){
+      $("panelContent").innerHTML = `<div class="panel__empty">Impossibile caricare <code>dati/statistiche.json</code> (${esc(err.message)}).<br/><br/>
+        Se stai aprendo <code>index.html</code> direttamente dal disco, il browser blocca la lettura dei file: avvia un piccolo server locale
+        (es. <code>python3 -m http.server</code> nella cartella) e apri <code>http://localhost:8000</code>.</div>`;
+      openPanel("Attenzione", $("panelContent").innerHTML);
+      setLoading(false);
+      return;
+    }
+    setLoading(false);
+    buildPeriodSeg();
+    buildVarList();
+    showRasterLayer();
+  })();
+  </script>
+</body>
+</html>
