@@ -26,19 +26,26 @@
       color: var(--ink);
     }
 
-    #map{ position: absolute; inset: 0; right: 0; transition: right .25s var(--ease); background:#eef0f3; }
-    body.panel-open #map{ right: var(--panel-w); }
+    #map{ position: absolute; inset: 0; background:#eef0f3; }
 
-    .panel-backdrop{
-      position: absolute; inset: 0; background: rgba(0,0,0,.22);
-      opacity: 0; pointer-events: none; transition: opacity .2s var(--ease); z-index: 8800;
+    /* Marker del punto interrogato */
+    .query-marker{ background: transparent; border: 0; }
+    .query-marker .qm-ring{
+      position:absolute; inset:0; border-radius:999px;
+      background: rgba(255,255,255,.95);
+      border: 2.5px solid var(--ink);
+      box-shadow: 0 0 0 3px rgba(255,255,255,.6), 0 2px 8px rgba(0,0,0,.35);
     }
-    body.panel-open .panel-backdrop{ opacity: 1; pointer-events: auto; }
+    .query-marker .qm-dot{
+      position:absolute; inset:5px; border-radius:999px; background: var(--heat);
+    }
 
     /* ---------- Pannello laterale ---------- */
     #infoPanel.panel{
       position: absolute; top: 0; right: 0; bottom: 0;
-      width: var(--panel-w); max-width: 46vw; background: #fff;
+      width: var(--panel-w); max-width: 46vw;
+      background: rgba(255,255,255,.92);
+      -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px);
       border-left: 1px solid rgba(0,0,0,.10);
       box-shadow: -14px 0 30px rgba(0,0,0,.14);
       z-index: 9999; display: flex; flex-direction: column;
@@ -48,7 +55,7 @@
     #infoPanel .panel__header{
       flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between;
       gap: 12px; padding: 14px 14px;
-      background: linear-gradient(180deg, #f7f8fa 0%, #fff 100%);
+      background: linear-gradient(180deg, rgba(247,248,250,.9) 0%, rgba(255,255,255,.35) 100%);
       border-bottom: 1px solid rgba(0,0,0,.08);
     }
     #infoPanel .panel__title{ font-weight: 750; letter-spacing: .2px; }
@@ -205,10 +212,29 @@
     .panel__empty{ opacity: .75; font-size: 13px; line-height:1.5; }
 
     /* Mobile */
+    /* Mobile: pannello come bottom sheet, controlli più grandi */
     @media (max-width: 820px){
-      body.panel-open #map{ right: 0; }
-      #infoPanel.panel{ width: var(--panel-w-mobile); max-width: var(--panel-w-mobile); }
-      .legend{ width: min(330px, calc(100vw - 24px)); max-height: 62vh; }
+      #infoPanel.panel{
+        top: auto; left: 0; right: 0; bottom: 0;
+        width: 100%; max-width: 100%; height: 58vh;
+        border-left: 0; border-top: 1px solid rgba(0,0,0,.10);
+        border-radius: 18px 18px 0 0;
+        box-shadow: 0 -14px 30px rgba(0,0,0,.18);
+        transform: translateY(0);
+      }
+      #infoPanel.panel--closed{ transform: translateY(112%); }
+      #infoPanel .panel__header{ border-radius: 18px 18px 0 0; padding-top: 18px; position: relative; }
+      #infoPanel .panel__header::before{
+        content:""; position:absolute; top:7px; left:50%; transform:translateX(-50%);
+        width:42px; height:4px; border-radius:999px; background: rgba(11,27,58,.25);
+      }
+      .legend{ width: min(330px, calc(100vw - 24px)); max-height: 56vh; }
+      .var-row{ padding: 8px 0; font-size: 14.5px; }
+      .var-row input[type=radio], .var-row input[type=checkbox]{ transform: scale(1.15); }
+      .var-info-btn{ width: 30px; height: 30px; font-size: 15px; }
+      .segmented button{ padding: 10px 4px; font-size: 13.5px; }
+      .basemap-row button{ padding: 10px 4px; }
+      .guide-link{ padding-top: 12px; font-size: 13.5px; }
     }
 
     .leaflet-popup-content { margin: 10px 10px; }
@@ -217,7 +243,6 @@
 </head>
 <body>
   <div id="map"></div>
-  <div id="panelBackdrop" class="panel-backdrop" aria-hidden="true"></div>
   <div id="loadingBadge" class="loading-badge">Carico i dati…</div>
 
   <aside id="infoPanel" class="panel panel--closed" aria-label="Dettagli">
@@ -742,16 +767,45 @@
     $("panelTitle").textContent = title;
     $("panelContent").innerHTML = html;
     panel.classList.remove("panel--closed");
-    document.body.classList.add("panel-open");
-    setTimeout(() => map.invalidateSize(), 260);
+    if (window.innerWidth <= 820) setLegendCollapsed(true);
   }
   function closePanel(){
     panel.classList.add("panel--closed");
-    document.body.classList.remove("panel-open");
-    setTimeout(() => map.invalidateSize(), 260);
+    clearQueryMarker();
   }
   $("panelClose").addEventListener("click", closePanel);
-  $("panelBackdrop").addEventListener("click", closePanel);
+
+  // ---- Marker del punto interrogato ----
+  let queryMarker = null;
+  const queryIcon = L.divIcon({
+    className: "query-marker",
+    html: '<span class="qm-ring"></span><span class="qm-dot"></span>',
+    iconSize: [18, 18], iconAnchor: [9, 9]
+  });
+  function setQueryMarker(latlng){
+    if (!queryMarker){
+      queryMarker = L.marker(latlng, { icon: queryIcon, interactive: false, keyboard: false }).addTo(map);
+    } else queryMarker.setLatLng(latlng);
+  }
+  function clearQueryMarker(){
+    if (queryMarker){ map.removeLayer(queryMarker); queryMarker = null; }
+  }
+
+  // Se il punto interrogato finisce sotto il pannello (o sotto la sheet su mobile),
+  // sposta leggermente la mappa per tenerlo in vista insieme al marker.
+  function ensurePointVisible(latlng){
+    const size = map.getSize();
+    const pt = map.latLngToContainerPoint(latlng);
+    let dx = 0, dy = 0;
+    if (window.innerWidth <= 820){
+      const visibleH = size.y - window.innerHeight * 0.58;   // mappa sopra la bottom sheet
+      if (pt.y > visibleH - 40) dy = pt.y - Math.max(70, visibleH * 0.5);
+    } else {
+      const panelW = 420;
+      if (pt.x > size.x - panelW - 40) dx = pt.x - (size.x - panelW) * 0.55;
+    }
+    if (dx || dy) map.panBy([dx, dy], { animate: true });
+  }
 
   // ---- Card sezione ----
   function sectionCardHTML(p){
@@ -844,9 +898,11 @@
     if (!STATS) return;
     if (!AOI_BOUNDS.pad(0.15).contains(e.latlng) && !sez) return;
 
+    setQueryMarker(e.latlng);
     openPanel("Lettura del punto",
       `<div class="pt-coords">Punto: ${lat.toFixed(5)}, ${lng.toFixed(5)} · periodo: <b>${PERIODS[currentPeriod].label}</b></div>` +
       `<div class="panel__empty">Leggo i valori…</div>`);
+    ensurePointVisible(e.latlng);
 
     let grs;
     try{
