@@ -86,6 +86,7 @@
 
     .block{ margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(0,0,0,.08); }
     .block-title{ font-size: 12px; font-weight: 750; margin-bottom: 7px; text-transform: uppercase; letter-spacing: .4px; color: var(--ink-soft); }
+    .block-sub{ font-size: 11.5px; color: var(--ink-soft); line-height: 1.4; margin: -3px 0 7px 0; }
 
     /* Periodo: segmented */
     .segmented{ display:flex; border:1px solid rgba(11,27,58,.25); border-radius: 10px; overflow:hidden; }
@@ -282,15 +283,20 @@
       </div>
 
       <div class="block">
-        <div class="block-title">Sezioni censuarie</div>
+        <div class="block-title">Isole di calore — fragilità sociale</div>
+        <p class="block-sub">Le sezioni censuarie dove caldo, fragilità sociale e assenza di verde si sovrappongono: il livello che dice <i>chi</i> vive nelle zone più esposte.</p>
         <div class="var-row">
-          <label><input type="checkbox" id="chkSezioni" /> <span>Sensibilità × calore × verde</span></label>
+          <label><input type="checkbox" id="chkSezioni" /> <span>Mostra le sezioni classificate</span></label>
           <button class="var-info-btn" data-info="sezinfo" type="button" title="Cosa significa">ⓘ</button>
         </div>
         <div class="var-info" id="info-sezinfo">
           Le 259 sezioni censuarie ISTAT di Monselice, classificate incrociando tre condizioni calcolate sul composito 2022–2026:
           <b>calda</b> (LST mediana di sezione sopra la media comunale), <b>fragile</b> (indice di sensibilità sociale ≥&nbsp;0,40)
           e <b>nuda</b> (almeno il 20% della superficie senza vegetazione). Tocca una sezione per i dettagli.
+        </div>
+        <div class="opacity-row" id="sezOpacityRow" style="display:none;">
+          <span>Trasparenza</span>
+          <input type="range" id="sezOpacitySlider" min="20" max="100" value="90" />
         </div>
         <div id="clsLegend" style="display:none; margin-top:6px;"></div>
       </div>
@@ -300,6 +306,9 @@
         <div class="basemap-row">
           <button id="bmLight" class="active" type="button">Mappa chiara</button>
           <button id="bmSat" type="button">Satellite</button>
+        </div>
+        <div class="var-row" style="margin-top:6px;">
+          <label><input type="checkbox" id="chkStrade" checked /> <span>Strade sempre in evidenza</span></label>
         </div>
       </div>
 
@@ -371,37 +380,37 @@
   const CLASSES = {
     "priorita' (calda+fragile+nuda)": {
       label: "Priorità: calda + fragile + nuda",
-      fill: "#a50f15", stroke: "#6d0a0e", fillOpacity: .82, weight: 1.4,
+      fill: "#a50f15", stroke: "#570608", fillOpacity: .9, weight: 1.8,
       desc: "Tutte e tre le condizioni insieme: qui caldo, fragilità sociale e assenza di verde coincidono."
     },
     "calda e fragile (verde presente)": {
       label: "Calda e fragile (verde presente)",
-      fill: "#ef8a62", stroke: "#b35c3c", fillOpacity: .6, weight: 1,
+      fill: "#e8703f", stroke: "#8f3d1c", fillOpacity: .75, weight: 1.3,
       desc: "Sezione più calda della media con popolazione sensibile, ma con vegetazione presente."
     },
     "calda e nuda (non fragile)": {
       label: "Calda e nuda (non fragile)",
-      fill: "#fdbe85", stroke: "#c98d4e", fillOpacity: .6, weight: 1,
+      fill: "#fdae61", stroke: "#a86f2e", fillOpacity: .75, weight: 1.3,
       desc: "Sezione calda e con poca vegetazione, ma senza particolare fragilità sociale."
     },
     "una condizione": {
       label: "Una sola condizione",
-      fill: "#f3e7cf", stroke: "#c9b898", fillOpacity: .5, weight: .8,
+      fill: "#f0dfb8", stroke: "#a8956a", fillOpacity: .65, weight: 1,
       desc: "Una sola delle tre condizioni è presente."
     },
     "nessuna condizione": {
       label: "Nessuna condizione",
-      fill: "#ffffff", stroke: "#9aa3ad", fillOpacity: .22, weight: .8,
+      fill: "#ffffff", stroke: "#6b7683", fillOpacity: .3, weight: 1,
       desc: "Nessuna delle tre condizioni: né particolarmente calda, né fragile, né spoglia."
     },
     "fuori copertura raster": {
       label: "Dato satellitare insufficiente",
-      fill: "#c9ced4", stroke: "#8a9199", fillOpacity: .5, weight: 1, dashArray: "4 3",
+      fill: "#c3c9d0", stroke: "#6f777f", fillOpacity: .6, weight: 1.1, dashArray: "4 3",
       desc: "Sezione con troppo pochi pixel Landsat validi: assenza di dato, non assenza di problema."
     },
     "fuori analisi": {
       label: "Fuori analisi",
-      fill: "#e4e6e9", stroke: "#c4c8cd", fillOpacity: .3, weight: .5,
+      fill: "#e1e4e8", stroke: "#b3b9bf", fillOpacity: .38, weight: .7,
       desc: "Sezione con meno di 20 residenti o non residenziale: l'indice sociale non è calcolato."
     }
   };
@@ -527,6 +536,18 @@
   }).addTo(map);
   const bmSat = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
     maxZoom: 20, attribution: 'Tiles &copy; Esri'
+  });
+
+  // Grafo stradale sempre in evidenza: overlay trasparente sopra raster e sezioni
+  map.createPane("roadsPane");
+  map.getPane("roadsPane").style.zIndex = 450;
+  map.getPane("roadsPane").style.pointerEvents = "none";
+  const roadsLayer = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}",
+    { pane: "roadsPane", maxZoom: 20, maxNativeZoom: 19, opacity: .95, attribution: "Strade: Esri" }
+  ).addTo(map);
+  $("chkStrade").addEventListener("change", (e) => {
+    if (e.target.checked) roadsLayer.addTo(map); else map.removeLayer(roadsLayer);
   });
 
   $("bmLight").addEventListener("click", () => setBasemap("light"));
@@ -708,11 +729,14 @@
   let sensValues = [];   // valori dell'indice per il percentile tra sezioni
   let pendingSection = null;
 
+  let sezOpacity = 0.9;   // fattore globale del livello sezioni
   function classStyle(cls){
     const c = CLASSES[cls] || CLASSES["fuori analisi"];
     return {
       fillColor: c.fill, color: c.stroke, weight: c.weight,
-      fillOpacity: c.fillOpacity, dashArray: c.dashArray || null
+      fillOpacity: Math.min(1, c.fillOpacity * sezOpacity),
+      opacity: Math.min(1, sezOpacity + .1),
+      dashArray: c.dashArray || null
     };
   }
 
@@ -752,10 +776,17 @@
       const lyr = await loadSezioni();
       lyr.addTo(map); lyr.bringToFront();
       $("clsLegend").style.display = "block";
+      $("sezOpacityRow").style.display = "flex";
     } else {
       if (sezLayer && map.hasLayer(sezLayer)) map.removeLayer(sezLayer);
       $("clsLegend").style.display = "none";
+      $("sezOpacityRow").style.display = "none";
     }
+  });
+
+  $("sezOpacitySlider").addEventListener("input", (e) => {
+    sezOpacity = e.target.value / 100;
+    if (sezLayer) sezLayer.setStyle((f) => classStyle(f.properties.classe));
   });
 
   // =====================================================================
@@ -1000,6 +1031,7 @@
     setLoading(false);
     buildPeriodSeg();
     buildVarList();
+    buildClassLegend();
     showRasterLayer();
   })();
   </script>
