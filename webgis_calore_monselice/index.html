@@ -142,6 +142,8 @@
       text-align:left; width:100%;
     }
     .guide-link:hover{ text-decoration:underline; }
+    .article-link{ display:block; margin-top:9px; font-size:12px; color:var(--heat); font-weight:650; text-decoration:none; }
+    .article-link:hover{ text-decoration:underline; }
     .hint { font-size: 11.5px; color:var(--ink-soft); margin-top: 8px; line-height: 1.35; }
 
     .loading-badge{
@@ -313,6 +315,7 @@
       </div>
 
       <button class="guide-link" id="guideLink" type="button">ⓘ&nbsp; Come leggere questa mappa</button>
+      <a class="article-link" href="https://andrearosina.com/il-caldo-ha-una-geografia.html">Leggi l'articolo: «Il caldo ha una geografia» →</a>
       <div class="hint">Tocca un punto qualsiasi della mappa: i valori vengono letti e spiegati nel pannello.</div>
     </div>
   </div>
@@ -331,7 +334,7 @@
   // =====================================================================
 
   const NODATA = -9999;
-  const ARTICLE_URL = "https://andrearosina.com"; // ← aggiorna con l'URL dell'articolo
+  const ARTICLE_URL = "https://andrearosina.com/il-caldo-ha-una-geografia.html";
 
   const PERIODS = {
     giugno:  { label: "Giugno 2026", suffix: "giugno2026",
@@ -1004,7 +1007,7 @@
       <div class="src">
         Analisi ed elaborazione: Andrea Rosina · dati Landsat Collection&nbsp;2 (USGS/NASA) via Google Earth Engine ·
         geometrie e censimento ISTAT 2021/2023.<br/>
-        L'articolo completo, con metodo e risultati: <a href="${ARTICLE_URL}" target="_blank" rel="noopener">andrearosina.com</a>
+        L'articolo completo, con metodo e risultati: <a href="${ARTICLE_URL}" target="_blank" rel="noopener">«Il caldo ha una geografia»</a>
       </div>
     </div>`;
   }

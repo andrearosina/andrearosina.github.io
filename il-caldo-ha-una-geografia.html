@@ -47,6 +47,9 @@
   .disclaimer strong { color:var(--green-2); }
   .box { background:var(--green-pale); border:1px solid var(--border); border-left:4px solid var(--green); border-radius:14px; padding:16px 18px; margin:16px 0; font-size:15.5px; }
   .box strong { display:block; color:var(--green-2); margin-bottom:4px; }
+  .webgis-box { border-left-color: var(--orange); }
+  .webgis-box .btn-map { display:inline-block; background:var(--green); color:white; text-decoration:none; font-weight:700; padding:10px 18px; border-radius:999px; margin-top:10px; }
+  .webgis-box .btn-map:hover { background:var(--green-2); }
   figure { margin:22px 0; }
   figure img { width:100%; height:auto; display:block; border:1px solid var(--border); border-radius:12px; background:white; }
   figcaption { font-size:13.5px; color:var(--muted); line-height:1.55; margin-top:8px; padding:0 4px; }
@@ -199,6 +202,11 @@
 <img alt="Zoom della mappa delle classi sulle sezioni prioritarie" src="https://andrearosina.com/lst_monselice/fig8_zoom.png" style="margin-top:12px;"/>
 <figcaption>Figura 11 — La classificazione a tre condizioni: in alto la vista d'insieme, in basso lo zoom sulle sezioni prioritarie (calde, fragili e povere di verde). In grigio le sezioni fuori analisi.</figcaption>
 </figure>
+<div class="box webgis-box">
+<strong>Esplora tu stesso: la mappa interattiva</strong>
+      Tutti i livelli di questa analisi — temperatura di superficie, anomalia, vegetazione, costruito e le sezioni classificate — sono navigabili nel webGIS di Sottosuoli, sia per giugno 2026 che per il composito 2022–2026. Tocca un punto qualsiasi: il valore viene letto dal pixel e spiegato in parole.
+      <a class="btn-map" href="/webgis_calore_monselice/">Apri la mappa interattiva →</a>
+</div>
 <p>Le sezioni che soddisfano tutte e tre le condizioni sono quattro, e ci abitano <span class="numero">585 persone</span>. Due sono piccole; due sono luoghi veri e riconoscibili.</p>
 <p>La prima conta 275 residenti ed è la sezione con l'indice di fragilità più alto di tutto il comune: qui vivono, in proporzione, più anziani e più persone sole che in qualunque altra parte di Monselice. Allo stesso tempo, un terzo della sua superficie è privo di vegetazione e la sua temperatura sta a +2,6 °C dalla media d'area. È il caso in cui i tre assi si sommano: fragilità massima, caldo sopra la media, spazio fisico per intervenire.</p>
 <p>La seconda, 243 residenti, è la più calda tra le sezioni residenziali — +3,4 °C — e ha quasi metà della superficie nuda: la fragilità qui è appena dentro il quartile alto, ma il margine d'intervento è il più ampio di tutta Monselice. Accanto a loro, la classificazione racconta anche i casi intermedi: tredici sezioni calde e fragili ma già verdi, dove il problema c'è ma lo spazio d'intervento sulle superfici è poco; nove calde e spoglie ma non fragili — parecchie lungo il corridoio commerciale, dove il discorso torna ai parcheggi del capitolo precedente.</p>
@@ -216,7 +224,7 @@
 </section>
 <section>
 <h2>Dati e strumenti</h2>
-<p>Le immagini satellitari sono Landsat 8/9 Collection 2 Level 2 (USGS/NASA), elaborate in Google Earth Engine; gli indicatori sociali vengono dalle basi territoriali ISTAT 2021 e dal censimento permanente 2023; il confronto istituzionale usa il composito estivo LST di ISPRA/SNPA consultabile sull'EcoAtlante e i dati sul consumo di suolo dell'edizione 2025; la serie storica delle temperature è la rianalisi ERA5 di Copernicus, quella globale i dati NASA GISTEMP. Le elaborazioni sono in Python (geopandas, rasterio, rasterstats) e QGIS. Il codice JavaScript usato per l'analisi in Google Earth Engine, insieme alla documentazione e agli altri materiali progressivamente resi disponibili, è raccolto nel repository dedicato: <a href="https://github.com/andrearosina/LST-Monselice" rel="noopener" target="_blank">github.com/andrearosina/LST-Monselice</a>; per altre richieste e per le obiezioni sul metodo — che sono benvenute — scrivetemi a <a href="mailto:bracc.rosina@gmail.com">bracc.rosina@gmail.com</a>: è così che questo osservatorio intende crescere.</p>
+<p>Le immagini satellitari sono Landsat 8/9 Collection 2 Level 2 (USGS/NASA), elaborate in Google Earth Engine; gli indicatori sociali vengono dalle basi territoriali ISTAT 2021 e dal censimento permanente 2023; il confronto istituzionale usa il composito estivo LST di ISPRA/SNPA consultabile sull'EcoAtlante e i dati sul consumo di suolo dell'edizione 2025; la serie storica delle temperature è la rianalisi ERA5 di Copernicus, quella globale i dati NASA GISTEMP. Le elaborazioni sono in Python (geopandas, rasterio, rasterstats) e QGIS. Tutti i livelli sono esplorabili nella <a href="/webgis_calore_monselice/">mappa interattiva</a>. Il codice JavaScript usato per l'analisi in Google Earth Engine, insieme alla documentazione e agli altri materiali progressivamente resi disponibili, è raccolto nel repository dedicato: <a href="https://github.com/andrearosina/LST-Monselice" rel="noopener" target="_blank">github.com/andrearosina/LST-Monselice</a>; per altre richieste e per le obiezioni sul metodo — che sono benvenute — scrivetemi a <a href="mailto:bracc.rosina@gmail.com">bracc.rosina@gmail.com</a>: è così che questo osservatorio intende crescere.</p>
 </section>
 <section class="footnotes">
 <h2>Note</h2>

@@ -153,6 +153,9 @@
   .analysis-stats { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 20px; }
   .analysis-stat { background:white; border:1px solid var(--border); border-radius:999px; padding:7px 11px; font-size:12.5px; color:var(--green-2); font-weight:700; }
   .analysis-image { width:100%; height:100%; min-height:340px; object-fit:cover; display:block; border-left:1px solid var(--border); }
+  .analysis-cta { display:flex; flex-wrap:wrap; gap:10px; }
+  .btn-map { border:1.5px solid var(--green); color:var(--green-2); background:white; }
+  .btn-map:hover { background:var(--green-pale); }
 
   @media (max-width: 820px) {
     .topbar .wrap { flex-direction:column; align-items:flex-start; gap:4px; }
@@ -182,6 +185,7 @@
     <div class="mainnav-links">
       <a href="#rassegna">Rassegna</a>
       <a href="il-caldo-ha-una-geografia.html">Approfondimenti</a>
+      <a href="/webgis_calore_monselice/">Mappa</a>
       <a href="archivio.html">Archivio</a>
       <a href="metodo.html">Metodo</a>
       <a href="fonti.html">Fonti</a>
@@ -220,13 +224,17 @@
       <div class="analysis-copy">
         <div class="kicker">Nuovo approfondimento</div>
         <h2>Dov'è l'isola di calore di Monselice?</h2>
-        <p>Il satellite misura la temperatura di superficie (LST) quartiere per quartiere e disegna la mappa dell'isola di calore urbana. Da lì un esperimento: cosa succede se depavimentiamo nove parcheggi del corridoio commerciale? Il <strong>depaving</strong> funziona davvero — ma non come lo raccontano i titoli dei giornali.</p>
+        <p>Il satellite misura la temperatura di superficie (LST) quartiere per quartiere e disegna la mappa dell'isola di calore urbana. Da lì un esperimento: cosa succede se depavimentiamo nove parcheggi del corridoio commerciale? Il <strong>depaving</strong> funziona davvero — ma non come lo raccontano i titoli dei giornali. E da oggi tutti i livelli dell'analisi si possono esplorare nella nuova <strong>mappa interattiva</strong>: tocca un punto e il valore ti viene letto e spiegato.</p>
         <div class="analysis-stats" aria-label="Dati principali dell'approfondimento">
           <span class="analysis-stat">Giugno 2026 · secondo più caldo dal 1940</span>
           <span class="analysis-stat">Isola di calore · +2,9 °C nel corridoio commerciale</span>
           <span class="analysis-stat">Depavimentazione · 9 parcheggi, 3,6 ettari simulati</span>
+          <span class="analysis-stat">Novità · WebGIS interattivo</span>
         </div>
-        <a class="btn btn-archive" href="il-caldo-ha-una-geografia.html">Leggi l'approfondimento →</a>
+        <div class="analysis-cta">
+          <a class="btn btn-archive" href="il-caldo-ha-una-geografia.html">Leggi l'approfondimento →</a>
+          <a class="btn btn-map" href="/webgis_calore_monselice/">Esplora la mappa interattiva</a>
+        </div>
       </div>
       <img class="analysis-image" src="https://andrearosina.com/lst_monselice/new_fig5_anomalia_mediana.png" alt="Mappa satellitare dell'anomalia della temperatura di superficie (LST) a Monselice: l'isola di calore urbana quartiere per quartiere">
     </article>
@@ -450,7 +458,7 @@ Le parole di Michelle Bachelet, di Papa Francesco. E poi le nostre, quelle di pe
 <footer class="footer">
   <div class="wrap footer-grid">
     <div><strong>Sottosuoli</strong><br>Osservatorio sul territorio a cura di Andrea Rosina.</div>
-    <div><a href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="mailto:andrea.rosina77@gmail.com">Email</a> · <a href="il-caldo-ha-una-geografia.html">Approfondimenti</a> · <a href="archivio.html">Archivio</a> · <a href="metodo.html">Metodo</a> · <a href="fonti.html">Fonti</a></div>
+    <div><a href="https://sottosuoli.substack.com" target="_blank" rel="noopener">Newsletter</a> · <a href="mailto:andrea.rosina77@gmail.com">Email</a> · <a href="il-caldo-ha-una-geografia.html">Approfondimenti</a> · <a href="/webgis_calore_monselice/">Mappa</a> · <a href="archivio.html">Archivio</a> · <a href="metodo.html">Metodo</a> · <a href="fonti.html">Fonti</a></div>
   </div>
 </footer>
 
