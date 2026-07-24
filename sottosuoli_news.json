@@ -1,7 +1,158 @@
 {
-  "aggiornato": "2026-07-22T06:12:49.862298+00:00",
-  "totale": 264,
+  "aggiornato": "2026-07-24T06:38:43.732078+00:00",
+  "totale": 277,
   "articoli": [
+    {
+      "titolo": "Peggiora la siccità in Europa, con danni soprattutto per l’agricoltura",
+      "sommario": "Secondo uno studio non sono tanto la mancanza di precipitazioni ad aggravare la crisi idrica quanto la cresciuta evotraspirazione che fa perdere umidità al suolo e alle piante",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/23/news/siccita_europa_danni_agricoltura-425488381/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "siccità"
+      ],
+      "data": "2026-07-23",
+      "data_iso": "2026-07-23T10:24:36+00:00"
+    },
+    {
+      "titolo": "Crisi del clima, il Mar d’Aral ora è una fonte di gas serra",
+      "sommario": "Prosciugato a causa dell’irrigazione intensiva dei campi agricoli, oggi la riforestazione non basta più. Secondo uno studio pubblicato su  Science  il bacino va riallagato, finanziando l’operazione attraverso il mercato volontario dei crediti di carbonio",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/23/news/crisi_del_clima_il_mar_d_aral_gas_serra-425476465/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [],
+      "data": "2026-07-23",
+      "data_iso": "2026-07-23T06:00:00+00:00"
+    },
+    {
+      "titolo": "L’ozono troposferico, l’inquinante che accompagna le ondate di calore",
+      "sommario": "È la stessa molecola che nella stratosfera forma lo strato di protezione della Terra dai raggi ultravioletti. Ma quando si forma vicino al suolo diventa dannoso per la salute, gli ecosistemi e l'agricoltura",
+      "link": "https://www.repubblica.it/green-and-blue/2026/07/22/news/ozono_troposferico_inquinante_ondate_calore-425474837/?rss",
+      "fonte": "Repubblica Ambiente",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "ambiente_clima",
+      "temi": [
+        "cambiamenti-climatici",
+        "inquinamento"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T18:00:00+00:00"
+    },
+    {
+      "titolo": "Pozzaglio (CR) – Biometano e data center vicini: e la Seveso…?",
+      "sommario": "Nel comune del cremonese è in corso l’iter di approvazione per realizzare un data center di 270 mila mq, su terreni agricoli e nonostante la [...]",
+      "link": "https://www.salviamoilpaesaggio.it/blog/2026/07/pozzaglio-cr-biometano-e-data-center-vicini-e-la-seveso/",
+      "fonte": "Salviamo il Paesaggio",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "territorio_paesaggio",
+      "temi": [
+        "consumo-suolo",
+        "paesaggio",
+        "datacenter"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T16:39:52+00:00"
+    },
+    {
+      "titolo": "Quanta CO2 è stata risparmiata con gli ecobonus sui veicoli elettrici e ibridi? Non si sa",
+      "sommario": "A porsi la domanda è la Corte dei Conti: dal 2019 a oggi tutti i dati diffusi riguardano vendite e incentivi, ma non i risultati raggiunti per l'ambiente.",
+      "link": "https://www.lifegate.it/co2-ecobonus-veicoli",
+      "fonte": "LifeGate",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "emissioni"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T15:53:19+00:00"
+    },
+    {
+      "titolo": "Continua lo smantellamento del SSN a vantaggio dei grandi privati.",
+      "sommario": "Il progressivo smantellamento del Servizio Sanitario Nazionale (SSN) italiano è una crisi confermata dai dati della Fondazione GIMBE. È guidato da un sottofinanziamento cronico, frammentazione regionale e carenza di personale, che spingono milioni di italiani a rivolgersi al privato o a rinunciare alle cure. Tra esternalizzazioni selvagge, crisi del pronto soccorso e fuga verso la sanità &#8230; Leggi tutto \"Continua lo smantellamento del SSN a vantaggio dei grandi privati.\"",
+      "link": "https://www.rete-ambientalista.it/2026/07/22/continua-lo-smantellamento-del-ssn-a-vantaggio-dei-grandi-privati/",
+      "fonte": "Rete Ambientalista",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "sanità"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T15:07:11+00:00"
+    },
+    {
+      "titolo": "Il temporale V-shaped sul Nord Italia osservato dai satelliti",
+      "sommario": "Un Temporale V-shaped è l&#8217;immagine del giorno pubblicata da Copernicus, che documenta uno dei fenomeni convettivi più intensi osservati recentemente sul Nord Italia. Acquisita dal satellite Sentinel-2, l&#8217;immagine evidenzia la caratteristica struttura a &#8220;V&#8221;, tipica dei temporali più violenti, dimostrando ancora una volta il valore dell&#8217;osservazione satellitare nel monitoraggio degli eventi meteorologici estremi. Acquisita il [&#8230;]\nL'articolo Il temporale V-shaped",
+      "link": "https://geosmartmagazine.it/2026/07/22/temporale-v-shaped-copernicus/",
+      "fonte": "GEO Smart Magazine",
+      "categoria_fonte": "rivista",
+      "tema_fonte": "gis_dati",
+      "temi": [
+        "cambiamenti-climatici",
+        "earth-observation",
+        "telerilevamento"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T12:57:42+00:00"
+    },
+    {
+      "titolo": "WWF: la transizione ecologica diventi un progetto condiviso, equo e partecipato",
+      "sommario": "La consapevolezza dell’urgenza della crisi climatica e della perdita di biodiversità è ormai ampiamente diffusa. La sfida, oggi, è trasformare questo consenso in partecipazione concreta, accompagnando cittadini, lavoratori, imprese e...\nL'articolo WWF: la transizione ecologica diventi un progetto condiviso, equo e partecipato proviene da ISDE News.",
+      "link": "https://www.isdenews.it/wwf-la-transizione-ecologica-diventi-un-progetto-condiviso-equo-e-partecipato/",
+      "fonte": "ISDE",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "biodiversità",
+        "transizione-ecologica",
+        "wwf"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T12:16:58+00:00"
+    },
+    {
+      "titolo": "“Servono fino a 200 miliardi l’anno per rimuovere appena il 2% dei PFAS in Europa”",
+      "sommario": "Lo calcola una ricerca pubblicata sulla rivista scientifica “Environmental Science: Processes and Impacts\". In Belgio l'associazione ClientEarth esplora una nuova via giuridica Continue Reading “Servono fino a 200 miliardi l’anno per rimuovere appena il 2% dei PFAS in Europa”\nL'articolo “Servono fino a 200 miliardi l’anno per rimuovere appena il 2% dei PFAS in Europa” proviene da EconomiaCircolare.com.",
+      "link": "https://economiacircolare.com/200-miliardi-anno-bonifica-pfas-europa/",
+      "fonte": "Economia Circolare",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "inquinamento",
+        "pfas"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T07:00:16+00:00"
+    },
+    {
+      "titolo": "Oltre il Piano Casa: cohousing, coliving e vicinato solidale sono un’alternativa reale?",
+      "sommario": "Al convegno organizzato dal Cohousing Case Franche si è fatto il punto su un movimento in crescita, alle prese con sfide concrete poste dall’emergenza abitativa in corso e alla ricerca di strumenti comuni.",
+      "link": "https://www.italiachecambia.org/2026/07/piano-casa-cohousing-alternativa/",
+      "fonte": "Italia che Cambia",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "altro",
+      "temi": [
+        "cohousing",
+        "coliving"
+      ],
+      "data": "2026-07-22",
+      "data_iso": "2026-07-22T06:05:08+00:00"
+    },
+    {
+      "titolo": "Le montagne sottomarine: scrigni di biodiversità e laboratori naturali per la ricerca geologica",
+      "sommario": "Per la loro importanza ecologica e vulnerabilità agli impatti causati dall’attività dell’uomo, le montagne sottomarine rappresentano un obiettivo prioritario per la conservazione del mare. Questi rilievi sommersi sono veri e propri hotspot di biodiversità, con ecosistemi unici che ospitano foreste di coralli, spugne, invertebrati e numerose specie ittiche.   Dal punto di vista geologico i monti sottomarini sono di estremo interesse per diversi motivi: la potenziale presenza di risorse geominerar",
+      "link": "https://www.isprambiente.gov.it/it/news/le-montagne-sottomarine-scrigni-di-biodiversita-e-laboratori-naturali-per-la-ricerca-geologica",
+      "fonte": "ISPRA",
+      "categoria_fonte": "istituzionale",
+      "tema_fonte": "politiche_istituzioni",
+      "temi": [
+        "biodiversità",
+        "geologia"
+      ],
+      "data": "2026-07-21",
+      "data_iso": "2026-07-21T22:15:00+00:00"
+    },
     {
       "titolo": "Direttiva europea anti-smog, l’Italia senza consultazione nonostante il primato delle morti da PM2,5",
       "sommario": "ISDE Italia e le altre associazioni chiedono al Governo trasparenza e partecipazione: nel 2023 l’inquinamento da particolato fine ha causato oltre 43mila morti premature nel Paese L’Italia è il Paese...\nL'articolo Direttiva europea anti-smog, l’Italia senza consultazione nonostante il primato delle morti da PM2,5 proviene da ISDE News.",
@@ -15,6 +166,19 @@
       ],
       "data": "2026-07-21",
       "data_iso": "2026-07-21T13:17:54+00:00"
+    },
+    {
+      "titolo": "Metano: molto più di un gas serra",
+      "sommario": "Perché ridurne le emissioni rappresenta una delle strategie più efficaci di prevenzione integrata di Fabrizio Bianchi (Comitato scientifico ISDE Italia) Quando si parla di metano (CH₄), l&#8217;attenzione si concentra quasi...\nL'articolo Metano: molto più di un gas serra proviene da ISDE News.",
+      "link": "https://www.isdenews.it/metano-molto-piu-di-un-gas-serra/",
+      "fonte": "ISDE",
+      "categoria_fonte": "associazione",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "emissioni"
+      ],
+      "data": "2026-07-21",
+      "data_iso": "2026-07-21T13:01:25+00:00"
     },
     {
       "titolo": "Salute e ambiente, HEAL chiede a von der Leyen un cambio di rotta sulle politiche europee",
@@ -114,6 +278,20 @@
       "tema_fonte": "salute_ambiente",
       "temi": [
         "ai"
+      ],
+      "data": "2026-07-21",
+      "data_iso": "2026-07-21T00:00:00+00:00"
+    },
+    {
+      "titolo": "Oil and gas drilling is shifting to the deep sea — here’s what is at stake",
+      "sommario": "Nature, Published online: 21 July 2026; doi:10.1038/d41586-026-02232-xTechnologies are taking the search for fossil fuels to the deepest parts of the ocean. Engineers must keep ecological risks manageable.",
+      "link": "https://www.nature.com/articles/d41586-026-02232-x",
+      "fonte": "Nature",
+      "categoria_fonte": "giornalismo",
+      "tema_fonte": "salute_ambiente",
+      "temi": [
+        "geologia",
+        "oil-gas"
       ],
       "data": "2026-07-21",
       "data_iso": "2026-07-21T00:00:00+00:00"
