@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grandi Giri e caldo · Sottosuoli</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root { --cream:#F8F4E7; --green:#1E4A37; --orange:#E07B39; --sage:#8FBF9F; --red:#8B1E1E; }
+  html, body { margin:0; height:100%; background:var(--cream);
+               font-family:Barlow, system-ui, sans-serif; color:var(--green); }
+  #sidebar { position:absolute; top:0; left:0; bottom:0; width:300px; overflow:auto;
+             background:var(--cream); border-right:2px solid var(--orange);
+             box-sizing:border-box; padding:14px 14px 20px; }
+  #main { position:absolute; top:0; left:300px; right:0; bottom:0; }
+  #map { position:absolute; top:0; left:0; right:0; bottom:138px; background:var(--cream); }
+  #profile { position:absolute; left:0; right:0; bottom:0; height:138px;
+             background:var(--cream); border-top:2px solid var(--orange);
+             box-sizing:border-box; padding:6px 10px 4px; }
+  #prof-head { font-size:12px; font-weight:600; }
+  #prof-readout { position:absolute; top:6px; right:12px; font-size:12px;
+                  color:var(--red); font-weight:600; }
+  #prof-svg { display:block; margin-top:2px; cursor:crosshair; width:100%; }
+  #brand { font-size:18px; font-weight:700; line-height:1.1; margin-bottom:2px; }
+  #brand span { display:block; font-size:12px; font-weight:600; color:var(--orange);
+                letter-spacing:.06em; text-transform:uppercase; }
+  #intro { font-size:12px; color:#555; margin:8px 0 12px; line-height:1.4; }
+  .tour-card { background:#fff; border:1px solid #e4ddc8; border-radius:6px;
+               padding:8px 10px; margin-bottom:8px; cursor:pointer; }
+  .tour-card:hover { border-color:var(--orange); }
+  .tour-card.active { border-color:var(--orange); box-shadow:0 0 0 2px rgba(224,123,57,.25); }
+  .tour-card b { font-size:13px; } .tour-card .w { font-size:11px; color:#777; }
+  #tour-detail h3 { font-size:14px; margin:14px 0 2px; }
+  .muted { font-size:12px; color:#777; }
+  .stat { display:flex; justify-content:space-between; font-size:12px;
+          padding:3px 0; border-bottom:1px dotted #ddd; }
+  .stat b { font-weight:700; }
+  .stage-list { margin-top:10px; display:flex; flex-direction:column; gap:5px; }
+  .stage-btn { text-align:left; font-family:inherit; font-size:12px; color:var(--green);
+               background:#fff; border:1px solid #e4ddc8; border-radius:5px;
+               padding:6px 8px; cursor:pointer; }
+  .stage-btn:hover { border-color:var(--orange); }
+  .stage-btn.active { background:var(--green); color:var(--cream); border-color:var(--green); }
+  .demo-badge { display:inline-block; background:var(--red); color:#fff; font-size:10px;
+                font-weight:700; border-radius:3px; padding:2px 6px; margin:6px 0; }
+  .box { background:var(--cream); color:var(--green); border-radius:4px;
+         box-shadow:0 1px 4px rgba(0,0,0,.25); padding:6px 10px; font-size:12px; }
+  .title-box { font-size:14px; font-weight:600; max-width:60vw; }
+  .legend-bar { height:10px; width:170px; border-radius:3px; margin:4px 0 2px;
+                background: linear-gradient(to right, #8FBF9F, #F8F4E7, #E07B39, #8B1E1E); }
+  .legend-lab { display:flex; justify-content:space-between; font-size:11px; color:#555; }
+  .metric-toggle button { font-family:inherit; font-size:12px; border:1px solid #e4ddc8;
+    background:#fff; color:var(--green); padding:4px 9px; cursor:pointer; }
+  .metric-toggle button:first-child { border-radius:4px 0 0 4px; }
+  .metric-toggle button:last-child { border-radius:0 4px 4px 0; border-left:none; }
+  .metric-toggle button.on { background:var(--green); color:var(--cream); border-color:var(--green); }
+  .thr-pin span { display:flex; align-items:center; justify-content:center;
+    width:22px; height:22px; border-radius:50%; color:#fff; font-weight:700;
+    font-size:13px; border:2px solid #fff; box-shadow:0 1px 3px rgba(0,0,0,.45); }
+  #explain-link { display:inline-block; margin-top:6px; font-size:12px; font-weight:600;
+    color:var(--orange); text-decoration:none; }
+  #explain-link:hover { text-decoration:underline; }
+  .events { margin-top:12px; }
+  .events-h { font-size:11px; font-weight:700; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--red); margin-bottom:4px; }
+  .event-badge { background:#fff; border-left:3px solid var(--red); border-radius:4px;
+    padding:6px 8px; margin-bottom:6px; font-size:12px; }
+  .event-badge b { display:block; }
+  .event-note { color:#555; margin-top:3px; line-height:1.35; }
+  .pins-key { margin-top:4px; font-size:11px; color:#555; line-height:1.5; }
+  .pins-key i { font-style:normal; font-weight:700; }
+  @media (max-width:760px) {
+    #sidebar { width:100%; height:190px; bottom:auto; border-right:none;
+               border-bottom:2px solid var(--orange); }
+    #main { left:0; top:190px; }
+  }
+</style>
+</head>
+<body>
+<div id="sidebar">
+  <div id="brand">Grandi Giri e caldo<span>Sottosuoli</span></div>
+  <div id="intro">Percorsi e temperature al passaggio nei tre grandi giri. Scegli un giro,
+    poi una tappa; clicca sulla traccia o passa sul profilo per interrogarla.
+    <a id="explain-link" href="grandi-giri-caldo.html">Metodo e riferimenti normativi →</a></div>
+  <div id="tour-cards"></div>
+  <div id="tour-detail"></div>
+  <div id="sidebar-note" class="muted"></div>
+</div>
+<div id="main">
+  <div id="map"></div>
+  <div id="profile">
+    <div id="prof-head"></div>
+    <div id="prof-readout"></div>
+    <svg id="prof-svg" height="96" preserveAspectRatio="none"></svg>
+  </div>
+</div>
+<script>
+if (typeof L === 'undefined') {
+  document.getElementById('map').innerHTML =
+    '<div style="padding:28px;color:#8B1E1E;font-size:15px">' +
+    '<b>Leaflet non si e caricato.</b><br>La rete blocca unpkg.com.</div>';
+  throw new Error('Leaflet non caricato');
+}
+
+const MANIFEST = [{"slug": "giro2026", "name": "Giro d'Italia 2026", "window": "maggio", "center": [43.5, 12.5]}, {"slug": "tour2026", "name": "Tour de France 2026", "window": "luglio", "center": [46.6, 2.6]}, {"slug": "vuelta2026", "name": "Vuelta a Espa\u00f1a 2026", "window": "agosto\u2013settembre", "center": [40.2, -3.7]}];
+const TILES = { url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}", attr: "Tiles (c) Esri" };
+const EXPLAIN = "grandi-giri-caldo.html";
+
+const map = L.map('map', { zoomControl: true });
+L.tileLayer(TILES.url, { attribution: TILES.attr, maxZoom: 19 }).addTo(map);
+const overviewLayer = L.layerGroup().addTo(map);
+const stageLayer = L.layerGroup().addTo(map);
+const pinLayer = L.layerGroup().addTo(map);
+const hl = L.circleMarker([0, 0], { radius:6, color:'#111', weight:2,
+  fillColor:'#fff', fillOpacity:1 });
+let CUR = null, PX = [], PY = [], activeTour = null, activeIdx = 0, metric = 'wbgt';
+
+function colorOf(o){ return metric === 'wbgt' ? o.cw : o.ca; }
+
+// ---- pin sui tratti oltre/sotto soglia ----
+const PIN_STYLE = {
+  uci:    { bg:'#8B1E1E', glyph:'!', label:'Oltre soglia UCI',   anchor:'uci' },
+  lavoro: { bg:'#E07B39', glyph:'!', label:'Oltre soglia lavoro', anchor:'lavoro' },
+  freddo: { bg:'#3E6DA6', glyph:'\u2744', label:'Sotto soglia freddo', anchor:'freddo' }
+};
+function pinPopup(pin){
+  const s = PIN_STYLE[pin.tier];
+  const unit = pin.tier === 'freddo' ? 'aria' : 'WBGT';
+  const link = EXPLAIN
+    ? '<a href="'+EXPLAIN+'#'+s.anchor+'" style="color:#E07B39;font-weight:600">'+
+      'Perch\u00e9 questa soglia? \u2192</a>' : '';
+  return '<div style="font-family:Barlow,system-ui,sans-serif;min-width:194px">' +
+    '<div style="font-weight:700;color:'+s.bg+';border-bottom:2px solid '+s.bg+
+    ';padding-bottom:3px;margin-bottom:5px">'+s.label+' ('+pin.soglia+'\u00b0C)</div>' +
+    '<div style="font-size:13px;margin-bottom:4px">'+unit+' al picco <b>'+
+    pin.peak.toFixed(1)+'\u00b0C</b></div>' +
+    '<div style="font-size:12px;color:#333;margin-bottom:5px">km '+pin.km0.toFixed(0)+
+    '\u2013'+pin.km1.toFixed(0)+' \u00b7 '+pin.kmlen.toFixed(0)+' km \u00b7 ~'+pin.min+
+    ' min oltre soglia</div>' + (link ? '<div style="font-size:12px">'+link+'</div>' : '') +
+    '</div>';
+}
+function drawPins(st){
+  pinLayer.clearLayers();
+  (st.pins || []).forEach(function(pin){
+    const s = PIN_STYLE[pin.tier];
+    const icon = L.divIcon({ className:'thr-pin', iconSize:[22,22], iconAnchor:[11,11],
+      html:'<span style="background:'+s.bg+'">'+s.glyph+'</span>' });
+    L.marker([pin.lat, pin.lon], { icon:icon, zIndexOffset:500 }).addTo(pinLayer)
+      .bindPopup(pinPopup(pin), { maxWidth:260 });
+  });
+}
+
+// ---- controlli persistenti: titolo, legenda, hint, selettore metrica ----
+const titleCtl = L.control({ position:'topright' });
+titleCtl.onAdd = function(){ this._d = L.DomUtil.create('div','box title-box');
+  this._d.innerHTML = 'Grandi Giri e caldo'; return this._d; };
+titleCtl.setText = function(t){ if(this._d) this._d.innerHTML = t; };
+titleCtl.addTo(map);
+
+const metricCtl = L.control({ position:'topleft' });
+metricCtl.onAdd = function(){
+  const d = L.DomUtil.create('div','box metric-toggle');
+  d.innerHTML = '<button data-m="wbgt" class="on">WBGT</button>' +
+                '<button data-m="app">Percepita</button>';
+  L.DomEvent.disableClickPropagation(d);
+  d.querySelectorAll('button').forEach(function(b){
+    b.onclick = function(){
+      metric = b.dataset.m;
+      d.querySelectorAll('button').forEach(function(x){
+        x.classList.toggle('on', x.dataset.m === metric); });
+      if (CUR) renderStage(activeTour, activeIdx);
+    };
+  });
+  return d;
+};
+metricCtl.addTo(map);
+
+const legendCtl = L.control({ position:'bottomright' });
+legendCtl.onAdd = function(){ this._d = L.DomUtil.create('div','box');
+  this._d.style.display='none'; return this._d; };
+legendCtl.set = function(label, vmin, vmax){ if(!this._d) return;
+  this._d.style.display='block';
+  this._d.innerHTML = label + '<div class="legend-bar"></div>' +
+    '<div class="legend-lab"><span>'+vmin+'</span><span>'+vmax+'</span></div>'; };
+legendCtl.addTo(map);
+
+const hintCtl = L.control({ position:'bottomleft' });
+hintCtl.onAdd = function(){ const d=L.DomUtil.create('div','box');
+  d.innerHTML='Clicca sulla traccia o passa sul profilo'; return d; };
+hintCtl.addTo(map);
+
+// ---- vista d'insieme: i tre giri come marker selezionabili ----
+function showOverview(){
+  stageLayer.clearLayers(); overviewLayer.clearLayers(); pinLayer.clearLayers();
+  clearProfile(); CUR = null;
+  titleCtl.setText('Grandi Giri e caldo — scegli un giro');
+  const bnds = [];
+  MANIFEST.forEach(function(t){
+    const mk = L.circleMarker(t.center, { radius:10, color:'#1E4A37', weight:2,
+      fillColor:'#E07B39', fillOpacity:0.9 }).addTo(overviewLayer)
+      .bindTooltip(t.name, { permanent:true, direction:'right', className:'box' });
+    mk.on('click', function(){ loadTour(t.slug); });
+    bnds.push(t.center);
+  });
+  if (bnds.length) map.fitBounds(L.latLngBounds(bnds), { padding:[60,60] });
+}
+
+// ---- caricamento di un giro (fetch del suo JSON) ----
+async function loadTour(slug){
+  markActiveCard(slug);
+  let tour;
+  try {
+    const r = await fetch(slug + '.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    tour = await r.json();
+  } catch(e){
+    const note = document.getElementById('sidebar-note');
+    note.innerHTML = (location.protocol === 'file:')
+      ? '<b style="color:#8B1E1E">Aprila via http.</b> I fetch da file:// sono ' +
+        'bloccati dal browser: lancia <code>python3 -m http.server</code> e apri ' +
+        'http://localhost:8000/grandi_giri.html'
+      : '<b style="color:#8B1E1E">JSON non trovato:</b> ' + slug + '.json';
+    return;
+  }
+  activeTour = tour;
+  renderSidebar(tour);
+  if (tour.stages && tour.stages.length) renderStage(tour, 0);
+  else { stageLayer.clearLayers(); pinLayer.clearLayers();
+         titleCtl.setText(tour.tour + ' — dati in arrivo'); }
+}
+
+function renderSidebar(tour){
+  const el = document.getElementById('tour-detail');
+  let stats = '';
+  if (tour.stats && tour.stats.n_tappe){
+    const s = tour.stats;
+    stats = '<div class="stat"><span>Tappe</span><b>'+s.n_tappe+'</b></div>' +
+      '<div class="stat"><span>Km totali</span><b>'+s.km_totali+'</b></div>' +
+      '<div class="stat"><span>% in zona rossa (WBGT≥28)</span><b>'+s.pct_zona_rossa+'%</b></div>' +
+      '<div class="stat"><span>WBGT max</span><b>'+s.wbgt_max+'°C</b></div>' +
+      '<div class="stat"><span>Percepita max</span><b>'+s.t_percepita_max+'°C</b></div>' +
+      '<div class="stat"><span>Tappa più calda</span><b style="max-width:150px;'+
+      'text-align:right">'+s.tappa_piu_calda+'</b></div>' +
+      (s.tappa_piu_esposta ? '<div class="stat"><span>Tappa più esposta (km ≥28°C)</span>'+
+        '<b style="max-width:150px;text-align:right">'+s.tappa_piu_esposta+
+        ' · '+s.km_esposti+' km</b></div>' : '') +
+      '<div class="pins-key"><i style="color:#8B1E1E">●</i> oltre UCI (28°C) · ' +
+      '<i style="color:#E07B39">●</i> oltre lavoro (26°C) · ' +
+      '<i style="color:#3E6DA6">●</i> sotto freddo (5°C)</div>';
+  }
+  let events = '';
+  if (tour.events && tour.events.length){
+    events = '<div class="events"><div class="events-h">Meteo estremo</div>' +
+      tour.events.map(function(ev){
+        return '<div class="event-badge"><b>'+ev.stage_label+'</b>' +
+          (ev.nota ? '<div class="event-note">'+ev.nota+'</div>' : '') + '</div>';
+      }).join('') + '</div>';
+  }
+  const badge = tour.demo ? '<div class="demo-badge">DEMO · dati sintetici</div>' : '';
+  const stages = (tour.stages||[]).map(function(st, i){
+    return '<button class="stage-btn" data-i="'+i+'">'+st.stage+'</button>'; }).join('');
+  el.innerHTML = '<h3>'+tour.tour+'</h3><div class="muted">'+(tour.window||'')+'</div>' +
+    badge + stats + events + '<div class="stage-list">' +
+    (stages || '<div class="muted">Tappe in arrivo</div>') + '</div>';
+  el.querySelectorAll('.stage-btn').forEach(function(b){
+    b.onclick = function(){ renderStage(activeTour, +b.dataset.i); }; });
+  document.getElementById('sidebar-note').innerHTML = '';
+}
+
+// ---- render di una tappa sulla mappa + profilo ----
+function renderStage(tour, idx){
+  const st = tour.stages[idx];
+  CUR = st; activeIdx = idx;
+  overviewLayer.clearLayers(); stageLayer.clearLayers();
+  st.segments.forEach(function(s){
+    L.polyline(s.coords, { color:colorOf(s), weight:6, opacity:0.9 }).addTo(stageLayer); });
+  L.circleMarker(st.start, { radius:7, color:'#1E4A37', weight:2,
+    fillColor:'#8FBF9F', fillOpacity:1 }).addTo(stageLayer).bindTooltip('Partenza');
+  L.circleMarker(st.end, { radius:7, color:'#1E4A37', weight:2,
+    fillColor:'#8B1E1E', fillOpacity:1 }).addTo(stageLayer).bindTooltip('Arrivo');
+  map.fitBounds(L.latLngBounds(st.bounds), { padding:[30,30] });
+  titleCtl.setText(tour.tour + ' — ' + st.stage);
+  const sc = st.scales[metric];
+  legendCtl.set(sc.label, sc.vmin, sc.vmax);
+  drawPins(st);
+  drawProfile(st);
+  document.querySelectorAll('.stage-btn').forEach(function(b){
+    b.classList.toggle('active', +b.dataset.i === idx); });
+}
+
+// ---- interrogazione: click sulla traccia (entro 3 km) ----
+function hav(a, b, c, d){ var R=6371, p=Math.PI/180;
+  var x=Math.sin((c-a)*p/2)**2 + Math.cos(a*p)*Math.cos(c*p)*Math.sin((d-b)*p/2)**2;
+  return 2*R*Math.asin(Math.sqrt(x)); }
+map.on('click', function(e){
+  if (!CUR) return;
+  var bi=-1, bd=1e9;
+  for (var i=0;i<CUR.points.length;i++){
+    var dkm = hav(e.latlng.lat, e.latlng.lng, CUR.points[i].lat, CUR.points[i].lon);
+    if (dkm < bd){ bd=dkm; bi=i; } }
+  if (bi>=0 && bd<=3.0){
+    L.popup({ maxWidth:300, autoPan:true })
+      .setLatLng([CUR.points[bi].lat, CUR.points[bi].lon])
+      .setContent(CUR.points[bi].html).openOn(map);
+    highlight(bi);
+  }
+});
+
+// ---- profilo altimetrico sincronizzato ----
+const svg = document.getElementById('prof-svg');
+function clearProfile(){ svg.innerHTML=''; PX=[]; PY=[];
+  document.getElementById('prof-head').textContent='';
+  document.getElementById('prof-readout').textContent=''; }
+
+function drawProfile(st){
+  const pts = st.points;
+  const W = svg.clientWidth || document.getElementById('profile').clientWidth;
+  const H = 96, top = 8;
+  const kmax = Math.max.apply(null, pts.map(function(p){ return p.km; }));
+  let emin = Math.min.apply(null, pts.map(function(p){ return p.ele; }));
+  let emax = Math.max.apply(null, pts.map(function(p){ return p.ele; }));
+  if (emax - emin < 20) emax = emin + 20;
+  const sx = function(km){ return km / kmax * W; };
+  const sy = function(e){ return H - (e - emin) / (emax - emin) * (H - top); };
+  PX = pts.map(function(p){ return sx(p.km); });
+  PY = pts.map(function(p){ return sy(p.ele); });
+  let area = 'M ' + PX[0] + ' ' + H + ' ';
+  for (let i=0;i<pts.length;i++) area += 'L ' + PX[i] + ' ' + PY[i] + ' ';
+  area += 'L ' + PX[PX.length-1] + ' ' + H + ' Z';
+  let ridge = '';
+  for (let i=0;i<pts.length-1;i++)
+    ridge += '<line x1="'+PX[i]+'" y1="'+PY[i]+'" x2="'+PX[i+1]+'" y2="'+PY[i+1]+
+             '" stroke="'+colorOf(pts[i])+'" stroke-width="3"/>';
+  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+  svg.innerHTML = '<path d="'+area+'" fill="rgba(143,191,159,.35)" stroke="none"/>' +
+    ridge + '<line id="prof-cursor" y1="0" y2="'+H+'" stroke="#1E4A37" ' +
+    'stroke-width="1" stroke-dasharray="3,3" style="display:none"/>';
+  document.getElementById('prof-head').textContent =
+    'Profilo altimetrico · D+ ' + st.dplus + ' m · quota ' + st.emin + '–' + st.emax + ' m';
+}
+
+function highlight(i){
+  if (!CUR) return;
+  const p = CUR.points[i];
+  hl.setLatLng([p.lat, p.lon]).addTo(map);
+  const cur = document.getElementById('prof-cursor');
+  if (cur && PX.length){ cur.setAttribute('x1', PX[i]); cur.setAttribute('x2', PX[i]);
+                         cur.style.display='block'; }
+  document.getElementById('prof-readout').innerHTML =
+    'km ' + p.km.toFixed(0) + ' · quota ' + p.ele.toFixed(0) +
+    ' m · WBGT ' + p.wbgt.toFixed(1) + '°C · percepita ' + p.app.toFixed(1) + '°C';
+}
+svg.addEventListener('mousemove', function(ev){
+  if (!PX.length) return;
+  const rect = svg.getBoundingClientRect();
+  const x = ev.clientX - rect.left;
+  let bi=0, bd=1e9;
+  for (let i=0;i<PX.length;i++){ const dd=Math.abs(PX[i]-x); if(dd<bd){bd=dd;bi=i;} }
+  highlight(bi);
+});
+window.addEventListener('resize', function(){ if (CUR) drawProfile(CUR); map.invalidateSize(); });
+
+// ---- TOC: schede dei giri ----
+function markActiveCard(slug){
+  document.querySelectorAll('.tour-card').forEach(function(c){
+    c.classList.toggle('active', c.dataset.slug === slug); });
+}
+(function initCards(){
+  const wrap = document.getElementById('tour-cards');
+  MANIFEST.forEach(function(t){
+    const c = document.createElement('div');
+    c.className = 'tour-card'; c.dataset.slug = t.slug;
+    c.innerHTML = '<b>'+t.name+'</b><div class="w">'+t.window+'</div>';
+    c.onclick = function(){ loadTour(t.slug); };
+    wrap.appendChild(c);
+  });
+})();
+
+showOverview();
+</script>
+</body>
+</html>
