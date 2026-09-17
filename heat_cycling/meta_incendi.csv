@@ -1,0 +1,12 @@
+race;label;lat;lon;data_inizio;data_fine;ha;sfollati;tipo;nota;fonte
+tour2026;Incendio dei Pirenei Orientali (tappa 3);42.5686;2.0722;2026-07-01;2026-07-10;1500;;minaccia_incendio;Fronte a circa 70 km da Les Angles, ultimi 40 km senza pubblico né carovana in Francia;Cyclingnews / CyclingUpToDate
+tour2026;Megaincendio della Gironda;44.90;-1.10;2026-07-22;2026-07-27;42000;224000;incendio_area;Il più grande incendio in Francia dal 1949 (Lacanau, Le Porge, Lège-Cap-Ferret, Saumos), 12 giorni dopo il passaggio a Bordeaux;NASA Earthdata / France24 / Wego
+tour2026;Incendio delle Landes (Biscarrosse);44.40;-1.16;2026-07-22;2026-07-27;3500;30000;incendio_area;Gemello minore della Gironda sulla costa aquitana;Reuters / Wikipedia
+tour2026;Foresta di Fontainebleau;48.404;2.699;2026-07-12;2026-07-14;2000;1000;incendio_area;Vicino a Parigi, Canadair dalla Senna per la prima volta;France24 / Wikipedia
+vuelta2026;Los Gallardos, Almería;37.18;-1.92;2026-07-09;2026-07-15;7000;1600;incendio_area;Incendio più letale nella storia dell'Andalusia, circa 12 vittime, propagato tra Bédar Antas e Lubrín;Wego / EcoHubMap
+vuelta2026;Sierra Oeste (Madrid–Ávila);40.35;-4.40;2026-07-22;2026-07-30;15000;60000;incendio_area;Il peggiore nella storia della regione di Madrid, ha attraversato il Madrid Deep Space Complex della NASA;Wikipedia / Mappr
+vuelta2026;Vall d'Uixó, Castellón;39.82;-0.23;2026-07-25;2026-08-05;9500;18000;incendio_area;Nel Parco naturale della Sierra de Espadán, circa il 12% dell'area protetta;Wikipedia / Wego
+vuelta2026;La Mierla, Guadalajara;40.88;-3.10;2026-07-18;2026-07-25;32000;;incendio_area;Oltre 32.000 ettari e 34 comuni evacuati nella Castiglia-La Mancia (date approssimative);Timeout / EFFIS
+vuelta2026;Niebla, Huelva;37.36;-6.68;2026-08-06;2026-08-22;33000;681;incendio_area;Il peggiore disastro ambientale dell'Andalusia, 33.000 ettari in undici comuni tra Doñana e la Sierra de Aracena;Moncloa / Infobae / Infoca
+vuelta2026;Benahavís, Málaga (Costa del Sol);36.52;-5.05;2026-09-13;2026-09-16;;;incendio_area;Durante la Vuelta vicino a Marbella, circa 9.500 residenti confinati in casa e l'urbanizzazione Montemayor Alto evacuata;Gulf News / ABC Andalucía
+vuelta2026;Tuéjar, Valencia;39.88;-1.04;2026-09-15;;880;;incendio_area;Durante la Vuelta nella Riserva della Biosfera dell'Alto Turia, circa 25 evacuati, perimetro di circa 18 km;InSpain / RTVE

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Gli approfondimenti di Sottosuoli: analisi lunghe del territorio con dati, mappe interattive e metodo dichiarato. A cura di Andrea Rosina." name="description"/>
+<meta content="sottosuoli" property="og:site_name"/>
+<meta content="it_IT" property="og:locale"/>
+<meta content="Approfondimenti — Sottosuoli" property="og:title"/>
+<meta content="Analisi lunghe del territorio con dati, mappe e metodo dichiarato. Una o due volte al mese." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://andrearosina.com/approfondimenti.html" property="og:url"/>
+<meta content="https://andrearosina.com/foto.jpg" property="og:image"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<meta content="#7b8879" name="theme-color"/>
+<title>Approfondimenti — Sottosuoli</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root { --green:#2D6A4F; --green-2:#1F4F3B; --green-light:#95D5B2; --green-pale:#F7FAF8; --orange:#E07B39; --text:#18221C; --muted:#5A6E62; --border:#D8E7DD; --shadow:0 12px 30px rgba(31,79,59,.08); --radius:18px; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Barlow', sans-serif; background:var(--green-pale); color:var(--text); line-height:1.7; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 22px; }
+  a { color:inherit; }
+  .topbar { background:var(--green-2); color:white; font-size:14px; }
+  .topbar .wrap { padding-top:10px; padding-bottom:10px; display:flex; justify-content:space-between; gap:16px; }
+  .topbar a { color:white; text-decoration:none; font-weight:700; }
+  header { background:linear-gradient(145deg,var(--green),var(--green-2)); color:white; padding:58px 0 50px; }
+  .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.14em; color:var(--green-light); font-weight:700; margin-bottom:12px; }
+  h1 { font-family:'Lora', serif; font-size:clamp(36px,6vw,58px); line-height:1.03; letter-spacing:-.03em; margin-bottom:16px; }
+  .lead { color:rgba(255,255,255,.84); font-size:19px; max-width:720px; }
+  main { padding:46px 0 70px; }
+  .list { display:flex; flex-direction:column; gap:18px; }
+  .appro-card { background:white; border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:26px 28px; transition:border-color .2s, box-shadow .2s, transform .2s; }
+  .appro-card:hover { border-color:var(--green); transform:translateY(-2px); }
+  .appro-tag { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--green); margin-bottom:9px; }
+  .appro-card h2 { font-family:'Lora', serif; color:var(--green-2); font-size:27px; line-height:1.12; margin-bottom:9px; }
+  .appro-card h2 a { text-decoration:none; }
+  .appro-card h2 a:hover { color:var(--green); }
+  .appro-card p { color:var(--muted); font-size:15.5px; margin-bottom:14px; }
+  .appro-meta { display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; font-size:13.5px; color:var(--muted); }
+  .appro-date { display:inline-flex; align-items:center; gap:7px; background:var(--green-pale); border:1px solid var(--border); color:var(--green-2); border-radius:999px; padding:5px 11px; font-weight:700; }
+  .appro-more { color:var(--green-2); font-weight:700; text-decoration:none; }
+  .appro-more:hover { text-decoration:underline; }
+  .appro-map { color:var(--green); font-weight:600; text-decoration:none; }
+  .appro-map:hover { text-decoration:underline; }
+  .cta { background:white; border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; margin-top:22px; text-align:center; }
+  .cta h2 { font-family:'Lora', serif; color:var(--green-2); font-size:24px; margin-bottom:8px; }
+  .cta p { color:var(--muted); font-size:15.5px; margin-bottom:6px; }
+  .cta a.btn { display:inline-block; background:var(--green); color:white; text-decoration:none; font-weight:700; padding:12px 22px; border-radius:999px; margin-top:8px; }
+  .cta a.btn:hover { background:var(--green-2); }
+  footer { background:var(--green-2); color:rgba(255,255,255,.72); padding:30px 0; font-size:14px; }
+  footer a { color:var(--green-light); text-decoration:none; }
+  @media (max-width:720px){ .appro-card{padding:22px;} }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><a href="/">← Sottosuoli</a><a href="archivio.html">Archivio →</a></div></div>
+<header><div class="wrap">
+<div class="eyebrow">Sottosuoli</div>
+<h1>Approfondimenti</h1>
+<p class="lead">Analisi lunghe del territorio: dati che chiunque può scaricare, mappe interattive e metodo dichiarato riga per riga. Una o due volte al mese, un tema guardato da vicino.</p>
+</div></header>
+<main class="wrap">
+<div class="list">
+
+<article class="appro-card">
+<div class="appro-tag">Clima e territorio · Ciclismo</div>
+<h2><a href="grandi-giri-caldo.html">Fuori soglia — i grandi giri nell'estate 2026</a></h2>
+<p>L'estate più calda mai registrata in Europa occidentale, letta lungo i percorsi di Giro, Tour e Vuelta 2026: quanto caldo hanno corso davvero, misurato con il WBGT, e cosa dicono a confronto le regole dello sport e quelle del lavoro.</p>
+<div class="appro-meta">
+<span class="appro-date">settembre 2026</span>
+<a class="appro-more" href="grandi-giri-caldo.html">Leggi l'approfondimento →</a>
+<a class="appro-map" href="https://andrearosina.com/heat_cycling/grandi_giri.html">Mappa interattiva</a>
+</div>
+</article>
+
+<article class="appro-card">
+<div class="appro-tag">Isole di calore · Monselice</div>
+<h2><a href="il-caldo-ha-una-geografia.html">Il caldo ha una geografia — l'isola di calore di Monselice</a></h2>
+<p>La temperatura di superficie (LST) misurata dal satellite quartiere per quartiere, il giugno 2026 secondo più caldo dal 1940 e un esperimento di depavimentazione su nove parcheggi del corridoio commerciale. Il depaving funziona — ma non come lo raccontano i titoli.</p>
+<div class="appro-meta">
+<span class="appro-date">luglio 2026</span>
+<a class="appro-more" href="il-caldo-ha-una-geografia.html">Leggi l'approfondimento →</a>
+<a class="appro-map" href="/webgis_calore_monselice/">Mappa interattiva</a>
+</div>
+</article>
+
+</div>
+
+<div class="cta">
+<h2>Non perderti il prossimo</h2>
+<p>Gli approfondimenti nascono e vengono rilanciati nella newsletter settimanale di Sottosuoli.</p>
+<a class="btn" href="https://sottosuoli.substack.com" target="_blank" rel="noopener">✉ Iscriviti alla newsletter</a>
+</div>
+</main>
+<footer><div class="wrap">Sottosuoli · Leggere il territorio · <a href="/">Home</a></div></footer>
+</body>
+</html>

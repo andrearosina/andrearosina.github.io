@@ -58,6 +58,11 @@
   .thr-pin span { display:flex; align-items:center; justify-content:center;
     width:22px; height:22px; border-radius:50%; color:#fff; font-weight:700;
     font-size:13px; border:2px solid #fff; box-shadow:0 1px 3px rgba(0,0,0,.45); }
+  .fire-pin span { display:flex; align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:50%; background:#fff; font-size:15px;
+    border:2px solid var(--orange); box-shadow:0 1px 3px rgba(0,0,0,.45); }
+  .fire-pin.on-route span { border-color:#8B1E1E; }
+  .fire-pin.area span { border-color:#E0A15E; }
   #explain-link { display:inline-block; margin-top:6px; font-size:12px; font-weight:600;
     color:var(--orange); text-decoration:none; }
   #explain-link:hover { text-decoration:underline; }
@@ -111,12 +116,38 @@ const map = L.map('map', { zoomControl: true });
 L.tileLayer(TILES.url, { attribution: TILES.attr, maxZoom: 19 }).addTo(map);
 const overviewLayer = L.layerGroup().addTo(map);
 const stageLayer = L.layerGroup().addTo(map);
+const stageHiLayer = L.layerGroup().addTo(map);
 const pinLayer = L.layerGroup().addTo(map);
+const fireLayer = L.layerGroup().addTo(map);
 const hl = L.circleMarker([0, 0], { radius:6, color:'#111', weight:2,
   fillColor:'#fff', fillOpacity:1 });
-let CUR = null, PX = [], PY = [], activeTour = null, activeIdx = 0, metric = 'wbgt';
+let CUR = null, PX = [], PY = [], activeTour = null, activeIdx = null, metric = 'wbgt';
 
-function colorOf(o){ return metric === 'wbgt' ? o.cw : o.ca; }
+// ---- palette GLOBALE (uguale per tutte le tappe e per tutti i giri) ----
+// WBGT: le cinque fasce UCI, soglie dichiarate. Percepita: scala globale fissa.
+const WBGT_BANDS = [
+  { min:28, color:'#8B1E1E', label:'≥ 28° · rosso (rischio)' },
+  { min:23, color:'#E07B39', label:'23–28° · arancione' },
+  { min:18, color:'#E6C65A', label:'18–23° · giallo' },
+  { min:15, color:'#8FBF9F', label:'15–18° · verde' },
+  { min:-99, color:'#B9C3AD', label:'< 15° · fresco' }
+];
+const APP_BANDS = [
+  { min:40, color:'#8B1E1E', label:'≥ 40°' },
+  { min:34, color:'#E07B39', label:'34–40°' },
+  { min:28, color:'#E6C65A', label:'28–34°' },
+  { min:22, color:'#8FBF9F', label:'22–28°' },
+  { min:-99, color:'#B9C3AD', label:'< 22°' }
+];
+function bandColor(v, bands){
+  for (var i=0;i<bands.length;i++){ if (v >= bands[i].min) return bands[i].color; }
+  return bands[bands.length-1].color;
+}
+// o = punto con .wbgt/.app grezzi (i segmenti ereditano dal punto d'inizio)
+function colorOf(o){
+  return (metric === 'wbgt') ? bandColor(o.wbgt, WBGT_BANDS)
+                             : bandColor(o.app, APP_BANDS);
+}
 
 // ---- pin sui tratti oltre/sotto soglia ----
 const PIN_STYLE = {
@@ -151,6 +182,46 @@ function drawPins(st){
   });
 }
 
+// ---- pin degli incendi (layer sempre visibile, per giro) ----
+function itDate(iso){ if(!iso) return '';
+  const p = iso.split('-'); return p.length===3 ? p[2]+'/'+p[1]+'/'+p[0] : iso; }
+function firePopup(f){
+  const onroute = (f.tipo === 'minaccia_incendio');
+  const col = onroute ? '#8B1E1E' : '#B9722E';
+  const tag = onroute ? 'Ha toccato la corsa' : 'Incendio d’area';
+  const per = f.data_inizio ? ('Dal ' + itDate(f.data_inizio) +
+    (f.data_fine ? (' al ' + itDate(f.data_fine)) : '')) : '';
+  const bits = [];
+  if (f.ha != null) bits.push(Number(f.ha).toLocaleString('it-IT') + ' ha bruciati');
+  if (f.sfollati != null) bits.push(Number(f.sfollati).toLocaleString('it-IT') + ' sfollati');
+  const link = EXPLAIN ? '<a href="' + EXPLAIN + '" style="color:#E07B39;font-weight:600">' +
+    'Il quadro dell’estate →</a>' : '';
+  return '<div style="font-family:Barlow,system-ui,sans-serif;min-width:210px">' +
+    '<div style="font-size:10px;font-weight:700;letter-spacing:.05em;' +
+    'text-transform:uppercase;color:' + col + '">🔥 ' + tag + '</div>' +
+    '<div style="font-weight:700;color:' + col + ';border-bottom:2px solid ' + col +
+    ';padding-bottom:3px;margin:2px 0 5px">' + f.label + '</div>' +
+    (per ? '<div style="font-size:12px;margin-bottom:3px">' + per + '</div>' : '') +
+    (bits.length ? '<div style="font-size:12px;color:#333;margin-bottom:4px">' +
+      bits.join(' · ') + '</div>' : '') +
+    (f.nota ? '<div style="font-size:12px;color:#555;line-height:1.35;' +
+      'margin-bottom:5px">' + f.nota + '</div>' : '') +
+    (f.fonte ? '<div style="font-size:11px;color:#888;margin-bottom:4px">Fonte: ' +
+      f.fonte + '</div>' : '') +
+    (link ? '<div style="font-size:12px">' + link + '</div>' : '') +
+    '</div>';
+}
+function drawFires(tour){
+  fireLayer.clearLayers();
+  (tour.fires || []).forEach(function(f){
+    const cls = (f.tipo === 'minaccia_incendio') ? 'on-route' : 'area';
+    const icon = L.divIcon({ className:'fire-pin ' + cls, iconSize:[28,28],
+      iconAnchor:[14,14], html:'<span>🔥</span>' });
+    L.marker([f.lat, f.lon], { icon:icon, zIndexOffset:400 }).addTo(fireLayer)
+      .bindPopup(firePopup(f), { maxWidth:300 });
+  });
+}
+
 // ---- controlli persistenti: titolo, legenda, hint, selettore metrica ----
 const titleCtl = L.control({ position:'topright' });
 titleCtl.onAdd = function(){ this._d = L.DomUtil.create('div','box title-box');
@@ -169,7 +240,8 @@ metricCtl.onAdd = function(){
       metric = b.dataset.m;
       d.querySelectorAll('button').forEach(function(x){
         x.classList.toggle('on', x.dataset.m === metric); });
-      if (CUR) renderStage(activeTour, activeIdx);
+      if (activeTour){ const keep = activeIdx; showTour(activeTour);
+                       if (keep != null) selectStage(activeTour, keep); }
     };
   });
   return d;
@@ -179,11 +251,21 @@ metricCtl.addTo(map);
 const legendCtl = L.control({ position:'bottomright' });
 legendCtl.onAdd = function(){ this._d = L.DomUtil.create('div','box');
   this._d.style.display='none'; return this._d; };
-legendCtl.set = function(label, vmin, vmax){ if(!this._d) return;
+legendCtl.setBands = function(label, bands){ if(!this._d) return;
   this._d.style.display='block';
-  this._d.innerHTML = label + '<div class="legend-bar"></div>' +
-    '<div class="legend-lab"><span>'+vmin+'</span><span>'+vmax+'</span></div>'; };
+  var rows = bands.map(function(bd){
+    return '<div style="display:flex;align-items:center;gap:6px;font-size:11px;' +
+      'margin:1px 0"><span style="width:14px;height:10px;border-radius:2px;' +
+      'background:'+bd.color+';display:inline-block"></span>'+bd.label+'</div>';
+  }).join('');
+  this._d.innerHTML = '<div style="font-weight:600;font-size:12px;' +
+    'margin-bottom:3px">'+label+'</div>' + rows; };
 legendCtl.addTo(map);
+function setLegend(){
+  const bands = (metric === 'wbgt') ? WBGT_BANDS : APP_BANDS;
+  const label = (metric === 'wbgt') ? 'WBGT stimato · fasce UCI' : 'Temperatura percepita';
+  legendCtl.setBands(label, bands);
+}
 
 const hintCtl = L.control({ position:'bottomleft' });
 hintCtl.onAdd = function(){ const d=L.DomUtil.create('div','box');
@@ -192,8 +274,9 @@ hintCtl.addTo(map);
 
 // ---- vista d'insieme: i tre giri come marker selezionabili ----
 function showOverview(){
-  stageLayer.clearLayers(); overviewLayer.clearLayers(); pinLayer.clearLayers();
-  clearProfile(); CUR = null;
+  stageLayer.clearLayers(); stageHiLayer.clearLayers(); overviewLayer.clearLayers();
+  pinLayer.clearLayers(); fireLayer.clearLayers();
+  clearProfile(); CUR = null; activeIdx = null;
   titleCtl.setText('Grandi Giri e caldo — scegli un giro');
   const bnds = [];
   MANIFEST.forEach(function(t){
@@ -225,9 +308,7 @@ async function loadTour(slug){
   }
   activeTour = tour;
   renderSidebar(tour);
-  if (tour.stages && tour.stages.length) renderStage(tour, 0);
-  else { stageLayer.clearLayers(); pinLayer.clearLayers();
-         titleCtl.setText(tour.tour + ' — dati in arrivo'); }
+  showTour(tour);
 }
 
 function renderSidebar(tour){
@@ -257,34 +338,71 @@ function renderSidebar(tour){
           (ev.nota ? '<div class="event-note">'+ev.nota+'</div>' : '') + '</div>';
       }).join('') + '</div>';
   }
+  let firesKey = '';
+  if (tour.fires && tour.fires.length){
+    firesKey = '<div class="pins-key" style="margin-top:8px">🔥 incendi · ' +
+      '<i style="color:#8B1E1E">bordo rosso</i> ha toccato la corsa · ' +
+      '<i style="color:#E0A15E">bordo ambra</i> incendio d’area</div>';
+  }
   const badge = tour.demo ? '<div class="demo-badge">DEMO · dati sintetici</div>' : '';
   const stages = (tour.stages||[]).map(function(st, i){
     return '<button class="stage-btn" data-i="'+i+'">'+st.stage+'</button>'; }).join('');
   el.innerHTML = '<h3>'+tour.tour+'</h3><div class="muted">'+(tour.window||'')+'</div>' +
-    badge + stats + events + '<div class="stage-list">' +
+    badge + stats + events + firesKey + '<div class="stage-list">' +
     (stages || '<div class="muted">Tappe in arrivo</div>') + '</div>';
   el.querySelectorAll('.stage-btn').forEach(function(b){
-    b.onclick = function(){ renderStage(activeTour, +b.dataset.i); }; });
+    b.onclick = function(){ selectStage(activeTour, +b.dataset.i); }; });
   document.getElementById('sidebar-note').innerHTML = '';
 }
 
-// ---- render di una tappa sulla mappa + profilo ----
-function renderStage(tour, idx){
+// ---- tutti i tracciati del giro, colorati sulla palette globale ----
+function drawBaseTracks(tour){
+  stageLayer.clearLayers();
+  const b = [];
+  (tour.stages || []).forEach(function(st){
+    st.segments.forEach(function(s, i){
+      const p = st.points[i] || st.points[st.points.length - 1];
+      L.polyline(s.coords, { color:colorOf(p), weight:5, opacity:0.85 }).addTo(stageLayer);
+    });
+    if (st.bounds){ b.push(st.bounds[0]); b.push(st.bounds[1]); }
+  });
+  return b;
+}
+
+// ---- vista d'insieme di un giro: tutte le tappe sempre attive + incendi ----
+function showTour(tour){
+  activeTour = tour; CUR = null; activeIdx = null;
+  overviewLayer.clearLayers(); stageHiLayer.clearLayers(); pinLayer.clearLayers();
+  clearProfile();
+  const b = drawBaseTracks(tour);
+  drawFires(tour);
+  setLegend();
+  if (b.length) map.fitBounds(L.latLngBounds(b), { padding:[30,30] });
+  else if (tour.fires && tour.fires.length)
+    map.fitBounds(L.latLngBounds(tour.fires.map(function(f){ return [f.lat, f.lon]; })),
+                  { padding:[50,50] });
+  else map.setView(tour.center, 6);
+  titleCtl.setText(tour.tour + (b.length ? ' — tutte le tappe' : ' — dati in arrivo'));
+  document.querySelectorAll('.stage-btn').forEach(function(x){ x.classList.remove('active'); });
+}
+
+// ---- evidenzia una tappa senza perdere il colpo d'occhio d'insieme ----
+function selectStage(tour, idx){
   const st = tour.stages[idx];
   CUR = st; activeIdx = idx;
-  overviewLayer.clearLayers(); stageLayer.clearLayers();
+  stageHiLayer.clearLayers();
   st.segments.forEach(function(s){
-    L.polyline(s.coords, { color:colorOf(s), weight:6, opacity:0.9 }).addTo(stageLayer); });
+    L.polyline(s.coords, { color:'#111', weight:9, opacity:0.22 }).addTo(stageHiLayer); });
+  st.segments.forEach(function(s, i){
+    const p = st.points[i] || st.points[st.points.length - 1];
+    L.polyline(s.coords, { color:colorOf(p), weight:6, opacity:1 }).addTo(stageHiLayer); });
   L.circleMarker(st.start, { radius:7, color:'#1E4A37', weight:2,
-    fillColor:'#8FBF9F', fillOpacity:1 }).addTo(stageLayer).bindTooltip('Partenza');
+    fillColor:'#8FBF9F', fillOpacity:1 }).addTo(stageHiLayer).bindTooltip('Partenza');
   L.circleMarker(st.end, { radius:7, color:'#1E4A37', weight:2,
-    fillColor:'#8B1E1E', fillOpacity:1 }).addTo(stageLayer).bindTooltip('Arrivo');
-  map.fitBounds(L.latLngBounds(st.bounds), { padding:[30,30] });
-  titleCtl.setText(tour.tour + ' — ' + st.stage);
-  const sc = st.scales[metric];
-  legendCtl.set(sc.label, sc.vmin, sc.vmax);
+    fillColor:'#8B1E1E', fillOpacity:1 }).addTo(stageHiLayer).bindTooltip('Arrivo');
   drawPins(st);
   drawProfile(st);
+  titleCtl.setText(tour.tour + ' — ' + st.stage);
   document.querySelectorAll('.stage-btn').forEach(function(b){
     b.classList.toggle('active', +b.dataset.i === idx); });
 }
